@@ -28,6 +28,9 @@
   .mood-card{ aspect-ratio:16/10; }
   #backToTop{ width:44px; height:44px; right:1rem; bottom:1rem; }
   .audio-player{ flex-wrap:wrap; }
+  /* .g-5 даёт строке поля по -1.5rem, а у .container всего .75rem: на телефоне
+     страница уезжала вбок на 12px. Узкий экран — отступ как у .g-4. */
+  .row.g-5{ --bs-gutter-x:1.5rem; }
 }
 
 @media (min-width:1400px){
