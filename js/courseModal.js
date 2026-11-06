@@ -1,26 +1,29 @@
 // =====================================================================
-// МОДУЛЬ: courseModal.js
-// Модальное окно записи на курс: заголовок и цена заполняются из
-// data-атрибутов кнопки, которая открыла модалку (event.relatedTarget —
-// стандартное событие Bootstrap show.bs.modal).
+// FILE: js/courseModal.js
+// PURPOSE: local-only workshop interest form with fictional credits.
+// FUNCTIONS: initCourseModal. No registration, payment or message is transmitted.
 // =====================================================================
-
 import { showSuccess } from './successModal.js';
 
+// BEGIN initCourseModal
 export function initCourseModal() {
   const modalEl = document.getElementById('courseModal');
-
-  modalEl.addEventListener('show.bs.modal', (event) => {
+  const form = document.getElementById('courseForm');
+  if (!modalEl || !form) return;
+  modalEl.addEventListener('show.bs.modal', event => {
     const button = event.relatedTarget;
+    if (!button?.dataset.course) return;
     document.getElementById('courseModalName').textContent = button.dataset.course;
     document.getElementById('courseModalPrice').textContent = button.dataset.price;
   });
-
-  document.getElementById('courseForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    bootstrap.Modal.getInstance(modalEl).hide();
-    const courseName = document.getElementById('courseModalName').textContent;
-    showSuccess(`Форма заполнена корректно. Это демо-проект без бэкенда: заявка на курс «${courseName}» никуда не отправлена и звонка не будет — в реальном приложении здесь был бы запрос к серверу.`);
-    this.reset();
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    const name = document.getElementById('courseModalName').textContent;
+    modalEl.addEventListener('hidden.bs.modal', () => {
+      showSuccess(`Сигнал о программе «${name}» проверен. Это локальная демонстрация: заявка не отправлена, кредиты не списаны. Приёмная комиссия продолжает искать кнопку «ответить».`);
+    }, { once: true });
+    bootstrap.Modal.getInstance(modalEl)?.hide(); form.reset();
   });
 }
+// END initCourseModal

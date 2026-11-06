@@ -1,12 +1,14 @@
 {
   "name": "photoclub-objectiv",
   "version": "1.0.0",
-  "description": "Учебный проект «Фотоклуб Объектив» — HTML5, CSS3, Bootstrap 5, JavaScript (ES-модули)",
+  "description": "Три пикселя до Центавра — межгалактический учебный центр фотографии и изобразительного искусства",
   "private": true,
   "type": "module",
   "scripts": {
     "start": "npx serve . -l 5500",
     "generate:audio": "node tools/generate-ambient-audio.js",
-    "generate:space-audio": "node tools/generate-space-audio.js"
+    "generate:space-audio": "node tools/generate-space-audio.js",
+    "test": "node --test tests/*.test.mjs",
+    "media:update": "node tools/update-media-manifest.mjs"
   }
 }

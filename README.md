@@ -1,4 +1,4 @@
-# Photo Club "Obektiv"
+# Три пикселя до Центавра
 
 [English](#english) · [Русский](#russian) · [עברית](#hebrew)
 
@@ -6,45 +6,37 @@
 
 ## English
 
-A landing page for a photography school: courses and workshops, a gallery of students' work, photo trips (including a "space safari"), the team, reviews, FAQ and contact forms. The largest of my HTML/CSS/JavaScript landing pages.
+**Three Pixels to Centauri** is a fictional intergalactic centre for photography and visual arts. A cinematic dark interface connects a supplied image archive, imaginary expeditions, humorous workshops and fictional curator characters. The repository folder retains its historical name, `photoclub-objectiv`.
 
-**Live demo:** https://dubnovalexey.github.io/photoclub-objectiv/
+### Try the prototype
 
-### Quick tour
+Open the archive, choose photographic studies or illustrations, and view an image with keyboard arrows and Escape. Start the shared music player explicitly, change tracks and volume. Open a workshop or curator profile; submitting a form demonstrates local validation and sends nothing.
 
-Filter the gallery and open a photo, inspect a course or instructor, then try the theme/font-size controls. Contact and newsletter forms demonstrate validation only: they do not send or save a request.
+### Current implementation
 
-Start with `js/main.js` and its feature modules; gallery/details use Bootstrap Modal, and sounds use the shared Web Audio helper in `js/utils.js`. Serve the ES modules over HTTP. Browser speech voices and CDN resources vary by environment.
+- 58 supplied archive images, plus the supplied PNG favicon. Descriptive ASCII file names and original-to-new mappings are in `assets/media-manifest.json`; original image/audio/video bytes were not re-encoded.
+- Progressive archive loading, semantic filters and a full-size Bootstrap modal. Captions distinguish photographic studies, illustrations and character art; they do not claim documentary or NASA provenance.
+- One HTML audio player with 13 supplied MP3/MPEG/MP4 recordings. Playback starts on a user gesture, advances sequentially, loops, and stops after a bounded failure pass. Legacy generated hum WAV files remain stored but are not played.
+- A supplied video is available as `assets/video/field-recording-01.mp4`, with native controls and no autoplay. Video and background music do not play simultaneously.
+- Fictional workshops use fictional credits. Curator biographies and ship-log entries are invented; no real student testimonials, registration, payment, contact delivery or newsletter backend is claimed.
+- Responsive layouts, keyboard controls, text-size buttons, safe focus styling and reduced-motion handling. The UI is Russian; these README sections do not translate the page.
 
-The language links above switch the documentation; they do not translate the existing demo interface.
+### Run and maintain
 
-### Features
+Serve this folder through HTTP, for example `python -m http.server 5500`, and open `http://127.0.0.1:5500/`. Bootstrap and Google Fonts are external dependencies; system font fallbacks remain available.
 
-- Ten sections: about, gallery, best shots, destinations, space safari, courses, team, reviews, FAQ, contact.
-- A gallery with category filters and a lightbox.
-- Course and instructor details in modal windows; contact and newsletter forms with an explicit demonstration result, without sending data.
-- Light and dark theme (Bootstrap colour modes) and a font size control.
-- Read-aloud of texts with the browser's speech synthesis.
-- Scroll reveal animations, smooth scrolling and space background effects.
-- Ambient audio assets are generated locally with the Node scripts in `tools/generate-*.js`.
+```bash
+npm test
+npm run media:update
+```
 
-### Tech stack
+Drop additional recordings into `assets/audio/` and run `npm run media:update`. This dependency-free Node helper updates the readable playlist and hashes without renaming or converting files. Missing or unreadable inputs are reported and excluded; the two legacy hum WAV names remain excluded. The browser must reload after manifest changes. A file decoding failure is handled by the bounded player fallback.
 
-HTML5 · CSS3 · Bootstrap 5 · JavaScript modules (DOM, Bootstrap Modal, Web Speech API, Web Audio, Intersection Observer) · Node.js scripts · GitHub Pages
+### Engineering map and next steps
 
-### Run locally
+`index.html` and `css/observatory.css` define the current presentation. `js/main.js` initializes the page; `js/mediaCatalog.js` supplies archive data; `js/galleryLightbox.js` owns filters and image navigation; `js/playlistPlayer.js` separates its testable controller from DOM bindings. Curator cards and profiles share `js/curatorData.js`. Older unreferenced style/effect files are retained for review, not loaded as alternate interfaces.
 
-Serve this folder over HTTP, for example with `npm start` or `python -m http.server 8000 --bind 127.0.0.1`, then open the printed local address. ES-module imports do not reliably load from `file://`.
-
-The ambient controls follow the actual media playback state. A rejected or unavailable audio source leaves the player paused and does not produce an unhandled playback promise.
-
-### Planned improvements
-
-These are proposals, not currently implemented features.
-
-- Visual: replace placeholder images with selected credited photographs and improve gallery loading/focus states.
-- Engineering: keep local dependency builds reproducible and add browser checks for modal focus, speech cancellation and form states.
-- Functionality: add a JSON course schedule with level filters; implement real booking only with an explicitly chosen backend.
+Planned: review the visual prototype, refine accessible archive exploration, then implement a real course/session/booking backend as a separate stage. A database, accounts, saved bookings and actual emails are not implemented here. Music stays in the existing audio folder; track descriptions come from supplied file names/metadata rather than invented identifications.
 
 ---
 
@@ -52,47 +44,37 @@ These are proposals, not currently implemented features.
 
 ## Русский
 
-**Фотоклуб «Объектив»**
-
-Лендинг школы фотографии: курсы и мастер-классы, галерея работ учеников, фотопоездки (в том числе «космическое сафари»), команда, отзывы, вопросы и ответы, формы связи. Самый большой из моих лендингов на HTML, CSS и JavaScript.
-
-**Демо:** https://dubnovalexey.github.io/photoclub-objectiv/
+**«Три пикселя до Центавра»** — вымышленный межгалактический учебный центр фотографии и изобразительного искусства. Тёмная кинематографичная витрина объединяет предоставленные изображения, экспедиции, мастерские с сухим космическим юмором и вымышленных кураторов. Историческое имя папки — `photoclub-objectiv`.
 
 ### Быстрый просмотр
 
-Отфильтруйте галерею, откройте фото, посмотрите курс или преподавателя и попробуйте тему/размер шрифта. Формы связи и рассылки демонстрируют только валидацию: заявки не отправляются и не сохраняются.
+Откройте архив, выберите фотографические этюды или иллюстрации и разверните работу целиком. В просмотре действуют стрелки клавиатуры и Escape. Включите общий плеер, переключите запись и громкость. Откройте мастерскую и личное дело куратора; форма демонстрирует локальную проверку, ничего не отправляя.
 
-Начните с `js/main.js` и подключаемых модулей; галерея и подробности используют Bootstrap Modal, звуки — общий Web Audio helper в `js/utils.js`. ES-модули запускаются по HTTP. Голоса синтеза речи и доступность CDN зависят от окружения.
+### Что работает
 
-Языковые ссылки выше переключают документацию, а не переводят существующий интерфейс демо.
+- 58 изображений в архиве и отдельный предоставленный favicon PNG. Описательные ASCII-имена и соответствия исходных файлов записаны в `assets/media-manifest.json`. Изображения, аудио и видео не перекодировались.
+- Постепенное раскрытие архива, фильтры и полноразмерный Bootstrap Modal. Подписи разделяют фотографические этюды, иллюстрации и персонажный арт; неподтверждённое происхождение не выдаётся за документальную съёмку или NASA.
+- Один общий HTML audio-плеер с 13 предоставленными MP3/MPEG/MP4. Запуск только нажатием, последовательное воспроизведение по кругу, предыдущая/следующая запись и громкость. При ошибках число попыток ограничено длиной списка. Старые синтезированные WAV сохранены, но не воспроизводятся.
+- Видеозапись `assets/video/field-recording-01.mp4` с ручным запуском и нативными controls. Включение видео останавливает музыку; включение музыки останавливает видео.
+- Мастерские оцениваются в условных кредитах. Кураторы и бортовой журнал вымышлены. Настоящих отзывов учащихся, записи на занятия, оплаты, отправки сообщений или подписки нет.
+- Адаптивная раскладка, клавиатура, кнопки размера текста и reduced motion. UI пока русский; языковые разделы README относятся к документации.
 
-### Возможности
+### Запуск и пополнение аудио
 
-- Десять разделов: о клубе, галерея, лучшие кадры, направления, космическое сафари, курсы, команда, отзывы, вопросы, контакты.
-- Галерея с фильтром по категориям и лайтбоксом.
-- Подробности о курсах и преподавателях в модальных окнах; форма связи и подписка на рассылку с явным результатом демонстрации, без отправки данных.
-- Светлая и тёмная тема (цветовые режимы Bootstrap) и выбор размера шрифта.
-- Чтение текста вслух через синтез речи браузера.
-- Появление блоков при прокрутке, плавная прокрутка и космические эффекты фона.
-- Файлы эмбиента генерируются локально скриптами Node в `tools/generate-*.js`.
+Раздайте папку через HTTP, например `python -m http.server 5500`, и откройте `http://127.0.0.1:5500/`. Bootstrap и Google Fonts загружаются извне; у шрифтов есть системные замены.
 
-### Стек
+```bash
+npm test
+npm run media:update
+```
 
-HTML5 · CSS3 · Bootstrap 5 · модули JavaScript (DOM, Bootstrap Modal, Web Speech API, Web Audio, Intersection Observer) · скрипты Node.js · GitHub Pages
+Добавляйте записи в `assets/audio/`, затем запускайте `npm run media:update`. Node-helper без сторонних зависимостей обновляет список читаемых файлов и SHA, не переименовывая и не конвертируя содержимое. Отсутствующие или нечитаемые файлы отмечаются и не попадают в плейлист; два старых hum WAV исключены. После изменения списка обновите страницу. Ошибка декодирования внутри браузера не запускает бесконечное переключение.
 
-### Как запустить
+### Устройство и дальнейшая работа
 
-Запустите HTTP-сервер из папки: `npm start` либо `python -m http.server 8000 --bind 127.0.0.1`, затем откройте локальный адрес. Импорты ES-модулей не рассчитаны на запуск через `file://`.
+Текущий интерфейс — `index.html` и `css/observatory.css`. Точка входа `js/main.js`; данные архива — `js/mediaCatalog.js`; фильтры/просмотр — `js/galleryLightbox.js`; отдельный проверяемый медиаконтроллер — `js/playlistPlayer.js`; общие данные карточек и профилей кураторов — `js/curatorData.js`. Старые неподключённые стили/эффекты сохранены для отдельной сверки и не формируют вторую версию интерфейса.
 
-Кнопки эмбиента отражают фактическое состояние аудио. При отказе запуска или недоступном файле плеер остаётся на паузе, кнопка доступна для повторной попытки.
-
-### План развития
-
-Это предложения, а не уже реализованные возможности.
-
-- Визуал: заменить картинки-заглушки выбранными фотографиями с подписями, улучшить состояния загрузки и фокуса галереи.
-- Инженерия: воспроизводимая локальная сборка зависимостей, браузерные проверки фокуса modal, отмены озвучивания и состояний форм.
-- Функции: расписание курсов из JSON с фильтром уровня; реальную запись вводить только с явно выбранным backend.
+Планы: оценить прототип, доработать удобство просмотра коллекции, затем отдельным этапом спроектировать реальные курсы, расписание и бронирование. БД, аккаунты, сохранённые заявки и настоящие письма сейчас не реализованы. Названия аудиозаписей берутся из предоставленных имён/метаданных; неизвестные записи обозначены нейтрально.
 
 ---
 
@@ -102,42 +84,32 @@ HTML5 · CSS3 · Bootstrap 5 · модули JavaScript (DOM, Bootstrap Modal, W
 
 ## עברית
 
-**מועדון הצילום "אובייקטיב"**
-
-דף נחיתה לבית ספר לצילום: קורסים וסדנאות, גלריית עבודות של תלמידים, טיולי צילום (כולל "ספארי בחלל"), הצוות, ביקורות, שאלות נפוצות וטפסי יצירת קשר.
-
-**הדגמה:** https://dubnovalexey.github.io/photoclub-objectiv/
+**Three Pixels to Centauri — «Три пикселя до Центавра»** הוא מרכז בין־גלקטי דמיוני לצילום ולאמנות חזותית. אב־הטיפוס מציג ארכיון תמונות שסופק לפרויקט, מסעות, סדנאות הומוריסטיות ואוצרים בדיוניים. שם תיקיית המאגר ההיסטורי נשאר `photoclub-objectiv`.
 
 ### סיור קצר
 
-סננו את הגלריה ופתחו תמונה, בדקו קורס או מדריך ונסו ערכת צבעים וגודל גופן. טפסי הקשר והדיוור מדגימים אימות בלבד: הבקשות אינן נשלחות או נשמרות.
+בחרו בארכיון מחקר צילומי או איור, פתחו תמונה והשתמשו בחצים וב־Escape. הפעילו את נגן המוזיקה באופן ידני ושנו רצועה ועוצמה. פתחו סדנה או פרופיל אוצר; הטפסים מדגימים אימות מקומי ואינם שולחים דבר.
 
-התחילו ב־`js/main.js` ובמודולי התכונות. הגלריה והפרטים משתמשים ב־Bootstrap Modal, והצלילים בעזר Web Audio המשותף ב־`js/utils.js`. מודולי ES דורשים HTTP; קולות דיבור ומשאבי CDN תלויים בסביבה.
+### מימוש נוכחי
 
-קישורי השפה למעלה מחליפים את התיעוד, ולא מתרגמים את ממשק ההדגמה הקיים.
+- 58 תמונות בארכיון וסמל PNG שסופק. שמות הקבצים ותיעוד המקור מופיעים ב־`assets/media-manifest.json`; קובצי המדיה לא קודדו מחדש.
+- טעינה הדרגתית, סינון ומודאל מלא של Bootstrap. מחקרים צילומיים, איורים ודיוקנאות דמויות מסומנים בנפרד, ללא טענה שמדובר בתיעוד מדעי או בתצלומי NASA.
+- נגן HTML audio יחיד עם 13 קובצי MP3/MPEG/MP4: הפעלה לפי לחיצה, רצף מחזורי, הקודם/הבא ועוצמה. כישלונות מוגבלים למעבר אחד על הרשימה. קובצי ה־WAV הישנים נשמרו אך אינם מושמעים.
+- וידאו עם פקדים וללא הפעלה אוטומטית. הווידאו והמוזיקה אינם מתנגנים יחד.
+- הסדנאות משתמשות בקרדיטים דמיוניים. האוצרים ויומן המסע בדיוניים; אין תשלום, רישום אמיתי, משלוח הודעה או הרשמה לניוזלטר.
+- עיצוב מותאם למסכים, מקלדת, שינוי גודל טקסט ו־reduced motion. ממשק האתר כרגע ברוסית; סעיף זה מתרגם את התיעוד בלבד.
 
-### יכולות
+### הרצה ותחזוקה
 
-- גלריה עם סינון לפי קטגוריות ותצוגה מוגדלת.
-- פרטי קורסים ומדריכים בחלונות קופצים, טופס יצירת קשר והרשמה לניוזלטר.
-- ערכת צבעים בהירה וכהה ושינוי גודל הגופן.
-- הקראת טקסט בעזרת סינתזת הדיבור של הדפדפן.
-- קובצי האווירה נוצרים מקומית בסקריפטי Node ב־`tools/generate-*.js`.
+הגישו את התיקייה ב־HTTP, למשל `python -m http.server 5500`, ופתחו `http://127.0.0.1:5500/`. Bootstrap וגופני Google דורשים רשת; קיימים גופני מערכת חלופיים.
 
-### טכנולוגיות
+```bash
+npm test
+npm run media:update
+```
 
-HTML5 · CSS3 · Bootstrap 5 · JavaScript · GitHub Pages
+הוסיפו קובצי שמע ל־`assets/audio/` והריצו את פקודת העדכון. כלי Node ללא תלות נוספת בונה מחדש את רשימת הקבצים הקריאים וה־SHA, בלי לשנות שמות או להמיר מדיה. קבצים חסרים או בלתי קריאים אינם נכללים; שני קובצי ה־WAV הישנים נשארים מחוץ לנגן. לאחר העדכון יש לרענן את הדף.
 
-### הרצה מקומית
-
-הריצו שרת HTTP בתיקייה: `npm start` או `python -m http.server 8000 --bind 127.0.0.1`, ופתחו את הכתובת המקומית. מודולי ES אינם מיועדים לפתיחה דרך `file://`.
-
-### שיפורים מתוכננים
-
-אלה הצעות, לא יכולות שכבר מומשו.
-
-- חזות: להחליף תמונות דמה בצילומים נבחרים עם קרדיטים ולשפר מצבי טעינה ומיקוד בגלריה.
-- הנדסה: בניית תלויות מקומית הניתנת לשחזור ובדיקות דפדפן למיקוד חלונות, ביטול הקראה ומצבי טפסים.
-- יכולות: לוח קורסים מ־JSON עם סינון לפי רמה; הרשמה אמיתית רק עם שרת שנבחר במפורש.
+`index.html` ו־`css/observatory.css` מגדירים את העיצוב; `js/main.js` מאתחל את המודולים. נתוני הארכיון ב־`js/mediaCatalog.js`, התצוגה ב־`js/galleryLightbox.js`, ובקר הנגן הנבדק ב־`js/playlistPlayer.js`. בעתיד ניתן לפתח שירות אמיתי של קורסים, מועדים והזמנות; חשבונות, בסיס נתונים ודוא״ל אינם חלק מאב־הטיפוס הנוכחי.
 
 </div>
