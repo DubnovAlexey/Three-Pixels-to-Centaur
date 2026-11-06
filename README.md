@@ -29,3 +29,5 @@ Open `index.html` in a browser, or run `npm start`.
 - Real photos (my own or free-licence ones with credits) instead of the 32 placeholder images.
 - The course schedule from a JSON file, with a filter by level.
 - Booking through Formspree, without a server of my own.
+
+The ambient controls follow the actual media playback state. A rejected or unavailable audio source leaves the player paused and does not produce an unhandled playback promise.

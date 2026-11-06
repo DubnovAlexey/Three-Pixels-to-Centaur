@@ -17,22 +17,24 @@ export function initAmbientPlayer({ audioId, toggleId, iconId, volumeId }) {
   const player = toggleBtn.closest('.audio-player');
 
   ambient.volume = volumeSlider.value / 100;
-  player.classList.add('is-paused');
-
-  toggleBtn.addEventListener('click', () => {
-    getAudioContext(); // «пробуждает» общий AudioContext по жесту пользователя
-    if (ambient.paused) {
-      ambient.play();
-      icon.className = 'bi bi-pause-fill';
-      player.classList.remove('is-paused');
-    } else {
-      ambient.pause();
-      icon.className = 'bi bi-play-fill';
-      player.classList.add('is-paused');
-    }
+  // НАЧАЛО ФУНКЦИИ syncPlaybackState
+  // Значок отражает фактическое состояние media, включая отказ play() или ошибку файла.
+  const syncPlaybackState = () => {
+    const playing = !ambient.paused && !ambient.error;
+    icon.className = playing ? 'bi bi-pause-fill' : 'bi bi-play-fill';
+    player.classList.toggle('is-paused', !playing);
+    toggleBtn.setAttribute('aria-pressed', String(playing));
+  };
+  // КОНЕЦ ФУНКЦИИ syncPlaybackState
+  syncPlaybackState();
+  for (const event of ['playing', 'pause', 'ended', 'error']) ambient.addEventListener(event, syncPlaybackState);
+  toggleBtn.addEventListener('click', async () => {
+    getAudioContext();
+    if (!ambient.paused) { ambient.pause(); return; }
+    toggleBtn.disabled = true;
+    try { await ambient.play(); }
+    catch { ambient.pause(); } // Например, файл недоступен: интерфейс остаётся в состоянии паузы.
+    finally { toggleBtn.disabled = false; syncPlaybackState(); }
   });
-
-  volumeSlider.addEventListener('input', () => {
-    ambient.volume = volumeSlider.value / 100;
-  });
+  volumeSlider.addEventListener('input', () => { ambient.volume = volumeSlider.value / 100; });
 }
