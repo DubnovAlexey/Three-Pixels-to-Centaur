@@ -1,6 +1,6 @@
 # Три пикселя до Центавра
 
-[English](#english) · [Русский](#russian) · [עברית](#hebrew)
+[English](#english) · [Русский](#русский) · [עברית](#עברית)
 
 <a name="english"></a>
 
