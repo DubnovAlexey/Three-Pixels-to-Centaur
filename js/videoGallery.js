@@ -31,7 +31,8 @@ export function initVideoGallery() {
   }
   function open(entry,button) {
     selected=entry;opener=button;failure.hidden=true;
-    media.pause();media.src=entry.file;media.load();renderModal();modal.show();
+    // The poster shows the clip's opening frame while the video itself is still loading.
+    media.pause();media.poster=entry.poster ?? '';media.src=entry.file;media.load();renderModal();modal.show();
   }
   function render() {
     const filtered=videoEntries.filter(x=>category==='all'||x.category===category);
@@ -56,7 +57,7 @@ export function initVideoGallery() {
   }));
   more.addEventListener('click',()=>{const previous=root.children.length;count+=8;render();root.children[previous]?.focus();});
   media.addEventListener('error',()=>{failure.hidden=false;});
-  modalEl.addEventListener('hidden.bs.modal',()=>{media.pause();media.removeAttribute('src');media.load();opener?.focus();});
+  modalEl.addEventListener('hidden.bs.modal',()=>{media.pause();media.removeAttribute('src');media.removeAttribute('poster');media.load();opener?.focus();});
   window.addEventListener('pagehide',()=>media.pause());
   onLanguageChange(()=>{render();renderModal();});render();
 }

@@ -1,7 +1,32 @@
+// noinspection NonAsciiCharacters — the Russian source copy is the lookup key by design.
 // FILE: js/translations.js
 // PURPOSE: complete RU-source dictionary for EN/HE static copy and UI messages.
 // Content data (personnel, vessels, new media) carries its own three-language fields.
 export const translations = {
+  "Экипаж на борту": {
+    "en": "Crew on board",
+    "he": "הצוות על הסיפון"
+  },
+  "Экипаж: {count}": {
+    "en": "Crew: {count}",
+    "he": "צוות: {count}"
+  },
+  "Капитан": {
+    "en": "Captain",
+    "he": "קברניט/ית"
+  },
+  "Выберите члена экипажа, чтобы открыть его досье. Все персонажи вымышлены.": {
+    "en": "Choose a crew member to open their file. All characters are fictional.",
+    "he": "בחרו איש צוות כדי לפתוח את התיק שלו. כל הדמויות בדויות."
+  },
+  "Открыть портрет целиком": {
+    "en": "Open the full portrait",
+    "he": "פתיחת הדיוקן המלא"
+  },
+  "До Центавра {distance} св. лет · сигнал {ping} мс": {
+    "en": "To Centauri {distance} light-years · signal {ping} ms",
+    "he": "עד קנטאור {distance} שנות אור · אות {ping} מ״ש"
+  },
   "Три пикселя до Центавра — межгалактический учебный центр фотографии и изобразительного искусства. Экспедиции, мастерские и факультет подозрительного искусства.": {
     "en": "Three Pixels to Centauri — an intergalactic school of photography and visual art. Expeditions, workshops and the Faculty of Suspicious Art.",
     "he": "שלושה פיקסלים עד קנטאור — מרכז בין־גלקטי לצילום ולאמנות חזותית. משלחות, סדנאות והפקולטה לאמנות חשודה."

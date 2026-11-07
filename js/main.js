@@ -19,6 +19,7 @@ import { initSignalType } from './signalType.js';
 import { initContactForm } from './contactForm.js';
 import { initNewsletterForm } from './newsletterForm.js';
 import { initSpaceSafariFacts } from './spaceSafari.js';
+import { initLiveSpace } from './liveSpace.js';
 
 // BEGIN initializePage
 document.addEventListener('DOMContentLoaded', () => {
@@ -28,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initGalleryLightbox(); let music;
   void initPlaylistPlayer().then(controller => { music = controller; });
   initCourseModal(); initPersonnel(); initVideoGallery(); initFleet(); initSignalType(); initContactForm(); initNewsletterForm(); initSpaceSafariFacts();
+  initLiveSpace(); // after i18n, so scrambles never touch the original copy it binds
   const video = document.getElementById('fieldVideo');
   // A user starts the video explicitly; pause music without automatically resuming it.
   video?.addEventListener('play', () => music?.pause());
