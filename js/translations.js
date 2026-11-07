@@ -3,6 +3,10 @@
 // PURPOSE: complete RU-source dictionary for EN/HE static copy and UI messages.
 // Content data (personnel, vessels, new media) carries its own three-language fields.
 export const translations = {
+  "Рассмотреть ⤢": {
+    "en": "View ⤢",
+    "he": "להגדלה ⤢"
+  },
   "Экипаж на борту": {
     "en": "Crew on board",
     "he": "הצוות על הסיפון"

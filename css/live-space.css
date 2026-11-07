@@ -137,3 +137,24 @@
   .live-ship { display: none; }
 }
 /* END SECTION 8 */
+
+
+/* BEGIN SECTION 9 — archive cards: a clear "view" badge */
+.gallery-image { position: relative; }
+.gallery-image::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, transparent 55%, rgba(8, 13, 20, .55));
+  opacity: .6; transition: opacity .3s ease;
+}
+.gallery-open {
+  position: absolute; z-index: 1; inset-inline-end: 10px; bottom: 10px;
+  padding: 6px 11px; border: 1px solid var(--cyan); border-radius: 2px;
+  background: rgba(8, 13, 20, .78); color: var(--cyan);
+  font: 600 .64rem/1 var(--font-mono), monospace; letter-spacing: .08em; text-transform: uppercase;
+  transition: background .25s ease, color .25s ease, transform .25s ease;
+}
+.gallery-item:hover .gallery-image::after, .gallery-item:focus-visible .gallery-image::after { opacity: 1; }
+.gallery-item:hover .gallery-open, .gallery-item:focus-visible .gallery-open {
+  background: var(--cyan); color: var(--void); transform: translateY(-2px);
+}
+/* END SECTION 9 */

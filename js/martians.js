@@ -177,20 +177,32 @@
         if (!hint) {
             hint = document.createElement("div");
             hint.className = "martian-hint";
-            hint.setAttribute("role", "status");
+            hint.setAttribute("role", "alert");   // тревога: читается экранным диктором сразу
+            hint.innerHTML = '<span class="martian-hint__sign" aria-hidden="true">⚠</span><span class="martian-hint__text"></span>';
             document.body.appendChild(hint);
         }
         const lang = (document.documentElement.lang || "en").slice(0, 2);
-        hint.textContent = HINT[lang] || HINT.en;
+        hint.querySelector(".martian-hint__text").textContent = HINT[lang] || HINT.en;
         hint.dir = lang === "he" ? "rtl" : "ltr";
         hint.classList.add("visible");
     }
 
     // Место у края экрана подальше от уже сидящих марсиан
+    // Сверху и снизу марсиане вылезают чаще, чем сбоку, — там они сильнее мешают
+    const SPOT_WEIGHTS = {bottom: 0.38, top: 0.3, left: 0.16, right: 0.16};
+    function pickSpot() {
+        let roll = Math.random();
+        for (const spot of SPOTS) {
+            roll -= SPOT_WEIGHTS[spot.name];
+            if (roll <= 0) return spot;
+        }
+        return SPOTS[0];
+    }
+
     function freeSpot(el) {
-        let spot = pick(SPOTS);
+        let spot = pickSpot();
         for (let attempt = 0; attempt < 10; attempt++) {
-            spot = pick(SPOTS);
+            spot = pickSpot();
             placeMartian(el, spot);
             const x = parseFloat(el.style.left) || 0, y = parseFloat(el.style.top) || 0;
             const close = crowd.some(m => m.spot.name === spot.name &&
@@ -205,39 +217,79 @@
     // Мелких осколков больше нет: вместо них узнаваемые части (глаз, зубы, палец, ухо, куски шлема и скафандра)
     // летят «на зрителя», шлёпаются о стекло с кровавой кляксой и сползают вниз, оставляя кровавый след.
     let uid = 0;
+    // Каждая часть — SVG с объёмной заливкой (градиент), влажным бликом и кровью на месте отрыва
     const ORGANS = {
-        eye: (id) => `<defs><radialGradient id="${id}" cx=".42" cy=".38" r=".62"><stop offset="0" stop-color="#fffdf0"/>` +
-            `<stop offset=".7" stop-color="#efd9bd"/><stop offset="1" stop-color="#c0685a"/></radialGradient></defs>` +
-            `<path d="M52 58 Q70 74 90 97" stroke="#8e1414" stroke-width="8" fill="none" stroke-linecap="round"/>` +
-            `<circle cx="46" cy="44" r="31" fill="url(#${id})" stroke="#7a1010" stroke-width="1.5"/>` +
-            `<path d="M18 38 Q26 40 30 46 M20 54 Q28 52 32 56 M72 30 Q64 34 62 40 M74 52 Q66 50 62 54 M44 14 Q46 22 44 28" stroke="#c4161c" stroke-width="1.3" fill="none"/>` +
-            `<circle cx="48" cy="46" r="12" fill="#a8070d"/><circle cx="48" cy="46" r="5" fill="#050505"/>` +
-            `<circle cx="42" cy="38" r="4" fill="#fff" opacity=".85"/>`,
-        teeth: () => `<path d="M6 42 Q50 20 94 42 L90 62 Q50 46 10 62 Z" fill="#8c1f2a" stroke="#4d0a12" stroke-width="1.5"/>` +
-            [0, 1, 2, 3, 4, 5].map(i => `<path d="M${15 + i * 12} 47 l10 -1 l-1 24 q-4 7 -8 0 z" fill="#f3ead0" stroke="#a89a72" stroke-width="1"/>`).join('') +
-            `<path d="M30 60 q2 14 0 22 q-3 4 -5 0 q-1 -10 2 -20 z" fill="#9e0b0b"/>`,
-        finger: () => `<path d="M24 88 Q20 52 36 30 Q46 16 60 18 Q68 22 64 32 Q52 52 50 88 Z" fill="#8faf58" stroke="#34401f" stroke-width="2"/>` +
-            `<path d="M27 62 Q38 60 49 63 M33 40 Q44 38 54 43" stroke="#34401f" stroke-width="1.8" fill="none"/>` +
-            `<path d="M58 18 Q74 2 84 10 Q72 14 64 28 Z" fill="#2a2a20"/>` +
-            `<ellipse cx="37" cy="88" rx="15" ry="6" fill="#7a0000"/><ellipse cx="37" cy="87" rx="6" ry="2.6" fill="#e6dcc0"/>`,
-        ear: () => `<path d="M32 90 Q12 62 24 34 Q38 6 74 4 Q60 26 64 46 Q68 70 50 92 Z" fill="#b4bd8c" stroke="#3c4424" stroke-width="2"/>` +
-            `<path d="M36 78 Q26 58 34 38 Q44 22 62 14 Q50 34 54 50 Q56 64 46 80" fill="#8e9a64"/>` +
-            `<path d="M30 90 Q40 84 52 92 L48 98 Q40 94 32 97 Z" fill="#8a0000"/>`,
+        // Глаз с остатками сосудов и зрительного нерва
+        eye: (id) => `<defs><radialGradient id="${id}a" cx=".4" cy=".36" r=".64"><stop offset="0" stop-color="#fffef4"/>` +
+            `<stop offset=".62" stop-color="#ecd3b6"/><stop offset="1" stop-color="#b45a4c"/></radialGradient>` +
+            `<radialGradient id="${id}b" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#1a0a06"/><stop offset=".45" stop-color="#6e1209"/>` +
+            `<stop offset=".8" stop-color="#b21f12"/><stop offset="1" stop-color="#4a0a06"/></radialGradient>` +
+            `<linearGradient id="${id}c" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5c0d12"/><stop offset=".5" stop-color="#c2414a"/><stop offset="1" stop-color="#5c0d12"/></linearGradient></defs>` +
+            `<path d="M54 60 Q66 76 74 96" stroke="url(#${id}c)" stroke-width="10" fill="none" stroke-linecap="round"/>` +
+            `<path d="M58 62 Q76 70 88 92 M50 64 Q48 82 40 98 M60 60 Q80 62 96 74" stroke="#7a1420" stroke-width="2.4" fill="none" stroke-linecap="round"/>` +
+            `<path d="M56 63 Q70 66 82 84" stroke="#4b2a7a" stroke-width="1.6" fill="none" stroke-linecap="round"/>` +
+            `<ellipse cx="74" cy="96" rx="7" ry="3" fill="#7a0000"/>` +
+            `<circle cx="44" cy="42" r="32" fill="url(#${id}a)" stroke="#6e1010" stroke-width="1.2"/>` +
+            `<path d="M14 36 Q22 38 26 46 Q30 52 24 58 M16 54 Q24 52 30 58 M72 22 Q64 28 64 36 M76 50 Q66 48 62 54 M40 11 Q44 18 41 26 M24 20 Q30 26 34 24" stroke="#c4161c" stroke-width="1.2" fill="none"/>` +
+            `<circle cx="47" cy="45" r="13" fill="url(#${id}b)"/><circle cx="47" cy="45" r="5.5" fill="#030303"/>` +
+            `<path d="M39 40 Q47 34 55 40" stroke="rgba(255,255,255,.25)" stroke-width="1" fill="none"/>` +
+            `<ellipse cx="37" cy="32" rx="8" ry="5" fill="#fff" opacity=".8" transform="rotate(-25 37 32)"/>`,
+        // Печень: две доли, глянец, желчный пузырь и обрубки сосудов
+        liver: (id) => `<defs><radialGradient id="${id}" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="#b8443a"/>` +
+            `<stop offset=".55" stop-color="#7c1d1a"/><stop offset="1" stop-color="#3b0907"/></radialGradient></defs>` +
+            `<path d="M6 46 Q4 20 34 16 Q58 12 80 20 Q98 28 94 44 Q90 58 70 64 Q56 70 46 84 Q38 92 28 80 Q8 70 6 46 Z" fill="url(#${id})" stroke="#2a0504" stroke-width="1.5"/>` +
+            `<path d="M44 20 Q46 44 42 70" stroke="#3b0907" stroke-width="2" fill="none" opacity=".7"/>` +
+            `<ellipse cx="60" cy="62" rx="9" ry="6" fill="#5f7a2e" stroke="#2f3d14" stroke-width="1"/>` +
+            `<path d="M30 80 q-2 8 4 14 M36 82 q4 6 2 14" stroke="#8a1c28" stroke-width="4" fill="none" stroke-linecap="round"/>` +
+            `<circle cx="34" cy="94" r="3" fill="#4a0508"/>` +
+            `<path d="M20 30 Q40 22 66 26" stroke="rgba(255,255,255,.45)" stroke-width="3" fill="none" stroke-linecap="round"/>` +
+            `<ellipse cx="74" cy="34" rx="6" ry="3" fill="rgba(255,255,255,.3)" transform="rotate(20 74 34)"/>`,
+        // Оторванная трёхпалая кисть с когтями, костью и кровью на запястье
+        hand: (id) => `<defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c9d79a"/>` +
+            `<stop offset=".5" stop-color="#8aa356"/><stop offset="1" stop-color="#4b5f27"/></linearGradient></defs>` +
+            `<path d="M34 92 Q26 70 30 56 Q22 40 14 20 Q12 12 18 12 Q24 12 28 22 L38 42 Q40 22 46 8 Q50 2 55 6 Q58 12 54 26 L52 44 Q62 28 74 18 Q80 14 84 18 Q86 24 80 30 L64 54 Q66 74 58 92 Z" fill="url(#${id})" stroke="#2f3d14" stroke-width="1.8"/>` +
+            `<path d="M18 12 Q12 2 6 4 Q12 8 16 16 Z M50 4 Q50 -6 58 -6 Q56 2 55 8 Z M84 18 Q92 10 96 14 Q90 18 84 24 Z" fill="#2a2a20"/>` +
+            `<path d="M26 32 Q32 30 34 36 M46 22 Q52 22 52 28 M70 30 Q74 34 70 38 M38 60 Q46 64 56 60" stroke="#3c4a1d" stroke-width="1.6" fill="none"/>` +
+            `<ellipse cx="46" cy="92" rx="14" ry="6" fill="#7a0000"/><ellipse cx="46" cy="91" rx="8" ry="3.2" fill="#c23b3b"/>` +
+            `<ellipse cx="46" cy="90.6" rx="3.6" ry="1.8" fill="#efe6cf"/>` +
+            `<path d="M40 96 q-2 6 1 10 M52 96 q3 5 1 9" stroke="#8a0a0a" stroke-width="3" fill="none" stroke-linecap="round"/>`,
+        // Отдельный палец: суставы, ноготь-коготь, обрубок с костью
+        finger: (id) => `<defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5e7432"/>` +
+            `<stop offset=".45" stop-color="#b9c98a"/><stop offset="1" stop-color="#5e7432"/></linearGradient></defs>` +
+            `<path d="M36 90 Q30 60 36 36 Q40 18 52 12 Q62 10 64 22 Q66 46 60 90 Z" fill="url(#${id})" stroke="#34401f" stroke-width="1.8"/>` +
+            `<path d="M38 62 Q48 58 60 62 M40 40 Q50 36 62 40" stroke="#3c4a1d" stroke-width="1.6" fill="none"/>` +
+            `<path d="M50 12 Q56 -2 66 2 Q62 8 62 18 Z" fill="#2a2a20"/>` +
+            `<ellipse cx="48" cy="90" rx="13" ry="5" fill="#7a0000"/><ellipse cx="48" cy="89.4" rx="5" ry="2.2" fill="#efe6cf"/>` +
+            `<path d="M44 94 q-1 6 2 9" stroke="#8a0a0a" stroke-width="3" fill="none" stroke-linecap="round"/>`,
+        // Один зуб с корнями и кровью
+        tooth: (id) => `<defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffdf2"/>` +
+            `<stop offset=".6" stop-color="#e9dcb7"/><stop offset="1" stop-color="#b29c6a"/></linearGradient></defs>` +
+            `<path d="M24 30 Q22 10 40 10 Q50 14 60 10 Q78 10 76 30 Q74 48 66 56 L62 86 Q60 94 56 86 L52 62 Q50 58 48 62 L44 88 Q40 96 37 86 L34 56 Q26 48 24 30 Z" fill="url(#${id})" stroke="#8c7a4c" stroke-width="1.5"/>` +
+            `<path d="M34 56 Q50 62 66 56 L64 66 Q50 70 36 66 Z" fill="#9e1b2a" opacity=".85"/>` +
+            `<path d="M40 86 q-2 8 2 12 M60 86 q3 6 0 10" stroke="#8a0a0a" stroke-width="3" fill="none" stroke-linecap="round"/>` +
+            `<path d="M32 22 Q40 16 48 20" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".9"/>`,
+        // Ухо с хрящевым завитком и кровавым срезом
+        ear: (id) => `<defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d3dbaa"/>` +
+            `<stop offset=".55" stop-color="#a3ad74"/><stop offset="1" stop-color="#5e6a3a"/></linearGradient></defs>` +
+            `<path d="M32 90 Q12 62 24 34 Q38 6 74 4 Q60 26 64 46 Q68 70 50 92 Z" fill="url(#${id})" stroke="#3c4424" stroke-width="2"/>` +
+            `<path d="M36 78 Q26 58 34 38 Q44 22 62 14 Q50 34 54 50 Q56 64 46 80" fill="#7f8a52" opacity=".85"/>` +
+            `<path d="M42 70 Q36 56 42 44" stroke="#5a6534" stroke-width="2" fill="none"/>` +
+            `<path d="M28 90 Q40 82 54 92 L50 99 Q40 94 30 98 Z" fill="#8a0000"/>` +
+            `<path d="M30 38 Q40 18 64 10" stroke="rgba(255,255,255,.5)" stroke-width="2" fill="none" stroke-linecap="round"/>`,
+        // Кусок мозга
+        brain: (id) => `<defs><radialGradient id="${id}" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="#f6c7cc"/>` +
+            `<stop offset=".6" stop-color="#d98a96"/><stop offset="1" stop-color="#8e3a55"/></radialGradient></defs>` +
+            `<path d="M10 54 Q6 24 32 18 Q50 6 70 18 Q94 24 90 54 Q86 80 54 82 Q20 84 10 54 Z" fill="url(#${id})" stroke="#7d2f45" stroke-width="2"/>` +
+            `<path d="M20 40 Q30 30 38 42 Q46 52 54 40 Q62 28 74 40 M18 60 Q28 52 36 62 Q46 70 56 60 Q66 50 80 58 M50 20 Q48 40 52 76" stroke="#8e3a55" stroke-width="2.4" fill="none" stroke-linecap="round"/>` +
+            `<path d="M30 78 q4 8 2 14" stroke="#9e0b0b" stroke-width="4" fill="none" stroke-linecap="round"/>` +
+            `<path d="M22 32 Q36 22 54 24" stroke="rgba(255,255,255,.5)" stroke-width="2.4" fill="none" stroke-linecap="round"/>`,
+        // Кусок шлема
         helmet: () => `<path d="M8 72 Q18 18 72 6 L90 26 L62 40 L78 58 L42 66 L30 94 Z" fill="rgba(200,240,255,.38)" stroke="rgba(235,250,255,.95)" stroke-width="2"/>` +
             `<path d="M18 60 Q26 30 60 16" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"/>` +
             `<path d="M44 34 L52 48 L46 58 M60 30 L66 40" stroke="rgba(255,255,255,.9)" stroke-width="1.2" fill="none"/>` +
-            `<path d="M32 88 q4 -8 10 -6" stroke="#9e0b0b" stroke-width="4" fill="none" stroke-linecap="round"/>`,
-        suit: (id) => `<defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b3bdcb"/>` +
-            `<stop offset=".5" stop-color="#55606f"/><stop offset="1" stop-color="#232a35"/></linearGradient></defs>` +
-            `<path d="M10 20 L80 10 L92 68 L62 62 L54 90 L32 74 L14 86 Z" fill="url(#${id})" stroke="#10141b" stroke-width="2"/>` +
-            `<circle cx="22" cy="28" r="2.6" fill="#d8dee8"/><circle cx="70" cy="20" r="2.6" fill="#d8dee8"/><circle cx="80" cy="58" r="2.6" fill="#d8dee8"/>` +
-            `<circle cx="46" cy="44" r="7" fill="#ff3b3b" stroke="#5c0000" stroke-width="2"/>` +
-            `<path d="M54 90 L48 80 L40 84 L32 74" stroke="#7a0000" stroke-width="3" fill="none"/>`,
-        brain: () => `<path d="M10 54 Q6 24 32 18 Q50 6 70 18 Q94 24 90 54 Q86 80 54 82 Q20 84 10 54 Z" fill="#e8a6b0" stroke="#8e3a55" stroke-width="2"/>` +
-            `<path d="M20 40 Q30 30 38 42 Q46 52 54 40 Q62 28 74 40 M18 60 Q28 52 36 62 Q46 70 56 60 Q66 50 80 58 M50 20 Q48 40 52 76" stroke="#8e3a55" stroke-width="2.4" fill="none" stroke-linecap="round"/>` +
-            `<path d="M30 78 q4 8 2 14" stroke="#9e0b0b" stroke-width="4" fill="none" stroke-linecap="round"/>`
+            `<path d="M32 88 q4 -8 10 -6" stroke="#9e0b0b" stroke-width="4" fill="none" stroke-linecap="round"/>`
     };
-    const ORGAN_SIZE = {eye: [80, 110], teeth: [96, 128], finger: [80, 110], ear: [84, 114], helmet: [110, 150], suit: [100, 136], brain: [96, 130]};
+    const ORGAN_SIZE = {eye: [84, 116], liver: [110, 150], hand: [100, 140], finger: [70, 96], tooth: [62, 84], ear: [84, 114], brain: [96, 130], helmet: [110, 150]};
 
     // Вспышка в момент взрыва
     function explode(x, y) {
@@ -514,12 +566,24 @@
         martian.el.classList.add("quiet");
         clearInterval(martian.fidget);
         let peeking = false;
+        // Появился — сразу палит, не дожидаясь музыки: марсиане должны мешать
+        setTimeout(() => { if (martian.state === "quiet" && canShow()) volley(martian); }, rand(500, 1200));
         martian.fidget = setInterval(() => {
             if (martian.state !== "quiet") return;
             peeking = !peeking;
             martian.el.style.transform = peeking ? martian.spot.peek : martian.spot.shown;
+            if (!peeking && canShow() && Math.random() < 0.55) setTimeout(() => volley(martian), 600);
         }, rand(3000, 7000));
         updateHint();
+    }
+
+    // Один-два выстрела подряд
+    function volley(martian) {
+        if (!martian.el.isConnected) return;
+        martian.el.classList.add("shooting");
+        fireBlaster(martian);
+        if (Math.random() < 0.55) setTimeout(() => martian.el.isConnected && fireBlaster(martian), 380);
+        setTimeout(() => martian.el.classList.remove("shooting"), 800);
     }
 
     function doom(martian) {

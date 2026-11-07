@@ -5,6 +5,7 @@
 // Original image files are used; captions distinguish studies and illustrations.
 // =====================================================================
 import { archiveImages } from './mediaCatalog.js';
+import { archiveDescriptions } from './archiveDescriptions.js';
 import { t,localText,onLanguageChange } from './i18n.js';
 
 const PAGE_SIZE = 8;
@@ -37,7 +38,10 @@ export function initGalleryLightbox() {
     failure.hidden = true; imageEl.hidden = false;
     imageEl.src = current.file; imageEl.alt = localText(current.titles ?? current.title);
     titleEl.textContent = localText(current.titles ?? current.title);
-    document.getElementById("photoModalDescription").textContent = current.descriptions ? localText(current.descriptions) : "";
+    // Подпись к работе: своя из каталога или шуточная из archiveDescriptions.js
+    const extra = archiveDescriptions[current.id];
+    const description = current.descriptions ?? (extra && {ru: extra[0], en: extra[1], he: extra[2]});
+    document.getElementById("photoModalDescription").textContent = description ? localText(description) : "";
     caption.textContent = `${t(current.label)} · ${currentIndex + 1} / ${filtered.length}`;
   }
   // END renderCurrent
@@ -63,7 +67,11 @@ export function initGalleryLightbox() {
       const frame = document.createElement('div'); frame.className = 'gallery-image';
       const picture = document.createElement('img');
       picture.src = image.file; picture.alt = localText(image.titles ?? image.title); picture.width = image.width; picture.height = image.height;
-      picture.loading = 'lazy'; picture.decoding = 'async'; frame.append(picture);
+      picture.loading = 'lazy'; picture.decoding = 'async';
+      // Заметная подсказка, что работу можно открыть целиком
+      const badge = document.createElement('span'); badge.className = 'gallery-open'; badge.setAttribute('aria-hidden', 'true');
+      badge.textContent = t('Рассмотреть ⤢');
+      frame.append(picture, badge);
       const heading = document.createElement('h3'); heading.className = 'gallery-item__title'; heading.textContent = localText(image.titles ?? image.title);
       const meta = document.createElement('p'); meta.className = 'gallery-item__exif'; meta.textContent = t(image.label);
       button.append(frame, heading, meta); button.addEventListener('click', () => open(index, button)); fragment.append(button);
