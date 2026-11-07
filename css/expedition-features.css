@@ -1,0 +1,77 @@
+/* ====================================================================
+ * FILE: css/expedition-features.css
+ * PURPOSE: languages, personnel, vessel selection, categorized video and signals.
+ * SECTIONS: navigation/RTL; archive cards; fleet; media modal; motion/responsive.
+ * ==================================================================== */
+
+/* BEGIN NAVIGATION AND LANGUAGE */
+.language-control{display:flex;align-items:center;gap:8px;font-size:.72rem;color:var(--muted)}
+.language-control select{min-height:40px;max-width:140px;border:1px solid var(--line);background:var(--navy);color:var(--ink);padding:7px 10px;border-radius:0}
+.language-control option{background:var(--navy);color:var(--ink)}
+html[dir=rtl] body{font-family:Arial,system-ui,sans-serif;line-height:1.9}
+html[dir=rtl] h1,html[dir=rtl] h2,html[dir=rtl] .card-body-space h3,html[dir=rtl] .workshop-card h3{font-family:Arial,system-ui,sans-serif;letter-spacing:0;line-height:1.25}
+html[dir=rtl] .eyebrow,html[dir=rtl] .brand-name,html[dir=rtl] .tag,html[dir=rtl] .filter-btn{letter-spacing:0}
+html[dir=rtl] .contact-note{border-left:0;border-right:1px solid var(--copper);padding-left:0;padding-right:18px}
+html[dir=rtl] .accordion-body{padding-inline:0 28px}
+html[dir=rtl] .accordion-button::after{margin-left:0;margin-right:auto}
+html[dir=rtl] .modal-header .btn-close{margin-left:0;margin-right:auto}
+.modal-header{gap:20px;align-items:flex-start}
+.modal-header .modal-title{min-width:0;overflow-wrap:anywhere;line-height:1.45}
+.modal-header .btn-close{flex:0 0 auto;margin-block:0;margin-inline-start:auto;margin-inline-end:0}
+.modal-footer{flex-wrap:wrap}
+input[type=email],.sound-counter,.media-time{direction:ltr;unicode-bidi:isolate}
+/* END NAVIGATION AND LANGUAGE */
+
+/* BEGIN PERSONNEL AND ARCHIVE */
+.curator-grid{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.guide-grid{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:34px}
+.guide-grid .curator-photo{aspect-ratio:4/3}
+.personnel-intro{margin-top:75px;padding-top:40px;border-top:1px solid var(--line)}
+.photo-description{padding:18px 24px;margin:0;line-height:1.7}
+.filter-btn{min-height:42px;line-height:1.5;white-space:normal}
+.gallery-item__exif{font-size:.67rem}.gallery-item__title{line-height:1.65}
+.curator-card button{min-height:36px;font-size:.7rem}
+.curator-modal-content p{font-size:1rem;line-height:1.85}
+/* END PERSONNEL AND ARCHIVE */
+
+/* BEGIN FLEET */
+.fleet-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}
+.fleet-card{border:1px solid var(--line);background:var(--navy);min-width:0;display:flex;flex-direction:column;transition:border-color .3s,box-shadow .3s}
+.fleet-card.is-selected{border-color:var(--cyan);box-shadow:0 0 28px rgba(167,223,237,.1)}
+.fleet-card>img{width:100%;height:250px;object-fit:contain;background:#10151c}
+.fleet-card .card-body-space{display:flex;flex:1;flex-direction:column}
+.fleet-card .card-body-space>p:not(.eyebrow):not(.fleet-price){flex:1}
+.fleet-card .button-space{width:100%;margin-top:15px}
+.fleet-card .fleet-price{font:.78rem/1.7 var(--font-mono);color:var(--copper);margin-bottom:0}
+.fleet-notice,.fleet-selection{font-size:.84rem;line-height:1.8;margin-block:24px 0;max-width:1000px}
+.fleet-selection{color:var(--cyan);min-height:3.5em}
+.fleet-modal-content{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.fleet-modal-content>img{width:100%;height:360px;object-fit:contain;background:#10151c}
+.fleet-modal-content dl{margin:0}.fleet-modal-content dt{color:var(--copper);font-size:.78rem;margin-top:18px}
+.fleet-modal-content dd{font-size:.92rem;margin:6px 0 0;line-height:1.8}
+.course-outline{padding-inline-start:22px;color:var(--muted);font-size:.9rem;line-height:1.8}
+/* END FLEET */
+
+/* BEGIN CATEGORIZED VIDEO */
+.video-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.video-card{position:relative;text-align:start;background:var(--navy);color:var(--ink);padding:0 0 20px;border:1px solid var(--line);min-width:0;overflow:hidden;cursor:pointer;box-shadow:0 9px 22px rgba(0,0,0,.2);transition:border-color .3s,transform .3s}
+.video-card:hover{border-color:var(--cyan);transform:translateY(-3px)}
+.video-card img{width:100%;height:170px;object-fit:cover;opacity:.8}
+.video-card .eyebrow{display:block;font-size:.58rem;letter-spacing:.06em;margin:18px 17px 8px}
+.video-card h3{font-size:.91rem;margin:0 17px;line-height:1.6}
+.video-play{position:absolute;top:112px;inset-inline-end:14px;border:1px solid rgba(238,240,233,.6);width:40px;height:40px;display:grid;place-items:center;background:rgba(8,13,20,.75);color:var(--ink)}
+.video-modal video{width:100%;max-height:65vh;object-fit:contain;background:#000}
+.video-modal .modal-dialog{max-width:min(1000px,calc(100% - 24px))}
+.video-error{padding:14px;border:1px solid var(--copper);margin-top:15px;color:var(--ink)}
+.dispatch-signal{min-height:3.6em;margin-top:30px;font:.74rem/1.8 var(--font-mono);color:var(--cyan);max-width:520px}
+.dispatch-signal::before{content:'●';display:inline-block;margin-inline-end:10px;color:var(--copper);font-size:.6rem}
+.hero-orbit::before{border-top-color:rgba(167,223,237,.3);animation:centauri-orbit 60s linear infinite}
+@keyframes centauri-orbit{to{transform:rotate(360deg)}}
+/* END CATEGORIZED VIDEO */
+
+/* BEGIN RESPONSIVE AND REDUCED MOTION */
+@media(min-width:992px) and (max-width:1299px){.nav-list{gap:12px;font-size:.65rem}.navbar-space .offcanvas-body{gap:14px}.nav-tools{gap:10px}.type-controls{display:none}.brand{min-width:175px}.brand-name{font-size:.63rem}.nav-tools .button-space{padding-inline:10px}.language-control{font-size:.65rem}.language-control>span{display:none}}
+@media(max-width:991px){.language-control select{max-width:none;min-height:44px}.nav-tools .language-control{width:100%}.fleet-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.video-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.guide-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:767px){.curator-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.guide-grid .curator-card:last-child{grid-column:1/-1;max-width:350px}.fleet-grid{grid-template-columns:1fr}.fleet-card>img{height:260px}.fleet-modal-content{grid-template-columns:1fr}.fleet-modal-content>img{height:230px}.video-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px}.video-card img{height:145px}.video-play{top:92px;width:34px;height:34px}.video-card h3{font-size:.78rem;margin-inline:13px}.video-card .eyebrow{font-size:.58rem;margin-inline:13px}.filter-btn{font-size:.76rem;padding:10px 13px}.gallery-item__title{font-size:.8rem}.gallery-item__exif{font-size:.64rem}.curator-card button{font-size:.64rem;line-height:1.8}.modal-body{padding:20px}.personnel-intro{margin-top:50px}.video-modal video{max-height:58vh}}
+@media(prefers-reduced-motion:reduce){.hero-orbit::before{animation:none}.video-card:hover{transform:none}.dispatch-signal{min-height:3.6em}}
+/* END RESPONSIVE AND REDUCED MOTION */
