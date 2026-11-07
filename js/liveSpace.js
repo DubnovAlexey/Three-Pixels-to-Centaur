@@ -1,8 +1,10 @@
 // =====================================================================
 // FILE: js/liveSpace.js
-// PURPOSE: small "living" details for «Три пикселя до Центавра»: a starfield behind the page,
+// PURPOSE: small "living" details for «Три пикселя до Центавра»: a starfield with meteors and a big comet,
+// slow nebulae, drifting planets and a passing spaceship behind the page, the hero title assembling letter by letter,
 // letter scrambles on short mono captions, a light 3D tilt of cards and a ticking hero telemetry line.
-// SECTIONS: 1 shared helpers; 2 starfield canvas; 3 letter scramble; 4 card tilt; 5 telemetry; 6 init.
+// SECTIONS: 1 shared helpers; 2 starfield canvas; 3 letter scramble; 4 card tilt; 5 telemetry; 6 init;
+// 7 hero title assembly; 8 space decor (nebulae, planets, ships — CSS animations, almost free for the CPU).
 // Everything is decorative (aria-hidden or text that ends exactly as it started), stops while the tab
 // is hidden and stays still when the visitor asks the system to reduce motion.
 // =====================================================================
@@ -24,7 +26,8 @@ function initStarfield() {
   document.body.prepend(canvas);
   const context = canvas.getContext('2d');
   if (!context) return;
-  let width = 0, height = 0, ratio = 1, stars = [], meteor = null, pixels = null, frame = 0, last = 0;
+  let width = 0, height = 0, ratio = 1, stars = [], meteor = null, pixels = null, comet = null, frame = 0, last = 0;
+  let nextComet = performance.now() + random(12000, 20000);
   let nextMeteor = performance.now() + random(3000, 7000), nextPixels = performance.now() + random(9000, 15000);
 
   function resize() {
@@ -62,6 +65,27 @@ function initStarfield() {
         context.beginPath(); context.moveTo(x, y); context.lineTo(x - meteor.dx * .18, y - meteor.dy * .18); context.stroke();
       }
     }
+    // Big comet: a bright head with a long, slowly fading tail, crossing the upper sky in several seconds
+    if (comet) {
+      const age = (now - comet.start) / comet.life;
+      if (age >= 1) comet = null;
+      else {
+        const x = comet.x + comet.dx * age, y = comet.y + comet.dy * age + Math.sin(age * Math.PI) * comet.bend;
+        const fade = Math.sin(age * Math.PI);
+        const tailX = x - comet.dx * .22, tailY = y - comet.dy * .22 - comet.bend * .3;
+        const tail = context.createLinearGradient(x, y, tailX, tailY);
+        tail.addColorStop(0, `rgba(230,248,255,${(.75 * fade).toFixed(3)})`);
+        tail.addColorStop(.35, `rgba(167,223,237,${(.35 * fade).toFixed(3)})`);
+        tail.addColorStop(1, 'rgba(167,223,237,0)');
+        context.strokeStyle = tail; context.lineWidth = 3; context.lineCap = 'round';
+        context.beginPath(); context.moveTo(x, y); context.lineTo(tailX, tailY); context.stroke();
+        const head = context.createRadialGradient(x, y, 0, x, y, 9);
+        head.addColorStop(0, `rgba(255,255,255,${fade.toFixed(3)})`);
+        head.addColorStop(1, 'rgba(167,223,237,0)');
+        context.fillStyle = head;
+        context.beginPath(); context.arc(x, y, 9, 0, Math.PI * 2); context.fill();
+      }
+    }
     if (pixels) {
       const age = (now - pixels.start) / pixels.life;
       if (age >= 1) pixels = null;
@@ -87,7 +111,13 @@ function initStarfield() {
         const fromLeft = Math.random() < .5;
         meteor = { start: now, life: random(700, 1200), x: fromLeft ? random(0, width * .5) : random(width * .5, width),
           y: random(0, height * .45), dx: (fromLeft ? 1 : -1) * random(260, 420), dy: random(120, 220) };
-        nextMeteor = now + random(6000, 13000);
+        nextMeteor = now + random(3000, 8000);
+      }
+      if (!comet && now > nextComet) {
+        const fromLeft = Math.random() < .5;
+        comet = { start: now, life: random(5000, 7500), x: fromLeft ? -40 : width + 40, y: random(height * .05, height * .35),
+          dx: (fromLeft ? 1 : -1) * (width + 80), dy: random(40, 160), bend: random(-40, 40) };
+        nextComet = now + random(20000, 35000);
       }
       if (!pixels && now > nextPixels) {
         const rtl = document.documentElement.dir === 'rtl';
@@ -237,9 +267,126 @@ function initTelemetry() {
 
 // BEGIN SECTION 6 — init
 export function initLiveSpace() {
+  initSpaceDecor();   // nebulae first, so the starfield canvas drawn next sits in front of them
   initStarfield();
+  initSpaceShips();
   initScramble();
   initTilt();
   initTelemetry();
+  initHeroTitle();
 }
 // END SECTION 6
+
+// BEGIN SECTION 7 — hero title assembly
+// The big title letters stand up one after another, slowly: each turns in from its edge and shuffles through a few
+// random glyphs before settling. The original text nodes stay in a visually hidden span, so screen readers read the
+// normal title and the language switcher keeps translating them; the visible letters are rebuilt from them.
+function initHeroTitle() {
+  const title = document.querySelector('.hero-title');
+  if (!title) return;
+  const pairs = [];
+  const walker = document.createTreeWalker(title, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  for (let node; (node = walker.nextNode());) if (node.data.trim()) nodes.push(node);
+  for (const node of nodes) {
+    const hidden = document.createElement('span');
+    hidden.className = 'sr-text';
+    const letters = document.createElement('span');
+    letters.className = 'hero-letters';
+    letters.setAttribute('aria-hidden', 'true');
+    node.parentNode.insertBefore(letters, node);
+    node.parentNode.insertBefore(hidden, node);
+    hidden.appendChild(node); // the same text node moves — the translator still updates it
+    pairs.push({node, letters});
+  }
+  let timers = [];
+  const play = () => {
+    timers.forEach(clearTimeout);
+    timers = [];
+    const set = glyphs[getLanguage()] || glyphs.en;
+    let index = 0;
+    for (const {node, letters} of pairs) {
+      letters.replaceChildren();
+      // Letters are grouped into words, so a line can break only between words, never inside one
+      for (const token of node.data.split(/(\s+)/)) {
+        if (!token) continue;
+        if (/^\s+$/.test(token)) { letters.append(token); continue; }
+        const word = document.createElement('span');
+        word.className = 'hero-word';
+        letters.appendChild(word);
+        for (const char of Array.from(token)) {
+        const letter = document.createElement('span');
+        letter.className = 'hero-letter';
+        letter.textContent = char;
+        word.appendChild(letter);
+        if (motion.matches) continue;
+        letter.classList.add('pending');
+        const begin = 300 + index * 110; // slow, one letter after another
+        index += 1;
+        timers.push(setTimeout(() => {
+          letter.classList.remove('pending');
+          for (let k = 0; k < 4; k++) {
+            timers.push(setTimeout(() => {
+              letter.textContent = k < 3 ? set[Math.floor(Math.random() * set.length)] : char;
+            }, k * 150));
+          }
+        }, begin));
+        }
+      }
+    }
+  };
+  onLanguageChange(play);
+  play();
+  // Now and then, while the title is on screen, it assembles itself again
+  let visible = true;
+  new IntersectionObserver(entries => { visible = entries[0].isIntersecting; }).observe(title);
+  setInterval(() => { if (visible && !document.hidden && !motion.matches) play(); }, 45000);
+}
+// END SECTION 7
+
+// BEGIN SECTION 8 — space decor
+// Two nebulae and two planets are plain elements with long CSS animations (the browser moves them on the GPU).
+function initSpaceDecor() {
+  const layer = document.createElement('div');
+  layer.className = 'live-decor';
+  layer.setAttribute('aria-hidden', 'true');
+  layer.innerHTML = // постоянная разметка, без данных пользователя
+    '<div class="live-nebula live-nebula--violet"></div><div class="live-nebula live-nebula--teal"></div>' +
+    '<div class="live-planet live-planet--ringed"><span></span></div><div class="live-planet live-planet--red"></div>';
+  document.body.prepend(layer);
+}
+
+// A small spaceship crosses the sky slowly now and then, with a faint engine glow
+const SHIP_SVG = '<svg viewBox="0 0 120 40" aria-hidden="true">' +
+  '<path d="M6 20 Q30 6 78 10 Q104 12 116 20 Q104 28 78 30 Q30 34 6 20 Z" fill="#c9d3df"/>' +
+  '<path d="M38 10 L52 0 L64 10 Z M38 30 L52 40 L64 30 Z" fill="#8792a2"/>' +
+  '<path d="M80 14 Q96 16 102 20 Q96 24 80 26 Z" fill="#a7dfed"/>' +
+  '<path d="M6 20 Q30 6 78 10 Q104 12 116 20" stroke="rgba(255,255,255,.7)" stroke-width="1.2" fill="none"/></svg>';
+
+function initSpaceShips() {
+  const launch = () => {
+    if (!document.hidden && !motion.matches) {
+      const ship = document.createElement('div');
+      ship.className = 'live-ship';
+      ship.setAttribute('aria-hidden', 'true');
+      ship.innerHTML = SHIP_SVG; // постоянная разметка из этого файла
+      const leftToRight = Math.random() < .5;
+      const size = random(46, 78);
+      ship.style.width = `${size}px`;
+      const y = random(innerHeight * .12, innerHeight * .7);
+      const drift = random(-60, 60);
+      const flip = leftToRight ? '' : ' scaleX(-1)';
+      const from = leftToRight ? -size * 3 : innerWidth + size * 3;
+      const to = leftToRight ? innerWidth + size * 3 : -size * 3;
+      document.body.appendChild(ship);
+      const flight = ship.animate([
+        {transform: `translate3d(${from}px, ${y}px, 0)${flip}`},
+        {transform: `translate3d(${to}px, ${y + drift}px, 0)${flip}`}
+      ], {duration: random(32000, 48000), easing: 'linear'});
+      flight.onfinish = () => ship.remove();
+    }
+    setTimeout(launch, random(25000, 45000));
+  };
+  setTimeout(launch, random(6000, 12000));
+}
+// END SECTION 8

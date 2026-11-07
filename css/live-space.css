@@ -72,3 +72,68 @@
 @media(max-width:575px){.crew-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.crew-dossier{grid-template-columns:96px 1fr;gap:14px}}
 @media (prefers-reduced-motion: reduce){.crew-card:hover,.crew-card[aria-pressed="true"]{transform:none}}
 /* END SECTION 6 */
+
+
+/* BEGIN SECTION 7 — hero title assembly (js/liveSpace.js) */
+.sr-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.hero-word { display: inline-block; white-space: nowrap; }
+.hero-letter { display: inline-block; transition: transform .9s cubic-bezier(.2, .8, .25, 1.15), opacity .6s ease; }
+.hero-letter.pending { transform: perspective(500px) rotateY(85deg) translateY(-.08em); opacity: 0; }
+/* END SECTION 7 */
+
+/* BEGIN SECTION 8 — space decor: nebulae, planets, ships (behind the page, GPU animations only) */
+.live-decor { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+
+.live-nebula { position: absolute; width: 70vmax; height: 70vmax; border-radius: 50%; opacity: .5; will-change: transform; }
+.live-nebula--violet {
+  left: -20vmax; top: -15vmax;
+  background: radial-gradient(closest-side, rgba(120, 80, 200, .35), rgba(80, 40, 140, .15) 55%, transparent);
+  animation: nebula-drift-a 110s ease-in-out infinite alternate;
+}
+.live-nebula--teal {
+  right: -25vmax; bottom: -20vmax;
+  background: radial-gradient(closest-side, rgba(40, 150, 170, .3), rgba(20, 90, 120, .14) 55%, transparent);
+  animation: nebula-drift-b 140s ease-in-out infinite alternate;
+}
+
+@keyframes nebula-drift-a { from { transform: translate3d(0, 0, 0) rotate(0deg) scale(1); } to { transform: translate3d(14vw, 10vh, 0) rotate(25deg) scale(1.15); } }
+@keyframes nebula-drift-b { from { transform: translate3d(0, 0, 0) rotate(0deg) scale(1.1); } to { transform: translate3d(-12vw, -14vh, 0) rotate(-20deg) scale(.95); } }
+
+.live-planet { position: absolute; border-radius: 50%; will-change: transform; }
+.live-planet--ringed {
+  width: 86px; height: 86px; top: 14vh; right: 8vw;
+  background: radial-gradient(circle at 34% 30%, #f4e3c2 0, #c9a476 38%, #6b4a2c 75%, #2b1d12 100%);
+  box-shadow: inset -12px -10px 20px rgba(0, 0, 0, .55);
+  opacity: .55;
+  animation: planet-drift-a 160s ease-in-out infinite alternate;
+}
+.live-planet--ringed span {
+  position: absolute; left: -34%; top: 38%; width: 168%; height: 24%;
+  border-radius: 50%; border: 3px solid rgba(230, 210, 170, .55);
+  transform: rotate(-16deg);
+}
+.live-planet--red {
+  width: 40px; height: 40px; bottom: 18vh; left: 6vw;
+  background: radial-gradient(circle at 35% 32%, #ffb59a 0, #d0573a 45%, #5c1a10 100%);
+  box-shadow: inset -6px -6px 12px rgba(0, 0, 0, .5);
+  opacity: .6;
+  animation: planet-drift-b 120s ease-in-out infinite alternate;
+}
+
+@keyframes planet-drift-a { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-30vw, 18vh, 0); } }
+@keyframes planet-drift-b { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(40vw, -20vh, 0); } }
+
+.live-ship { position: fixed; left: 0; top: 0; z-index: -1; pointer-events: none; opacity: .7; will-change: transform; }
+.live-ship svg { width: 100%; height: auto; display: block; overflow: visible; }
+/* engine glow behind the ship */
+.live-ship::before {
+  content: ""; position: absolute; right: 96%; top: 38%; width: 160%; height: 24%;
+  border-radius: 50%;
+  background: linear-gradient(270deg, rgba(167, 223, 237, .7), rgba(167, 223, 237, 0));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-nebula, .live-planet { animation: none; }
+  .live-ship { display: none; }
+}
+/* END SECTION 8 */
