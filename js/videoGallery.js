@@ -8,7 +8,7 @@ import { videoEntries } from './videoCatalog.js';
 import { t,localText,onLanguageChange } from './i18n.js';
 export const videoCategories=['worlds','ships','characters','workshops'];
 const names={worlds:'Миры и маршруты',ships:'Корабли и рейсы',characters:'Бортовые происшествия',workshops:'Визуальная лаборатория'};
-const posters={worlds:'assets/images/galactic-cliff.png',ships:'assets/images/frontier-freighter.jpeg',characters:'assets/images/first-lesson.jpeg',workshops:'assets/images/celestial-atlas.png'};
+const posters={worlds:'assets/images/galactic-cliff.webp',ships:'assets/images/frontier-freighter.webp',characters:'assets/images/first-lesson.webp',workshops:'assets/images/celestial-atlas.webp'};
 
 // BEGIN initVideoGallery
 export function initVideoGallery() {

@@ -4,7 +4,7 @@ export const personnel = [
   {
     "id": "iris",
     "kind": "tutor",
-    "image": "assets/images/chromatic-pilot.png",
+    "image": "assets/images/chromatic-pilot.webp",
     "name": {
       "ru": "Ирис Р-7",
       "en": "Iris R-7",
@@ -24,7 +24,7 @@ export const personnel = [
   {
     "id": "grh",
     "kind": "tutor",
-    "image": "assets/images/lightkeeper-portrait.png",
+    "image": "assets/images/lightkeeper-portrait.webp",
     "name": {
       "ru": "Мастер Грх",
       "en": "Master Grh",
@@ -44,7 +44,7 @@ export const personnel = [
   {
     "id": "chlorophyll",
     "kind": "tutor",
-    "image": "assets/images/solar-botanist.png",
+    "image": "assets/images/solar-botanist.webp",
     "name": {
       "ru": "Доктор Хлорофилл",
       "en": "Dr. Chlorophyll",
@@ -64,7 +64,7 @@ export const personnel = [
   {
     "id": "echo",
     "kind": "tutor",
-    "image": "assets/images/eye-collage-study.png",
+    "image": "assets/images/eye-collage-study.webp",
     "name": {
       "ru": "Эхо-9",
       "en": "Echo-9",
@@ -84,7 +84,7 @@ export const personnel = [
   {
     "id": "mira",
     "kind": "tutor",
-    "image": "assets/images/waterline-portrait.png",
+    "image": "assets/images/waterline-portrait.webp",
     "name": {
       "ru": "Мира Ноль",
       "en": "Mira Zero",
@@ -104,7 +104,7 @@ export const personnel = [
   {
     "id": "captain",
     "kind": "guide",
-    "image": "assets/images/pirate-of-the-frontier.jpeg",
+    "image": "assets/images/pirate-of-the-frontier.webp",
     "name": {
       "ru": "Капитан Недосвет",
       "en": "Captain Underexposure",
@@ -124,7 +124,7 @@ export const personnel = [
   {
     "id": "ada",
     "kind": "guide",
-    "image": "assets/images/android-city-guide.jpeg",
+    "image": "assets/images/android-city-guide.webp",
     "name": {
       "ru": "Ада Фаза",
       "en": "Ada Phase",
@@ -144,7 +144,7 @@ export const personnel = [
   {
     "id": "nori",
     "kind": "guide",
-    "image": "assets/images/little-nova.jpeg",
+    "image": "assets/images/little-nova.webp",
     "name": {
       "ru": "Нори-Люмен",
       "en": "Nori Lumen",

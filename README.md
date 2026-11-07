@@ -18,7 +18,7 @@
 
 ### What works
 
-- **Archive:** 158 images (30 photographs, 93 illustrations, 35 character portraits) with progressive loading, filters and a keyboard-friendly full-size view. Captions do not claim documentary or NASA origin.
+- **Archive:** 158 images (30 photographs, 93 illustrations, 35 character portraits) with progressive loading, filters and a keyboard-friendly full-size view. Captions do not claim documentary or NASA origin. All pictures are WebP at their original resolution (about 24 MB instead of 206 MB of PNG/JPEG); `assets/media-manifest.json` keeps each original file name.
 - **Video log:** 35 clips in four themes. Small WebP posters are cut from each clip's opening seconds (`assets/video/posters/`), the player starts only on request, and video and music never play together.
 - **Music:** one shared player with 18 supplied recordings, started by the visitor, played in a loop with previous/next and volume.
 - **Characters:** 5 tutors, 3 expedition guides and 27 crew members across six ships (`js/personnelData.js`, `js/crewData.js`). Roles do not repeat. Every name, role and darkly humorous biography exists in all three languages. All characters are fictional.
@@ -47,7 +47,7 @@ To add music, drop files into `assets/audio/` and run `npm run media:update`: th
 These are proposals, not features.
 
 - Engineering: a real course → session → booking service with capacity checks, then accounts for organisers.
-- Visual: WebP copies of the large PNG archive images and a lighter favicon.
+- Visual: a dedicated small favicon drawn for 16–32 px sizes.
 - Content: short descriptions for each video clip and a crew filter by role.
 
 ---
@@ -68,7 +68,7 @@ These are proposals, not features.
 
 ### Что работает
 
-- **Архив:** 158 изображений (30 фотографий, 93 иллюстрации, 35 портретов персонажей), постепенная загрузка, фильтры и полноразмерный просмотр с клавиатуры. Подписи не выдают работы за документальную съёмку или NASA.
+- **Архив:** 158 изображений (30 фотографий, 93 иллюстрации, 35 портретов персонажей), постепенная загрузка, фильтры и полноразмерный просмотр с клавиатуры. Подписи не выдают работы за документальную съёмку или NASA. Все картинки — WebP в исходном разрешении (около 24 МБ вместо 206 МБ PNG/JPEG); исходные имена файлов записаны в `assets/media-manifest.json`.
 - **Видеожурнал:** 35 роликов в четырёх темах. Маленькие WebP-превью вырезаны из первых секунд каждого ролика (`assets/video/posters/`); плеер запускается только по просьбе, видео и музыка не играют одновременно.
 - **Музыка:** один общий плеер с 18 предоставленными записями; запуск только посетителем, воспроизведение по кругу, переключение и громкость.
 - **Персонажи:** 5 кураторов, 3 проводника и 27 членов экипажей шести кораблей (`js/personnelData.js`, `js/crewData.js`). Роли не повторяются. Имя, роль и биография с чёрным юмором есть у каждого на всех трёх языках. Все персонажи вымышлены.
@@ -97,7 +97,7 @@ npm run media:update
 Это предложения, а не готовые функции.
 
 - Инженерия: настоящий сервис «курс → занятие → запись» с проверкой мест, затем кабинет организатора.
-- Визуал: WebP-копии крупных PNG архива и более лёгкий favicon.
+- Визуал: отдельный маленький favicon, нарисованный для размеров 16–32 px.
 - Содержание: короткие описания каждого ролика и фильтр экипажа по ролям.
 
 ---
@@ -120,7 +120,7 @@ npm run media:update
 
 ### מה עובד
 
-- **ארכיון:** 158 תמונות (30 צילומים, 93 איורים, 35 דיוקנאות דמויות), טעינה הדרגתית, סינון ותצוגה מלאה מהמקלדת. הכיתובים אינם טוענים למקור תיעודי או ל־NASA.
+- **ארכיון:** 158 תמונות (30 צילומים, 93 איורים, 35 דיוקנאות דמויות), טעינה הדרגתית, סינון ותצוגה מלאה מהמקלדת. הכיתובים אינם טוענים למקור תיעודי או ל־NASA. כל התמונות בפורמט WebP ברזולוציה המקורית (כ־24 MB במקום 206 MB של PNG/JPEG); שמות הקבצים המקוריים שמורים ב־`assets/media-manifest.json`.
 - **יומן וידאו:** 35 סרטונים בארבעה נושאים. תמונות WebP קטנות נחתכו מהשניות הראשונות של כל סרטון (`assets/video/posters/`); הנגן מתחיל רק לפי בקשה, ווידאו ומוזיקה לא מתנגנים יחד.
 - **מוזיקה:** נגן משותף אחד עם 18 הקלטות שסופקו; ההפעלה בידי המבקר, ניגון במחזוריות, הקודם/הבא ועוצמה.
 - **דמויות:** 5 מורים, 3 מדריכי מסע ו־27 אנשי צוות בשש ספינות (`js/personnelData.js`, `js/crewData.js`). התפקידים אינם חוזרים. לכל דמות שם, תפקיד וביוגרפיה עם הומור שחור בשלוש השפות. כל הדמויות בדויות.
@@ -149,7 +149,7 @@ npm run media:update
 אלה הצעות, לא יכולות קיימות.
 
 - הנדסה: שירות אמיתי של קורס ← מפגש ← הרשמה עם בדיקת מקומות, ואחר כך ממשק למארגנים.
-- חזות: עותקי WebP לתמונות ה־PNG הגדולות בארכיון וסמל אתר קל יותר.
+- חזות: סמל אתר קטן שצויר במיוחד לגדלים 16–32 פיקסלים.
 - תוכן: תיאור קצר לכל סרטון וסינון הצוות לפי תפקיד.
 
 </div>

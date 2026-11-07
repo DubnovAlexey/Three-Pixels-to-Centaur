@@ -63,7 +63,7 @@ export const fleetRoutes = [
 export const fleet = [
   {
     id: 'rusty-aperture',
-    image: 'assets/images/frontier-freighter.jpeg',
+    image: 'assets/images/frontier-freighter.webp',
     name: { ru: 'Ржавая Диафрагма', en: 'Rusty Aperture', he: 'הצמצם החלוד' },
     role: { ru: 'Бюджетный грузопассажирский ветеран', en: 'Budget cargo-and-passenger veteran', he: 'ספינת משא ונוסעים ותיקה וחסכונית' },
     description: {
@@ -87,7 +87,7 @@ export const fleet = [
   },
   {
     id: 'golden-pixel',
-    image: 'assets/images/silver-orbital-ship.jpeg',
+    image: 'assets/images/silver-orbital-ship.webp',
     name: { ru: 'Золотой Пиксель', en: 'Golden Pixel', he: 'הפיקסל הזהוב' },
     role: { ru: 'Камерный панорамный корабль', en: 'Small panoramic touring ship', he: 'ספינת תצפית פנורמית לקבוצה קטנה' },
     description: {
@@ -111,7 +111,7 @@ export const fleet = [
   },
   {
     id: 'double-exposure',
-    image: 'assets/images/twin-engine-vessel.jpeg',
+    image: 'assets/images/twin-engine-vessel.webp',
     name: { ru: 'Двойная Выдержка', en: 'Double Exposure', he: 'חשיפה כפולה' },
     role: { ru: 'Манёвренный полевой шаттл', en: 'Agile field shuttle', he: 'מעבורת שטח זריזה' },
     description: {
@@ -135,7 +135,7 @@ export const fleet = [
   },
   {
     id: 'perfect-frame',
-    image: 'assets/images/long-haul-cruiser.jpeg',
+    image: 'assets/images/long-haul-cruiser.webp',
     name: { ru: 'Безупречный Кадр', en: 'Perfect Frame', he: 'הפריים המושלם' },
     role: { ru: 'Дальний экспедиционный крейсер', en: 'Long-range expedition cruiser', he: 'סיירת מסעות ארוכי טווח' },
     description: {
@@ -159,7 +159,7 @@ export const fleet = [
   },
   {
     id: 'ring-of-observation',
-    image: 'assets/images/ring-drive-ship.jpeg',
+    image: 'assets/images/ring-drive-ship.webp',
     name: { ru: 'Круг Наблюдения', en: 'Observation Ring', he: 'טבעת התצפית' },
     role: { ru: 'Обсерватория с кольцевым приводом', en: 'Ring-drive observatory ship', he: 'ספינת מצפה עם הנעת טבעת' },
     description: {
@@ -183,7 +183,7 @@ export const fleet = [
   },
   {
     id: 'quiet-horizon',
-    image: 'assets/images/event-horizon-vessel.jpeg',
+    image: 'assets/images/event-horizon-vessel.webp',
     name: { ru: 'Тихий Горизонт', en: 'Quiet Horizon', he: 'האופק השקט' },
     role: { ru: 'Защищённый исследовательский корабль', en: 'Protected research ship', he: 'ספינת מחקר ממוגנת' },
     description: {

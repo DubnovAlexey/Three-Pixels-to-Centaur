@@ -5,19 +5,19 @@ export const archiveImages = [
   {
     "id": "celestial-atlas",
     "original": "img_36.png",
-    "file": "assets/images/celestial-atlas.png",
+    "file": "assets/images/celestial-atlas.webp",
     "title": "Небесный атлас",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 1040,
     "height": 1280,
-    "bytes": 2851956,
-    "sha256": "5349f3760b2d54884e7d1565ec32f1af69c9be52397968886cc76da472bc03c9"
+    "bytes": 268022,
+    "sha256": "db1ec3c9e44086f90e0fa3c9b9ef09aeabe22f8ec1b0e1a0e10cf3aa052b1c0c"
   },
   {
     "id": "deep-space-probe",
     "original": "img.png",
-    "file": "assets/images/deep-space-probe.png",
+    "file": "assets/images/deep-space-probe.webp",
     "title": "Зонд дальнего космоса",
     "titles": {
       "ru": "Зонд дальнего космоса",
@@ -39,19 +39,19 @@ export const archiveImages = [
   {
     "id": "visitors-at-orbit",
     "original": "img_41.png",
-    "file": "assets/images/visitors-at-orbit.png",
+    "file": "assets/images/visitors-at-orbit.webp",
     "title": "Посетители на орбите",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 1043,
     "height": 1280,
-    "bytes": 2704210,
-    "sha256": "3c01e1348c870d6de23215d5ca3c3e93b7131f95ea149cddfd143c6039297a8c"
+    "bytes": 264550,
+    "sha256": "ba0bc9efc7cc027b241ffcc028b82220caa78f12f0f9855a11762002c2a186df"
   },
   {
     "id": "cloud-towers",
     "original": "img_1.png",
-    "file": "assets/images/cloud-towers.png",
+    "file": "assets/images/cloud-towers.webp",
     "title": "Облачные башни",
     "titles": {
       "ru": "Облачные башни",
@@ -73,31 +73,31 @@ export const archiveImages = [
   {
     "id": "azure-cavern",
     "original": "img_16.png",
-    "file": "assets/images/azure-cavern.png",
+    "file": "assets/images/azure-cavern.webp",
     "title": "Лазурная пещера",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 1000,
     "height": 1000,
-    "bytes": 2464853,
-    "sha256": "f3e2e225c58791e6a1ee29f9b0bc208adbcf08066e8542999024ad76876d71fa"
+    "bytes": 198376,
+    "sha256": "9a9c8d5536705d0b1cb16267af4119cf31f4c18c5a53b57c2702f5e85252a3bf"
   },
   {
     "id": "coastal-road",
     "original": "img_1.png",
-    "file": "assets/images/coastal-road.png",
+    "file": "assets/images/coastal-road.webp",
     "title": "Береговой маршрут",
     "category": "photo",
     "label": "Фотографический этюд",
     "width": 1280,
     "height": 960,
-    "bytes": 2241245,
-    "sha256": "c4958e9f3b7a017a08b80a8505d2f1ff248bdb618229c59996fa767d6d771b5f"
+    "bytes": 233878,
+    "sha256": "a40dce060c6f0f0724fa634f6ced8e3e24dc63e9fd312f0e9f06546cad5f0763"
   },
   {
     "id": "lunar-cafe",
     "original": "img_39.png",
-    "file": "assets/images/lunar-cafe.png",
+    "file": "assets/images/lunar-cafe.webp",
     "title": "Лунное кафе",
     "titles": {
       "ru": "Лунное кафе",
@@ -119,7 +119,7 @@ export const archiveImages = [
   {
     "id": "waterline-portrait",
     "original": "img_47.png",
-    "file": "assets/images/waterline-portrait.png",
+    "file": "assets/images/waterline-portrait.webp",
     "title": "Портрет на ватерлинии",
     "category": "portrait",
     "label": "Персонажный арт",
@@ -136,319 +136,319 @@ export const archiveImages = [
   {
     "id": "sunlit-boats",
     "original": "img_10.png",
-    "file": "assets/images/sunlit-boats.png",
+    "file": "assets/images/sunlit-boats.webp",
     "title": "Лодки в солнечном канале",
     "category": "photo",
     "label": "Фотографический этюд",
     "width": 666,
     "height": 1005,
-    "bytes": 1630003,
-    "sha256": "f2728295a43f45e685ca601b223941d355a76327d460fc20fe996d0f2a73375a"
+    "bytes": 118800,
+    "sha256": "5cd9dd3b2c8046bdb493de3fa3b81e627d092566b85f40061ce9b66c5d386025"
   },
   {
     "id": "copper-horizon",
     "original": "img_11.png",
-    "file": "assets/images/copper-horizon.png",
+    "file": "assets/images/copper-horizon.webp",
     "title": "Медный горизонт",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 917,
     "height": 1280,
-    "bytes": 1332692,
-    "sha256": "3676ec0c9778b37f1799fb93e4bbb126164bf50935e0e81818955959274833ba"
+    "bytes": 44940,
+    "sha256": "8f946c574b6710c1cf054516f5a2453d3c861038d24ea3d9cc39f7fc14f79885"
   },
   {
     "id": "asteroid-red-orbit",
     "original": "img_12.png",
-    "file": "assets/images/asteroid-red-orbit.png",
+    "file": "assets/images/asteroid-red-orbit.webp",
     "title": "Красная орбита",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 640,
     "height": 839,
-    "bytes": 1282995,
-    "sha256": "aa41fe27262a6f9a5b7218dc34ba995f9c0a213616e03e1b27d04a6fc4cf57df"
+    "bytes": 173494,
+    "sha256": "8fd7ec4ce5652bba56b3c4abfe053c33fabcafe71474cfb3d5af0c0c3c0116b1"
   },
   {
     "id": "golden-forest-pool",
     "original": "img_13.png",
-    "file": "assets/images/golden-forest-pool.png",
+    "file": "assets/images/golden-forest-pool.webp",
     "title": "Золотой лесной бассейн",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 914,
     "height": 1280,
-    "bytes": 2505152,
-    "sha256": "e91903fc0d1f1fcaf32e8bccbb801cc252df31cb8ac6f653773b706071fb5d15"
+    "bytes": 236280,
+    "sha256": "122f9169e03dd2c2a3a5d78ab50081e8aa2307a348b4c748bce5572998f30100"
   },
   {
     "id": "lightkeeper-portrait",
     "original": "img_14.png",
-    "file": "assets/images/lightkeeper-portrait.png",
+    "file": "assets/images/lightkeeper-portrait.webp",
     "title": "Хранитель света",
     "category": "portrait",
     "label": "Персонажный арт",
     "width": 1024,
     "height": 1280,
-    "bytes": 2328140,
-    "sha256": "5732f6dab47258692efe175df2d3a40997fdcd6d6f62a018898a641cd335a208"
+    "bytes": 143644,
+    "sha256": "a8410da8bf952b83c133598b015e67a2f4493c638a20f236fcd62e35a66282a9"
   },
   {
     "id": "accretion-ring-study",
     "original": "img_15.png",
-    "file": "assets/images/accretion-ring-study.png",
+    "file": "assets/images/accretion-ring-study.webp",
     "title": "Исследование светового кольца",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 1280,
     "height": 853,
-    "bytes": 827196,
-    "sha256": "c3bfadf7dd06012a45e60c48ea175f87eccb6c0262385e4b6b643fd3f96f2f66"
+    "bytes": 36030,
+    "sha256": "90ada1abe30c779673cbc3205825357e92783882567e59c0ef8544d313f12dd3"
   },
   {
     "id": "winter-gate-character",
     "original": "img_17.png",
-    "file": "assets/images/winter-gate-character.png",
+    "file": "assets/images/winter-gate-character.webp",
     "title": "Персонаж у зимних ворот",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 1152,
     "height": 768,
-    "bytes": 1671775,
-    "sha256": "de898030d0a038812b3f91fca92c57f82f0d9dd2b94999f53526ce5545dd0860"
+    "bytes": 85928,
+    "sha256": "d77fc7fa4cf2535268d2f1f05e525985c472607b681d4d428eebb634942edeff"
   },
   {
     "id": "sky-aperture",
     "original": "img_18.png",
-    "file": "assets/images/sky-aperture.png",
+    "file": "assets/images/sky-aperture.webp",
     "title": "Диафрагма неба",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 1024,
     "height": 1280,
-    "bytes": 2692326,
-    "sha256": "6028a3a4fdcb66c5de2442c616e131cf7478f255c99ab62b4fad64dd9f823b95"
+    "bytes": 170732,
+    "sha256": "2c29b53f406b37d711493f74d281ef677d64bbda3691056daf49d2c84e10d6d4"
   },
   {
     "id": "supercar-study",
     "original": "img_19.png",
-    "file": "assets/images/supercar-study.png",
+    "file": "assets/images/supercar-study.webp",
     "title": "Автомобильный этюд",
     "category": "photo",
     "label": "Фотографический этюд",
     "width": 1280,
     "height": 1280,
-    "bytes": 2360085,
-    "sha256": "05e0d7ff17e71373142f8b5abbceaea2f8919eb2cc61589e5f6b4dbe9753fd7d"
+    "bytes": 158834,
+    "sha256": "3717c357f5ce8c2c5dc83108a8a522861750130748881549720447d73a67cebf"
   },
   {
     "id": "tent-overlook",
     "original": "img_2.png",
-    "file": "assets/images/tent-overlook.png",
+    "file": "assets/images/tent-overlook.webp",
     "title": "Окно экспедиции",
     "category": "photo",
     "label": "Фотографический этюд",
     "width": 1280,
     "height": 848,
-    "bytes": 1894288,
-    "sha256": "2dd037927bafb7cb57f197d246dad8f143d8bbae855860a63e5a58d61e7cf0af"
+    "bytes": 85334,
+    "sha256": "33997999a5e2e80993a898dd38795577c872aac4bf4c97732315487e790a73e3"
   },
   {
     "id": "orbital-city",
     "original": "img_20.png",
-    "file": "assets/images/orbital-city.png",
+    "file": "assets/images/orbital-city.webp",
     "title": "Орбитальный город",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 1200,
     "height": 1200,
-    "bytes": 2565834,
-    "sha256": "bf28a43cbb67b91abf12e4cf1a986188afb334b6ca3f42618577f37eb7a6c41e"
+    "bytes": 141482,
+    "sha256": "60e7ae6dcd9c79f0be33eb275996a0f371a39ceb837afaf589f746963ebd8303"
   },
   {
     "id": "garden-bowl",
     "original": "img_21.png",
-    "file": "assets/images/garden-bowl.png",
+    "file": "assets/images/garden-bowl.webp",
     "title": "Зелёный натюрморт",
     "category": "photo",
     "label": "Фотографический этюд",
     "width": 960,
     "height": 1280,
-    "bytes": 2716334,
-    "sha256": "a7821254ccb1ec2d74f795b9a3b1bef968ba461fa3fa07da2c12cea53c330c8d"
+    "bytes": 188772,
+    "sha256": "aedfd0268469e4fad09142fb8cc6ccb5ae05c663506121cc47d943a63a26cbdb"
   },
   {
     "id": "violet-observatory",
     "original": "img_22.png",
-    "file": "assets/images/violet-observatory.png",
+    "file": "assets/images/violet-observatory.webp",
     "title": "Фиолетовая обсерватория",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 1024,
     "height": 982,
-    "bytes": 1190994,
-    "sha256": "fde9ca5290704e7d72ba1177498c8dfb707644fbce2cb3b80405c76b31c16236"
+    "bytes": 69902,
+    "sha256": "05fa870374248d15ba2e5ab486a2faa493fb4942f3b38eefa7e752314195cc11"
   },
   {
     "id": "arrival-in-the-field",
     "original": "img_23.png",
-    "file": "assets/images/arrival-in-the-field.png",
+    "file": "assets/images/arrival-in-the-field.webp",
     "title": "Прибытие в поле",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 894,
     "height": 1280,
-    "bytes": 2406084,
-    "sha256": "5e47ecd19a980c8c39d8870baa0635c4ea482ca11caac142e2293f2a317167ce"
+    "bytes": 149142,
+    "sha256": "5184a8b0af3f9355c5026d9049a1ad55a96d205c00773b29527e340a9475b620"
   },
   {
     "id": "neural-star",
     "original": "img_24.png",
-    "file": "assets/images/neural-star.png",
+    "file": "assets/images/neural-star.webp",
     "title": "Нейронная звезда",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 1024,
     "height": 1280,
-    "bytes": 1458895,
-    "sha256": "f2db9ad0679ad5797cb8592b47afc84eb7348f7157d40bfd478b419be8641046"
+    "bytes": 84604,
+    "sha256": "ce4ba693adfd4b55711881ad91c9dce6777e0efdeee845450f0005c17f99a9fd"
   },
   {
     "id": "umbrella-storm",
     "original": "img_25.png",
-    "file": "assets/images/umbrella-storm.png",
+    "file": "assets/images/umbrella-storm.webp",
     "title": "Непогода под зонтом",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 640,
     "height": 800,
-    "bytes": 1280991,
-    "sha256": "c361a3ad82f6628f5df588d08a36eeb76b9225faa837f53fadf2f56ebabb7415"
+    "bytes": 201786,
+    "sha256": "3d2fc9e2278ebedbef3d158d064be31e8e64c75cd55d34345cdb5b8d811502d2"
   },
   {
     "id": "levitating-grove",
     "original": "img_26.png",
-    "file": "assets/images/levitating-grove.png",
+    "file": "assets/images/levitating-grove.webp",
     "title": "Левитирующая роща",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 1280,
     "height": 1280,
-    "bytes": 3241486,
-    "sha256": "5e574295d0416009d9b9d62253594669297f9721d27c40b27930dad3934fd07c"
+    "bytes": 334766,
+    "sha256": "c848448c902e3060123c09a7a537288eac682bd36d6076ceb4ee77080387406f"
   },
   {
     "id": "cat-and-fish",
     "original": "img_27.png",
-    "file": "assets/images/cat-and-fish.png",
+    "file": "assets/images/cat-and-fish.webp",
     "title": "Начальник рыбного отдела",
     "category": "photo",
     "label": "Фотографический этюд",
     "width": 640,
     "height": 800,
-    "bytes": 1224530,
-    "sha256": "c308c23b334af79dd311298b66fc8d23c2b2b612428d9b137fe7683558529577"
+    "bytes": 132564,
+    "sha256": "429e698283d92a661e2513187881bfca20aacbbec8d00eae8055e234014eaecc"
   },
   {
     "id": "scarlet-disk-city",
     "original": "img_28.png",
-    "file": "assets/images/scarlet-disk-city.png",
+    "file": "assets/images/scarlet-disk-city.webp",
     "title": "Алый диск над городом",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 1024,
     "height": 1280,
-    "bytes": 1830984,
-    "sha256": "971fbf4761de70e9a0d7a2bba38fc84ce8a2b91f28c573e7709ae3f0e15c53fa"
+    "bytes": 60396,
+    "sha256": "a4e024d9e4a1720dd0b9181f8e39df096e03ab0755adb30e051dbe78d3bf026b"
   },
   {
     "id": "mountain-house",
     "original": "img_29.png",
-    "file": "assets/images/mountain-house.png",
+    "file": "assets/images/mountain-house.webp",
     "title": "Дом у горного хребта",
     "category": "photo",
     "label": "Фотографический этюд",
     "width": 1025,
     "height": 1280,
-    "bytes": 2076814,
-    "sha256": "4440c20f13030f1d2046cea3660b3024fc0b40b7d756f7721466159dcfc496f4"
+    "bytes": 160674,
+    "sha256": "d9e5427c38e5035c2ed8396dadcb9fa9cc5be9a173a9c6d000af1129f5868fd4"
   },
   {
     "id": "alpine-dawn",
     "original": "img_3.png",
-    "file": "assets/images/alpine-dawn.png",
+    "file": "assets/images/alpine-dawn.webp",
     "title": "Тихие вершины",
     "category": "photo",
     "label": "Фотографический этюд",
     "width": 2560,
     "height": 1534,
-    "bytes": 5274286,
-    "sha256": "80589c11f5fa07250aef5f4fa667d27d3475a13bce9f6dd4d8a11d067cdb9a31"
+    "bytes": 295814,
+    "sha256": "9ba4845fe6bf92cba28069afa8f86fc9b7a1d530323c59a6b3fe077f39fad597"
   },
   {
     "id": "island-house",
     "original": "img_30.png",
-    "file": "assets/images/island-house.png",
+    "file": "assets/images/island-house.webp",
     "title": "Дом у воды",
     "category": "photo",
     "label": "Фотографический этюд",
     "width": 864,
     "height": 1080,
-    "bytes": 1189869,
-    "sha256": "d7069bbdcfbb0abe19c4e0f11a1e70a19fe1d5b237326d6c3ac33b49d1c7dcc8"
+    "bytes": 122690,
+    "sha256": "b75db8c69d1c1d8c47a2050c64856e3392cefa0bd223e1fa366a0bba97eb4348"
   },
   {
     "id": "breakfast-at-altitude",
     "original": "img_31.png",
-    "file": "assets/images/breakfast-at-altitude.png",
+    "file": "assets/images/breakfast-at-altitude.webp",
     "title": "Завтрак на высоте",
     "category": "photo",
     "label": "Фотографический этюд",
     "width": 1169,
     "height": 1202,
-    "bytes": 2923513,
-    "sha256": "9ea89f16f846cbd631e9a5a71a0780b55083692b29ed3b4c8c058aac783d8076"
+    "bytes": 242606,
+    "sha256": "4c31a47a1e4ddb2a1a076aa35fa80485317decab35f4f6252a8eaf00da7cca2d"
   },
   {
     "id": "storm-over-valley",
     "original": "img_32.png",
-    "file": "assets/images/storm-over-valley.png",
+    "file": "assets/images/storm-over-valley.webp",
     "title": "Гроза над долиной",
     "category": "photo",
     "label": "Фотографический этюд",
     "width": 1080,
     "height": 1162,
-    "bytes": 1000130,
-    "sha256": "f493f16532bbaa845cbe4c537d8bf8eac464c3b60eb8a3c06f1a4397399bd1fa"
+    "bytes": 52772,
+    "sha256": "f60ddffd7655bf9ef87399d8d5402a7dc5646549ebc0ea949576abed2eaa5b25"
   },
   {
     "id": "drifting-suit",
     "original": "img_33.png",
-    "file": "assets/images/drifting-suit.png",
+    "file": "assets/images/drifting-suit.webp",
     "title": "Скафандр в дрейфе",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 1280,
     "height": 1132,
-    "bytes": 3656317,
-    "sha256": "4ef684450775225bb73e6887ba0fa2a4d6f56ab7444d4fdb9e05cb9a19942eaf"
+    "bytes": 312198,
+    "sha256": "f3b0f0dd4800357c790cd0082022c4686cb5c4c02f236d2796ecc2d76ee4a8b9"
   },
   {
     "id": "lunar-lightburst",
     "original": "img_34.png",
-    "file": "assets/images/lunar-lightburst.png",
+    "file": "assets/images/lunar-lightburst.webp",
     "title": "Лунный световой выброс",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 1040,
     "height": 1280,
-    "bytes": 3056661,
-    "sha256": "372525d049cd963e2268e18c26d7b121c91678cb7d0af2b00cd69362b2fb6770"
+    "bytes": 356112,
+    "sha256": "8b63b69dc346a0f84237989a753dc65f69cb4bbc1db0415087166058c3537609"
   },
   {
     "id": "red-moon-expedition",
     "original": "img_35.png",
-    "file": "assets/images/red-moon-expedition.png",
+    "file": "assets/images/red-moon-expedition.webp",
     "title": "Экспедиция под красной луной",
     "category": "illustration",
     "label": "Иллюстрация",
@@ -465,319 +465,319 @@ export const archiveImages = [
   {
     "id": "crescent-ridge",
     "original": "img_37.png",
-    "file": "assets/images/crescent-ridge.png",
+    "file": "assets/images/crescent-ridge.webp",
     "title": "Серп над хребтом",
     "category": "photo",
     "label": "Фотографический этюд",
     "width": 640,
     "height": 418,
-    "bytes": 365811,
-    "sha256": "ec6595a46ed13e5e88ac0a0146b66c4458a79bef6d52efb07148d524119a7595"
+    "bytes": 19378,
+    "sha256": "0a03bfff3bd438f2b994c85230f87238e1d6bd43e15421d872ec793881200ea3"
   },
   {
     "id": "eye-collage-study",
     "original": "img_38.png",
-    "file": "assets/images/eye-collage-study.png",
+    "file": "assets/images/eye-collage-study.webp",
     "title": "Исследование взгляда",
     "category": "portrait",
     "label": "Персонажный арт",
     "width": 901,
     "height": 1280,
-    "bytes": 3046095,
-    "sha256": "bc9ee17e1f4b5ea3c6c46d24a7bb6a8e16832d90aeef5e99c2cc80d0e29cc6f6"
+    "bytes": 309646,
+    "sha256": "50339ced5063a0d15c1b1f56e1fd331c1ed999efacc2eae18f41875a6316fd62"
   },
   {
     "id": "rose-interior",
     "original": "img_39.png",
-    "file": "assets/images/rose-interior.png",
+    "file": "assets/images/rose-interior.webp",
     "title": "Розовая каюта",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 995,
     "height": 1280,
-    "bytes": 2339704,
-    "sha256": "197ec34112f0eed5a010a86b4cd3201cfdd12f8e53c58bcd645c31518e8e0c00"
+    "bytes": 195496,
+    "sha256": "a3046078ea8203315a4227c6ad39e366c1b7f8b501f3c21520530a30cdb15791"
   },
   {
     "id": "lake-ducks",
     "original": "img_4.png",
-    "file": "assets/images/lake-ducks.png",
+    "file": "assets/images/lake-ducks.webp",
     "title": "Два навигатора",
     "category": "photo",
     "label": "Фотографический этюд",
     "width": 1280,
     "height": 1063,
-    "bytes": 2854661,
-    "sha256": "00e6c0b56d6babc3fe0fab22920e35c41bbb0bc198079ea82dc47e634fba942b"
+    "bytes": 129008,
+    "sha256": "13916f0e6e8e72fffd9bd8751c70d867556b7fad562bf1a164ef3b886ed87a27"
   },
   {
     "id": "silhouette-spectrum",
     "original": "img_40.png",
-    "file": "assets/images/silhouette-spectrum.png",
+    "file": "assets/images/silhouette-spectrum.webp",
     "title": "Спектр силуэта",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 1036,
     "height": 1280,
-    "bytes": 3534207,
-    "sha256": "0513ca684e58bdf855c6a670bf259977a3cf58d3e403cc43dc8f6b625d4f2b60"
+    "bytes": 617046,
+    "sha256": "ba79898fe4b0b25fc18a6145c6418f54e50cea25796a6e8f54213aaea760d9ec"
   },
   {
     "id": "basketball-net-study",
     "original": "img_42.png",
-    "file": "assets/images/basketball-net-study.png",
+    "file": "assets/images/basketball-net-study.webp",
     "title": "Геометрия сетки",
     "category": "photo",
     "label": "Фотографический этюд",
     "width": 1000,
     "height": 999,
-    "bytes": 2170358,
-    "sha256": "3e55ed82595902a8415e381716195c73d0018804944fbb77ee39c8a5250c053d"
+    "bytes": 194582,
+    "sha256": "9eb99ae1c2c457b2f568ab8efcfaaf92ddb7af7d46a61a49472a894d2238ffa3"
   },
   {
     "id": "breakfast-composition",
     "original": "img_43.png",
-    "file": "assets/images/breakfast-composition.png",
+    "file": "assets/images/breakfast-composition.webp",
     "title": "Завтрак как композиция",
     "category": "photo",
     "label": "Фотографический этюд",
     "width": 960,
     "height": 1280,
-    "bytes": 3230397,
-    "sha256": "8ab77b83b185bdd40d47f0a86aa691ebdb74312407ba37f5cd25a3e6b79ec7d4"
+    "bytes": 284464,
+    "sha256": "e8edcc552a5f1d22e448b08ae649a3587491853c6252fd59a8338a383f557a6e"
   },
   {
     "id": "blue-flower-study",
     "original": "img_44.png",
-    "file": "assets/images/blue-flower-study.png",
+    "file": "assets/images/blue-flower-study.webp",
     "title": "Синий ботанический этюд",
     "category": "photo",
     "label": "Фотографический этюд",
     "width": 961,
     "height": 1280,
-    "bytes": 2194092,
-    "sha256": "4b03b5e9de835fe3b24335c8291f13f2fd6fa63bf8a82d4fe7bfa384e418832f"
+    "bytes": 108332,
+    "sha256": "d3f72d87e752dd6b2788b5d9dea3ef15f264c86f6cf51cf56f18f66498e5cb33"
   },
   {
     "id": "solar-botanist",
     "original": "img_45.png",
-    "file": "assets/images/solar-botanist.png",
+    "file": "assets/images/solar-botanist.webp",
     "title": "Солнечный ботаник",
     "category": "portrait",
     "label": "Персонажный арт",
     "width": 905,
     "height": 1280,
-    "bytes": 2429332,
-    "sha256": "d79a9078b284828a2fb751c33e2ebc7b09cfb6743ab47a7bb0c408c8e3cd9379"
+    "bytes": 178414,
+    "sha256": "c2ad475df97cc09bfbf670507036d4bbd540c9c54e268c4e97066e9f0f799a27"
   },
   {
     "id": "crimson-signal",
     "original": "img_46.png",
-    "file": "assets/images/crimson-signal.png",
+    "file": "assets/images/crimson-signal.webp",
     "title": "Багровый сигнал",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 995,
     "height": 1280,
-    "bytes": 2266649,
-    "sha256": "fb825e3c135b3ce1f25eb556cb90be7c7ea6717d1f446a1ed7b022686357b7dc"
+    "bytes": 98658,
+    "sha256": "560336894629104c1027363a87a2675b4b8bf0e5286c7fdeb16d8d24bee50a79"
   },
   {
     "id": "waterlily-depths",
     "original": "img_5.png",
-    "file": "assets/images/waterlily-depths.png",
+    "file": "assets/images/waterlily-depths.webp",
     "title": "Под поверхностью",
     "category": "photo",
     "label": "Фотографический этюд",
     "width": 1280,
     "height": 854,
-    "bytes": 2094663,
-    "sha256": "d26040d3d5149d33b6dac7b4f17680594de8a7016d0286678044e288418ec332"
+    "bytes": 120968,
+    "sha256": "3ec068611862f928e90be845a6ab1d4e5c0b7f0c901e0596d1d220433c421681"
   },
   {
     "id": "autumn-hills",
     "original": "img_6.png",
-    "file": "assets/images/autumn-hills.png",
+    "file": "assets/images/autumn-hills.webp",
     "title": "Сезон медного света",
     "category": "photo",
     "label": "Фотографический этюд",
     "width": 1024,
     "height": 1280,
-    "bytes": 3139791,
-    "sha256": "2e77db4c7c8612651e299f7b621cf151d25ff1edd33c03c815501fd173429703"
+    "bytes": 250106,
+    "sha256": "ad9cf706b19a8afbd8960e3c4bc0ebc4816cd05e39c269c1df5a511b296e83ee"
   },
   {
     "id": "mossy-forest",
     "original": "img_7.png",
-    "file": "assets/images/mossy-forest.png",
+    "file": "assets/images/mossy-forest.webp",
     "title": "Лесная обсерватория",
     "category": "photo",
     "label": "Фотографический этюд",
     "width": 736,
     "height": 1104,
-    "bytes": 2246308,
-    "sha256": "5871223ce3bf144c436954168d241abcfe20d87897ffd59f8795914ddfef65d6"
+    "bytes": 231002,
+    "sha256": "701ad7ccef7edca86fa271bd38fb1e2990d4f39f9ab969d27253ba611385c317"
   },
   {
     "id": "starship-design-study",
     "original": "img_8.png",
-    "file": "assets/images/starship-design-study.png",
+    "file": "assets/images/starship-design-study.webp",
     "title": "Проект межзвёздного судна",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 1920,
     "height": 786,
-    "bytes": 1743095,
-    "sha256": "6a5d74bc9098973fa47f9bb364f6f1edc829c019cd7b1db5062d7b8efe46ca19"
+    "bytes": 142714,
+    "sha256": "8d0eaf8774a6030b6b4e3b7bf102ff7a1420c54de429178c42886cbaaa4333e3"
   },
   {
     "id": "chromatic-pilot",
     "original": "img_9.png",
-    "file": "assets/images/chromatic-pilot.png",
+    "file": "assets/images/chromatic-pilot.webp",
     "title": "Хроматический пилот",
     "category": "portrait",
     "label": "Персонажный арт",
     "width": 1200,
     "height": 1280,
-    "bytes": 3131483,
-    "sha256": "dd85ecc3dc417c4544e10f618057bc7a094687a30028be112d74213ae2ce3fa1"
+    "bytes": 292972,
+    "sha256": "d25f44a1ecb9c9898d816c5e753b93414befaeee96032f5d27cf44ca3f6a188e"
   },
   {
     "id": "sunlight-hills",
     "original": "img.png",
-    "file": "assets/images/sunlight-hills.png",
+    "file": "assets/images/sunlight-hills.webp",
     "title": "Свет над холмами",
     "category": "photo",
     "label": "Фотографический этюд",
     "width": 1024,
     "height": 683,
-    "bytes": 1267463,
-    "sha256": "da824d5d926fab7fa55524f80357d1cada03a1f8a75127f404cabba0d5559921"
+    "bytes": 132004,
+    "sha256": "5abd58e4f82ffd7976263890ab035e1c71e17bba8924d61bad7e5ae9bbd44c79"
   },
   {
     "id": "mountain-room",
     "original": "WhatsApp Image 2026-09-13 at 10.52.29.jpeg",
-    "file": "assets/images/mountain-room.jpeg",
+    "file": "assets/images/mountain-room.webp",
     "title": "Комната над облаками",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 1024,
     "height": 1280,
-    "bytes": 290737,
-    "sha256": "157aed40bae0a21f311557429fb7b986ef34d05cd3478bb18f6a964a397fa86d"
+    "bytes": 318244,
+    "sha256": "debd7cfb9b394f47195456609d11b5093ad613a137d9bc65dd973390ed51a5bb"
   },
   {
     "id": "still-life-tea",
     "original": "WhatsApp Image 2026-09-13 at 11.19.36.jpeg",
-    "file": "assets/images/still-life-tea.jpeg",
+    "file": "assets/images/still-life-tea.webp",
     "title": "Чайный натюрморт",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 1022,
     "height": 1280,
-    "bytes": 90750,
-    "sha256": "d9bcba4c35c0cf0fc5a21428f23859cadbb80cde3270800068821946829feb12"
+    "bytes": 60954,
+    "sha256": "5105fc2d461a3e2f4c2fdc58bbd04ef4835cb52d33477b41952be0329b2c3495"
   },
   {
     "id": "chorus-of-travelers",
     "original": "WhatsApp Image 2026-09-21 at 20.38.14.jpeg",
-    "file": "assets/images/chorus-of-travelers.jpeg",
+    "file": "assets/images/chorus-of-travelers.webp",
     "title": "Хор путешественников",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 736,
     "height": 1118,
-    "bytes": 68883,
-    "sha256": "f763895ad94ec35c4b880e5a23f9647e8e4cfafb42a172be9b5a1ece111cb555"
+    "bytes": 45792,
+    "sha256": "61ff0f6bb0d93cfb9693196e221a98f04fabe4e23a13ecd91d767ab3bb2c824c"
   },
   {
     "id": "cat-through-glass",
     "original": "WhatsApp Image 2026-10-02 at 12.00.52.jpeg",
-    "file": "assets/images/cat-through-glass.jpeg",
+    "file": "assets/images/cat-through-glass.webp",
     "title": "Кот сквозь стекло",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 1080,
     "height": 934,
-    "bytes": 154485,
-    "sha256": "47c752fb40ebfefb78c2f580a49c8daf4efd9cbba5208779fc300a1393ecf9fb"
+    "bytes": 126896,
+    "sha256": "5c2d1cb458074f4dcbf969a7d9c1b78576b5d9568e71f03e20da36ff97196f8b"
   },
   {
     "id": "autumn-leaf",
     "original": "WhatsApp Image 2026-10-10 at 16.03.54.jpeg",
-    "file": "assets/images/autumn-leaf.jpeg",
+    "file": "assets/images/autumn-leaf.webp",
     "title": "Осенний лист",
     "category": "photo",
     "label": "Фотографический этюд",
     "width": 1200,
     "height": 1600,
-    "bytes": 277906,
-    "sha256": "d927d5f6bd04678e810a8bf209b0b34e35d2b59205913df5d988c0566ec72c06"
+    "bytes": 243398,
+    "sha256": "d4627bdcc5b6bb19a38ba2099a754135dd471ca70777694da0f4f3e188043df2"
   },
   {
     "id": "kitchen-story",
     "original": "WhatsApp Image 2026-10-11 at 22.41.47.jpeg",
-    "file": "assets/images/kitchen-story.jpeg",
+    "file": "assets/images/kitchen-story.webp",
     "title": "История на кухне",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 1012,
     "height": 1280,
-    "bytes": 145222,
-    "sha256": "dab861013ba848267ab651e192d609687d93878dea8fcd2947fb296b9e8a878e"
+    "bytes": 120180,
+    "sha256": "f6c31a5f77d6bc12373f60bd3ea2e7b569a95829e19e2b7e2455897438c518ac"
   },
   {
     "id": "abstract-botanical",
     "original": "WhatsApp Image 2026-10-11 at 23.00.14.jpeg",
-    "file": "assets/images/abstract-botanical.jpeg",
+    "file": "assets/images/abstract-botanical.webp",
     "title": "Ботаническая абстракция",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 403,
     "height": 554,
-    "bytes": 40088,
-    "sha256": "285c3ee194c1c3ed14218b5cd59e2cbf946c48b5ad36d2088c3df11cc085b140"
+    "bytes": 33340,
+    "sha256": "653a890a7d206b094cdbd5cc46dc92c6a8b1501c25627bd34254b3708e24b449"
   },
   {
     "id": "cosmic-evening-reader",
     "original": "WhatsApp Image 2026-10-17 at 01.16.34.jpeg",
-    "file": "assets/images/cosmic-evening-reader.jpeg",
+    "file": "assets/images/cosmic-evening-reader.webp",
     "title": "Читатель на краю вечера",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 640,
     "height": 1280,
-    "bytes": 200292,
-    "sha256": "caf74d586375f76a1924dd94c6f7b5308083840a67b001ffdfd3b128fd7f45a3"
+    "bytes": 195818,
+    "sha256": "e74f9f98306b52803a63019b16c3a460351cb33f26709f86f96d7a7a4cdee965"
   },
   {
     "id": "red-eye-over-snow",
     "original": "WhatsApp Image 2026-10-17 at 11.43.34.jpeg",
-    "file": "assets/images/red-eye-over-snow.jpeg",
+    "file": "assets/images/red-eye-over-snow.webp",
     "title": "Красный глаз над снегом",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 640,
     "height": 640,
-    "bytes": 43805,
-    "sha256": "f466ee632f6703a3737dbf7b5905076430b3164a1d18e3b8caaf0fadd1ed9238"
+    "bytes": 39220,
+    "sha256": "81b7d412d3f7031fcdf35be835c3b484331864197e86383178f802efd7f54a23"
   },
   {
     "id": "pink-family-study",
     "original": "WhatsApp Image 2026-11-02 at 22.18.06.jpeg",
-    "file": "assets/images/pink-family-study.jpeg",
+    "file": "assets/images/pink-family-study.webp",
     "title": "Семейный этюд в розовом",
     "category": "illustration",
     "label": "Иллюстрация",
     "width": 736,
     "height": 1104,
-    "bytes": 250310,
-    "sha256": "4404a29625810addf289acd5e89f77154152ff9a5d58dcfe92348775998fd224"
+    "bytes": 233450,
+    "sha256": "cda514842326b885fa4d767639949d4911e707e2119d79bcc008aa0824122e92"
   },
   {
     "id": "rippled-sky-road",
     "original": "img_10.png",
-    "file": "assets/images/rippled-sky-road.png",
+    "file": "assets/images/rippled-sky-road.webp",
     "title": "Дорога под волнистым небом",
     "titles": {
       "ru": "Дорога под волнистым небом",
@@ -794,7 +794,7 @@ export const archiveImages = [
   {
     "id": "painted-world",
     "original": "img_11.png",
-    "file": "assets/images/painted-world.png",
+    "file": "assets/images/painted-world.webp",
     "title": "Расписной мир",
     "titles": {
       "ru": "Расписной мир",
@@ -811,7 +811,7 @@ export const archiveImages = [
   {
     "id": "orbital-dawn",
     "original": "img_12.png",
-    "file": "assets/images/orbital-dawn.png",
+    "file": "assets/images/orbital-dawn.webp",
     "title": "Орбитальный рассвет",
     "titles": {
       "ru": "Орбитальный рассвет",
@@ -828,7 +828,7 @@ export const archiveImages = [
   {
     "id": "nebula-fingers",
     "original": "img_13.png",
-    "file": "assets/images/nebula-fingers.png",
+    "file": "assets/images/nebula-fingers.webp",
     "title": "Пальцы туманности",
     "titles": {
       "ru": "Пальцы туманности",
@@ -845,7 +845,7 @@ export const archiveImages = [
   {
     "id": "copper-canyon",
     "original": "img_14.png",
-    "file": "assets/images/copper-canyon.png",
+    "file": "assets/images/copper-canyon.webp",
     "title": "Медный каньон",
     "titles": {
       "ru": "Медный каньон",
@@ -862,7 +862,7 @@ export const archiveImages = [
   {
     "id": "lunar-module-study",
     "original": "img_15.png",
-    "file": "assets/images/lunar-module-study.png",
+    "file": "assets/images/lunar-module-study.webp",
     "title": "Лунный модуль в разрезе",
     "titles": {
       "ru": "Лунный модуль в разрезе",
@@ -879,7 +879,7 @@ export const archiveImages = [
   {
     "id": "spiral-ember",
     "original": "img_16.png",
-    "file": "assets/images/spiral-ember.png",
+    "file": "assets/images/spiral-ember.webp",
     "title": "Спиральный уголёк",
     "titles": {
       "ru": "Спиральный уголёк",
@@ -896,7 +896,7 @@ export const archiveImages = [
   {
     "id": "eclipse-over-city",
     "original": "img_17.png",
-    "file": "assets/images/eclipse-over-city.png",
+    "file": "assets/images/eclipse-over-city.webp",
     "title": "Затмение над городом",
     "titles": {
       "ru": "Затмение над городом",
@@ -913,7 +913,7 @@ export const archiveImages = [
   {
     "id": "valley-of-mist",
     "original": "img_18.png",
-    "file": "assets/images/valley-of-mist.png",
+    "file": "assets/images/valley-of-mist.webp",
     "title": "Долина тумана",
     "titles": {
       "ru": "Долина тумана",
@@ -930,7 +930,7 @@ export const archiveImages = [
   {
     "id": "desert-in-bloom",
     "original": "img_19.png",
-    "file": "assets/images/desert-in-bloom.png",
+    "file": "assets/images/desert-in-bloom.webp",
     "title": "Пустыня передумала",
     "titles": {
       "ru": "Пустыня передумала",
@@ -947,7 +947,7 @@ export const archiveImages = [
   {
     "id": "lightning-column",
     "original": "img_2.png",
-    "file": "assets/images/lightning-column.png",
+    "file": "assets/images/lightning-column.webp",
     "title": "Грозовая колонна",
     "titles": {
       "ru": "Грозовая колонна",
@@ -964,7 +964,7 @@ export const archiveImages = [
   {
     "id": "ember-cloud",
     "original": "img_20.png",
-    "file": "assets/images/ember-cloud.png",
+    "file": "assets/images/ember-cloud.webp",
     "title": "Облако цвета угля",
     "titles": {
       "ru": "Облако цвета угля",
@@ -981,7 +981,7 @@ export const archiveImages = [
   {
     "id": "night-from-orbit",
     "original": "img_21.png",
-    "file": "assets/images/night-from-orbit.png",
+    "file": "assets/images/night-from-orbit.webp",
     "title": "Ночь с орбиты",
     "titles": {
       "ru": "Ночь с орбиты",
@@ -998,7 +998,7 @@ export const archiveImages = [
   {
     "id": "retro-lunar-port",
     "original": "img_22.png",
-    "file": "assets/images/retro-lunar-port.png",
+    "file": "assets/images/retro-lunar-port.webp",
     "title": "Ретролунный порт",
     "titles": {
       "ru": "Ретролунный порт",
@@ -1015,7 +1015,7 @@ export const archiveImages = [
   {
     "id": "orbital-window-seat",
     "original": "img_23.png",
-    "file": "assets/images/orbital-window-seat.png",
+    "file": "assets/images/orbital-window-seat.webp",
     "title": "Место у орбитального окна",
     "titles": {
       "ru": "Место у орбитального окна",
@@ -1032,7 +1032,7 @@ export const archiveImages = [
   {
     "id": "retro-free-flight",
     "original": "img_24.png",
-    "file": "assets/images/retro-free-flight.png",
+    "file": "assets/images/retro-free-flight.webp",
     "title": "Ретрополёт без билета",
     "titles": {
       "ru": "Ретрополёт без билета",
@@ -1049,7 +1049,7 @@ export const archiveImages = [
   {
     "id": "frontier-pilot",
     "original": "img_25.png",
-    "file": "assets/images/frontier-pilot.png",
+    "file": "assets/images/frontier-pilot.webp",
     "title": "Пилот фронтира",
     "titles": {
       "ru": "Пилот фронтира",
@@ -1066,7 +1066,7 @@ export const archiveImages = [
   {
     "id": "copper-flight-jacket",
     "original": "img_26.png",
-    "file": "assets/images/copper-flight-jacket.png",
+    "file": "assets/images/copper-flight-jacket.webp",
     "title": "Медная лётная куртка",
     "titles": {
       "ru": "Медная лётная куртка",
@@ -1083,7 +1083,7 @@ export const archiveImages = [
   {
     "id": "silver-traveler",
     "original": "img_27.png",
-    "file": "assets/images/silver-traveler.png",
+    "file": "assets/images/silver-traveler.webp",
     "title": "Серебряная путешественница",
     "titles": {
       "ru": "Серебряная путешественница",
@@ -1100,7 +1100,7 @@ export const archiveImages = [
   {
     "id": "lunar-resort",
     "original": "img_28.png",
-    "file": "assets/images/lunar-resort.png",
+    "file": "assets/images/lunar-resort.webp",
     "title": "Курорт без приливов",
     "titles": {
       "ru": "Курорт без приливов",
@@ -1117,7 +1117,7 @@ export const archiveImages = [
   {
     "id": "first-contact-seminar",
     "original": "img_29.png",
-    "file": "assets/images/first-contact-seminar.png",
+    "file": "assets/images/first-contact-seminar.webp",
     "title": "Семинар первого контакта",
     "titles": {
       "ru": "Семинар первого контакта",
@@ -1134,7 +1134,7 @@ export const archiveImages = [
   {
     "id": "jupiter-over-ridge",
     "original": "img_3.png",
-    "file": "assets/images/jupiter-over-ridge.png",
+    "file": "assets/images/jupiter-over-ridge.webp",
     "title": "Юпитер над хребтом",
     "titles": {
       "ru": "Юпитер над хребтом",
@@ -1156,7 +1156,7 @@ export const archiveImages = [
   {
     "id": "portal-camera-bear",
     "original": "img_30.png",
-    "file": "assets/images/portal-camera-bear.png",
+    "file": "assets/images/portal-camera-bear.webp",
     "title": "Медведь у съёмочной площадки",
     "titles": {
       "ru": "Медведь у съёмочной площадки",
@@ -1173,7 +1173,7 @@ export const archiveImages = [
   {
     "id": "saturn-landing",
     "original": "img_31.png",
-    "file": "assets/images/saturn-landing.png",
+    "file": "assets/images/saturn-landing.webp",
     "title": "Посадка у Сатурна",
     "titles": {
       "ru": "Посадка у Сатурна",
@@ -1190,7 +1190,7 @@ export const archiveImages = [
   {
     "id": "two-travelers",
     "original": "img_32.png",
-    "file": "assets/images/two-travelers.png",
+    "file": "assets/images/two-travelers.webp",
     "title": "Два путешественника",
     "titles": {
       "ru": "Два путешественника",
@@ -1207,7 +1207,7 @@ export const archiveImages = [
   {
     "id": "robot-under-tree",
     "original": "img_33.png",
-    "file": "assets/images/robot-under-tree.png",
+    "file": "assets/images/robot-under-tree.webp",
     "title": "Робот на привале",
     "titles": {
       "ru": "Робот на привале",
@@ -1229,7 +1229,7 @@ export const archiveImages = [
   {
     "id": "cat-in-a-spacesuit",
     "original": "img_34.png",
-    "file": "assets/images/cat-in-a-spacesuit.png",
+    "file": "assets/images/cat-in-a-spacesuit.webp",
     "title": "Кот в скафандре",
     "titles": {
       "ru": "Кот в скафандре",
@@ -1251,7 +1251,7 @@ export const archiveImages = [
   {
     "id": "matter-transmission",
     "original": "img_35.png",
-    "file": "assets/images/matter-transmission.png",
+    "file": "assets/images/matter-transmission.webp",
     "title": "Передача материи",
     "titles": {
       "ru": "Передача материи",
@@ -1268,7 +1268,7 @@ export const archiveImages = [
   {
     "id": "star-grazers",
     "original": "img_36.png",
-    "file": "assets/images/star-grazers.png",
+    "file": "assets/images/star-grazers.webp",
     "title": "Пастухи звёзд",
     "titles": {
       "ru": "Пастухи звёзд",
@@ -1285,7 +1285,7 @@ export const archiveImages = [
   {
     "id": "stellar-engineer",
     "original": "img_37.png",
-    "file": "assets/images/stellar-engineer.png",
+    "file": "assets/images/stellar-engineer.webp",
     "title": "Звёздный механик",
     "titles": {
       "ru": "Звёздный механик",
@@ -1302,7 +1302,7 @@ export const archiveImages = [
   {
     "id": "orbital-botanist",
     "original": "img_38.png",
-    "file": "assets/images/orbital-botanist.png",
+    "file": "assets/images/orbital-botanist.webp",
     "title": "Ботаник на орбите",
     "titles": {
       "ru": "Ботаник на орбите",
@@ -1319,7 +1319,7 @@ export const archiveImages = [
   {
     "id": "galaxy-after-sunset",
     "original": "img_4.png",
-    "file": "assets/images/galaxy-after-sunset.png",
+    "file": "assets/images/galaxy-after-sunset.webp",
     "title": "Галактика после заката",
     "titles": {
       "ru": "Галактика после заката",
@@ -1336,7 +1336,7 @@ export const archiveImages = [
   {
     "id": "retro-bridge-pilot",
     "original": "img_40.png",
-    "file": "assets/images/retro-bridge-pilot.png",
+    "file": "assets/images/retro-bridge-pilot.webp",
     "title": "Пилот ретромостика",
     "titles": {
       "ru": "Пилот ретромостика",
@@ -1353,7 +1353,7 @@ export const archiveImages = [
   {
     "id": "atomic-comic-study",
     "original": "img_41.png",
-    "file": "assets/images/atomic-comic-study.png",
+    "file": "assets/images/atomic-comic-study.webp",
     "title": "Атомный комикс",
     "titles": {
       "ru": "Атомный комикс",
@@ -1370,7 +1370,7 @@ export const archiveImages = [
   {
     "id": "orbital-diner",
     "original": "img_42.png",
-    "file": "assets/images/orbital-diner.png",
+    "file": "assets/images/orbital-diner.webp",
     "title": "Орбитальная закусочная",
     "titles": {
       "ru": "Орбитальная закусочная",
@@ -1387,7 +1387,7 @@ export const archiveImages = [
   {
     "id": "goggle-inventor",
     "original": "img_43.png",
-    "file": "assets/images/goggle-inventor.png",
+    "file": "assets/images/goggle-inventor.webp",
     "title": "Изобретательница в очках",
     "titles": {
       "ru": "Изобретательница в очках",
@@ -1404,7 +1404,7 @@ export const archiveImages = [
   {
     "id": "helmet-skull-study",
     "original": "img_44.png",
-    "file": "assets/images/helmet-skull-study.png",
+    "file": "assets/images/helmet-skull-study.webp",
     "title": "Шлем помнит всё",
     "titles": {
       "ru": "Шлем помнит всё",
@@ -1421,7 +1421,7 @@ export const archiveImages = [
   {
     "id": "red-void",
     "original": "img_45.png",
-    "file": "assets/images/red-void.png",
+    "file": "assets/images/red-void.webp",
     "title": "Красная пустота",
     "titles": {
       "ru": "Красная пустота",
@@ -1438,7 +1438,7 @@ export const archiveImages = [
   {
     "id": "fire-alchemist",
     "original": "img_46.png",
-    "file": "assets/images/fire-alchemist.png",
+    "file": "assets/images/fire-alchemist.webp",
     "title": "Алхимик огня",
     "titles": {
       "ru": "Алхимик огня",
@@ -1455,7 +1455,7 @@ export const archiveImages = [
   {
     "id": "forest-bard",
     "original": "img_47.png",
-    "file": "assets/images/forest-bard.png",
+    "file": "assets/images/forest-bard.webp",
     "title": "Бард лесного фронтира",
     "titles": {
       "ru": "Бард лесного фронтира",
@@ -1472,7 +1472,7 @@ export const archiveImages = [
   {
     "id": "elder-seer",
     "original": "img_48.png",
-    "file": "assets/images/elder-seer.png",
+    "file": "assets/images/elder-seer.webp",
     "title": "Хранительница знаков",
     "titles": {
       "ru": "Хранительница знаков",
@@ -1489,7 +1489,7 @@ export const archiveImages = [
   {
     "id": "forest-keeper",
     "original": "img_49.png",
-    "file": "assets/images/forest-keeper.png",
+    "file": "assets/images/forest-keeper.webp",
     "title": "Хранительница леса",
     "titles": {
       "ru": "Хранительница леса",
@@ -1506,7 +1506,7 @@ export const archiveImages = [
   {
     "id": "lenticular-volcano",
     "original": "img_5.png",
-    "file": "assets/images/lenticular-volcano.png",
+    "file": "assets/images/lenticular-volcano.webp",
     "title": "Шляпа для вулкана",
     "titles": {
       "ru": "Шляпа для вулкана",
@@ -1523,7 +1523,7 @@ export const archiveImages = [
   {
     "id": "dark-library-keeper",
     "original": "img_50.png",
-    "file": "assets/images/dark-library-keeper.png",
+    "file": "assets/images/dark-library-keeper.webp",
     "title": "Библиотекарь сумерек",
     "titles": {
       "ru": "Библиотекарь сумерек",
@@ -1540,7 +1540,7 @@ export const archiveImages = [
   {
     "id": "void-sentinel",
     "original": "img_51.png",
-    "file": "assets/images/void-sentinel.png",
+    "file": "assets/images/void-sentinel.webp",
     "title": "Страж пустоты",
     "titles": {
       "ru": "Страж пустоты",
@@ -1557,7 +1557,7 @@ export const archiveImages = [
   {
     "id": "fungal-skull",
     "original": "img_52.png",
-    "file": "assets/images/fungal-skull.png",
+    "file": "assets/images/fungal-skull.webp",
     "title": "Грибной советник",
     "titles": {
       "ru": "Грибной советник",
@@ -1574,7 +1574,7 @@ export const archiveImages = [
   {
     "id": "lunar-apparition",
     "original": "img_53.png",
-    "file": "assets/images/lunar-apparition.png",
+    "file": "assets/images/lunar-apparition.webp",
     "title": "Лунное явление",
     "titles": {
       "ru": "Лунное явление",
@@ -1591,7 +1591,7 @@ export const archiveImages = [
   {
     "id": "twin-moon-towers",
     "original": "img_54.png",
-    "file": "assets/images/twin-moon-towers.png",
+    "file": "assets/images/twin-moon-towers.webp",
     "title": "Башни двух лун",
     "titles": {
       "ru": "Башни двух лун",
@@ -1608,7 +1608,7 @@ export const archiveImages = [
   {
     "id": "clockwork-tree",
     "original": "img_55.png",
-    "file": "assets/images/clockwork-tree.png",
+    "file": "assets/images/clockwork-tree.webp",
     "title": "Дерево времени",
     "titles": {
       "ru": "Дерево времени",
@@ -1625,7 +1625,7 @@ export const archiveImages = [
   {
     "id": "floating-reading-room",
     "original": "img_56.png",
-    "file": "assets/images/floating-reading-room.png",
+    "file": "assets/images/floating-reading-room.webp",
     "title": "Комната, забывшая пол",
     "titles": {
       "ru": "Комната, забывшая пол",
@@ -1642,7 +1642,7 @@ export const archiveImages = [
   {
     "id": "root-thought",
     "original": "img_57.png",
-    "file": "assets/images/root-thought.png",
+    "file": "assets/images/root-thought.webp",
     "title": "Мысль пустила корни",
     "titles": {
       "ru": "Мысль пустила корни",
@@ -1659,7 +1659,7 @@ export const archiveImages = [
   {
     "id": "breakfast-with-a-sun",
     "original": "img_58.png",
-    "file": "assets/images/breakfast-with-a-sun.png",
+    "file": "assets/images/breakfast-with-a-sun.webp",
     "title": "Завтрак с солнцем",
     "titles": {
       "ru": "Завтрак с солнцем",
@@ -1681,7 +1681,7 @@ export const archiveImages = [
   {
     "id": "observatory-tree",
     "original": "img_59.png",
-    "file": "assets/images/observatory-tree.png",
+    "file": "assets/images/observatory-tree.webp",
     "title": "Дерево-обсерватория",
     "titles": {
       "ru": "Дерево-обсерватория",
@@ -1698,7 +1698,7 @@ export const archiveImages = [
   {
     "id": "galactic-cliff",
     "original": "img_6.png",
-    "file": "assets/images/galactic-cliff.png",
+    "file": "assets/images/galactic-cliff.webp",
     "title": "Скала под галактикой",
     "titles": {
       "ru": "Скала под галактикой",
@@ -1715,7 +1715,7 @@ export const archiveImages = [
   {
     "id": "crowned-wanderer",
     "original": "img_60.png",
-    "file": "assets/images/crowned-wanderer.png",
+    "file": "assets/images/crowned-wanderer.webp",
     "title": "Коронованный странник",
     "titles": {
       "ru": "Коронованный странник",
@@ -1732,7 +1732,7 @@ export const archiveImages = [
   {
     "id": "flying-tree-castle",
     "original": "img_61.png",
-    "file": "assets/images/flying-tree-castle.png",
+    "file": "assets/images/flying-tree-castle.webp",
     "title": "Летающий замок-дерево",
     "titles": {
       "ru": "Летающий замок-дерево",
@@ -1749,7 +1749,7 @@ export const archiveImages = [
   {
     "id": "storm-at-horizon",
     "original": "img_7.png",
-    "file": "assets/images/storm-at-horizon.png",
+    "file": "assets/images/storm-at-horizon.webp",
     "title": "Гроза на горизонте",
     "titles": {
       "ru": "Гроза на горизонте",
@@ -1766,7 +1766,7 @@ export const archiveImages = [
   {
     "id": "volcano-under-stars",
     "original": "img_8.png",
-    "file": "assets/images/volcano-under-stars.png",
+    "file": "assets/images/volcano-under-stars.webp",
     "title": "Вулкан под звёздами",
     "titles": {
       "ru": "Вулкан под звёздами",
@@ -1783,7 +1783,7 @@ export const archiveImages = [
   {
     "id": "whale-moon",
     "original": "img_9.png",
-    "file": "assets/images/whale-moon.png",
+    "file": "assets/images/whale-moon.webp",
     "title": "Луна и хвост кита",
     "titles": {
       "ru": "Луна и хвост кита",
@@ -1805,7 +1805,7 @@ export const archiveImages = [
   {
     "id": "frontier-freighter",
     "original": "WhatsApp Image 2026-11-07 at 02.48.41.jpeg",
-    "file": "assets/images/frontier-freighter.jpeg",
+    "file": "assets/images/frontier-freighter.webp",
     "title": "Грузовик фронтира",
     "titles": {
       "ru": "Грузовик фронтира",
@@ -1822,7 +1822,7 @@ export const archiveImages = [
   {
     "id": "silver-orbital-ship",
     "original": "WhatsApp Image 2026-11-07 at 02.49.10.jpeg",
-    "file": "assets/images/silver-orbital-ship.jpeg",
+    "file": "assets/images/silver-orbital-ship.webp",
     "title": "Серебряный орбитальщик",
     "titles": {
       "ru": "Серебряный орбитальщик",
@@ -1839,7 +1839,7 @@ export const archiveImages = [
   {
     "id": "twin-engine-vessel",
     "original": "WhatsApp Image 2026-11-07 at 02.49.23.jpeg",
-    "file": "assets/images/twin-engine-vessel.jpeg",
+    "file": "assets/images/twin-engine-vessel.webp",
     "title": "Двухмоторный странник",
     "titles": {
       "ru": "Двухмоторный странник",
@@ -1856,7 +1856,7 @@ export const archiveImages = [
   {
     "id": "long-haul-cruiser",
     "original": "WhatsApp Image 2026-11-07 at 02.49.37.jpeg",
-    "file": "assets/images/long-haul-cruiser.jpeg",
+    "file": "assets/images/long-haul-cruiser.webp",
     "title": "Крейсер дальних рейсов",
     "titles": {
       "ru": "Крейсер дальних рейсов",
@@ -1873,7 +1873,7 @@ export const archiveImages = [
   {
     "id": "ring-drive-ship",
     "original": "WhatsApp Image 2026-11-07 at 02.49.54.jpeg",
-    "file": "assets/images/ring-drive-ship.jpeg",
+    "file": "assets/images/ring-drive-ship.webp",
     "title": "Кольцевой двигатель",
     "titles": {
       "ru": "Кольцевой двигатель",
@@ -1890,7 +1890,7 @@ export const archiveImages = [
   {
     "id": "event-horizon-vessel",
     "original": "WhatsApp Image 2026-11-07 at 02.50.56.jpeg",
-    "file": "assets/images/event-horizon-vessel.jpeg",
+    "file": "assets/images/event-horizon-vessel.webp",
     "title": "Корабль у горизонта событий",
     "titles": {
       "ru": "Корабль у горизонта событий",
@@ -1907,7 +1907,7 @@ export const archiveImages = [
   {
     "id": "tentacle-engineer",
     "original": "WhatsApp Image 2026-11-07 at 02.51.30.jpeg",
-    "file": "assets/images/tentacle-engineer.jpeg",
+    "file": "assets/images/tentacle-engineer.webp",
     "title": "Инженер многозадачности",
     "titles": {
       "ru": "Инженер многозадачности",
@@ -1924,7 +1924,7 @@ export const archiveImages = [
   {
     "id": "android-city-guide",
     "original": "WhatsApp Image 2026-11-07 at 02.52.51.jpeg",
-    "file": "assets/images/android-city-guide.jpeg",
+    "file": "assets/images/android-city-guide.webp",
     "title": "Проводница техногорода",
     "titles": {
       "ru": "Проводница техногорода",
@@ -1941,7 +1941,7 @@ export const archiveImages = [
   {
     "id": "book-of-smoke",
     "original": "WhatsApp Image 2026-11-07 at 02.55.07.jpeg",
-    "file": "assets/images/book-of-smoke.jpeg",
+    "file": "assets/images/book-of-smoke.webp",
     "title": "Книга дыма",
     "titles": {
       "ru": "Книга дыма",
@@ -1958,7 +1958,7 @@ export const archiveImages = [
   {
     "id": "mechanical-heart",
     "original": "WhatsApp Image 2026-11-07 at 02.55.46.jpeg",
-    "file": "assets/images/mechanical-heart.jpeg",
+    "file": "assets/images/mechanical-heart.webp",
     "title": "Механическое сердце",
     "titles": {
       "ru": "Механическое сердце",
@@ -1975,7 +1975,7 @@ export const archiveImages = [
   {
     "id": "dust-meditation",
     "original": "WhatsApp Image 2026-11-07 at 02.56.30.jpeg",
-    "file": "assets/images/dust-meditation.jpeg",
+    "file": "assets/images/dust-meditation.webp",
     "title": "Пылевая медитация",
     "titles": {
       "ru": "Пылевая медитация",
@@ -1992,7 +1992,7 @@ export const archiveImages = [
   {
     "id": "house-at-the-end-of-sea",
     "original": "WhatsApp Image 2026-11-07 at 03.01.02.jpeg",
-    "file": "assets/images/house-at-the-end-of-sea.jpeg",
+    "file": "assets/images/house-at-the-end-of-sea.webp",
     "title": "Дом на краю моря",
     "titles": {
       "ru": "Дом на краю моря",
@@ -2014,7 +2014,7 @@ export const archiveImages = [
   {
     "id": "sun-forged-smile",
     "original": "WhatsApp Image 2026-11-07 at 03.01.56.jpeg",
-    "file": "assets/images/sun-forged-smile.jpeg",
+    "file": "assets/images/sun-forged-smile.webp",
     "title": "Улыбка солнечной ковки",
     "titles": {
       "ru": "Улыбка солнечной ковки",
@@ -2031,7 +2031,7 @@ export const archiveImages = [
   {
     "id": "pirate-of-the-frontier",
     "original": "WhatsApp Image 2026-11-07 at 03.02.13.jpeg",
-    "file": "assets/images/pirate-of-the-frontier.jpeg",
+    "file": "assets/images/pirate-of-the-frontier.webp",
     "title": "Пират фронтира",
     "titles": {
       "ru": "Пират фронтира",
@@ -2048,7 +2048,7 @@ export const archiveImages = [
   {
     "id": "forest-contact",
     "original": "WhatsApp Image 2026-11-07 at 03.03.17.jpeg",
-    "file": "assets/images/forest-contact.jpeg",
+    "file": "assets/images/forest-contact.webp",
     "title": "Контакт в лесу",
     "titles": {
       "ru": "Контакт в лесу",
@@ -2065,7 +2065,7 @@ export const archiveImages = [
   {
     "id": "orbital-acrobat",
     "original": "WhatsApp Image 2026-11-07 at 03.03.33.jpeg",
-    "file": "assets/images/orbital-acrobat.jpeg",
+    "file": "assets/images/orbital-acrobat.webp",
     "title": "Орбитальный акробат",
     "titles": {
       "ru": "Орбитальный акробат",
@@ -2082,7 +2082,7 @@ export const archiveImages = [
   {
     "id": "red-suit-expedition",
     "original": "WhatsApp Image 2026-11-07 at 03.03.51.jpeg",
-    "file": "assets/images/red-suit-expedition.jpeg",
+    "file": "assets/images/red-suit-expedition.webp",
     "title": "Экспедиция в красном",
     "titles": {
       "ru": "Экспедиция в красном",
@@ -2099,7 +2099,7 @@ export const archiveImages = [
   {
     "id": "clockwork-inspector",
     "original": "WhatsApp Image 2026-11-07 at 03.04.27.jpeg",
-    "file": "assets/images/clockwork-inspector.jpeg",
+    "file": "assets/images/clockwork-inspector.webp",
     "title": "Инспектор часового механизма",
     "titles": {
       "ru": "Инспектор часового механизма",
@@ -2116,7 +2116,7 @@ export const archiveImages = [
   {
     "id": "root-haired-guardian",
     "original": "WhatsApp Image 2026-11-07 at 03.05.06.jpeg",
-    "file": "assets/images/root-haired-guardian.jpeg",
+    "file": "assets/images/root-haired-guardian.webp",
     "title": "Страж с корнями вместо волос",
     "titles": {
       "ru": "Страж с корнями вместо волос",
@@ -2133,7 +2133,7 @@ export const archiveImages = [
   {
     "id": "waterline-gaze",
     "original": "WhatsApp Image 2026-11-07 at 03.05.23.jpeg",
-    "file": "assets/images/waterline-gaze.jpeg",
+    "file": "assets/images/waterline-gaze.webp",
     "title": "Взгляд с ватерлинии",
     "titles": {
       "ru": "Взгляд с ватерлинии",
@@ -2150,7 +2150,7 @@ export const archiveImages = [
   {
     "id": "racer-design-sheet",
     "original": "WhatsApp Image 2026-11-07 at 03.06.00.jpeg",
-    "file": "assets/images/racer-design-sheet.jpeg",
+    "file": "assets/images/racer-design-sheet.webp",
     "title": "Чертёж скоростного корабля",
     "titles": {
       "ru": "Чертёж скоростного корабля",
@@ -2167,7 +2167,7 @@ export const archiveImages = [
   {
     "id": "silver-frontier-warden",
     "original": "WhatsApp Image 2026-11-07 at 03.06.41.jpeg",
-    "file": "assets/images/silver-frontier-warden.jpeg",
+    "file": "assets/images/silver-frontier-warden.webp",
     "title": "Серебряный страж фронтира",
     "titles": {
       "ru": "Серебряный страж фронтира",
@@ -2184,7 +2184,7 @@ export const archiveImages = [
   {
     "id": "monolith-expedition",
     "original": "WhatsApp Image 2026-11-07 at 03.06.53.jpeg",
-    "file": "assets/images/monolith-expedition.jpeg",
+    "file": "assets/images/monolith-expedition.webp",
     "title": "Экспедиция к монолиту",
     "titles": {
       "ru": "Экспедиция к монолиту",
@@ -2201,7 +2201,7 @@ export const archiveImages = [
   {
     "id": "horizon-palace",
     "original": "WhatsApp Image 2026-11-07 at 03.07.11.jpeg",
-    "file": "assets/images/horizon-palace.jpeg",
+    "file": "assets/images/horizon-palace.webp",
     "title": "Дворец горизонта",
     "titles": {
       "ru": "Дворец горизонта",
@@ -2218,7 +2218,7 @@ export const archiveImages = [
   {
     "id": "hanging-sky-garden",
     "original": "WhatsApp Image 2026-11-07 at 03.08.10.jpeg",
-    "file": "assets/images/hanging-sky-garden.jpeg",
+    "file": "assets/images/hanging-sky-garden.webp",
     "title": "Подвесной небесный сад",
     "titles": {
       "ru": "Подвесной небесный сад",
@@ -2235,7 +2235,7 @@ export const archiveImages = [
   {
     "id": "library-ghost",
     "original": "WhatsApp Image 2026-11-07 at 03.08.31.jpeg",
-    "file": "assets/images/library-ghost.jpeg",
+    "file": "assets/images/library-ghost.webp",
     "title": "Призрак библиотечного фонда",
     "titles": {
       "ru": "Призрак библиотечного фонда",
@@ -2252,7 +2252,7 @@ export const archiveImages = [
   {
     "id": "snow-field-mission",
     "original": "WhatsApp Image 2026-11-07 at 03.09.03.jpeg",
-    "file": "assets/images/snow-field-mission.jpeg",
+    "file": "assets/images/snow-field-mission.webp",
     "title": "Снежная полевая миссия",
     "titles": {
       "ru": "Снежная полевая миссия",
@@ -2269,7 +2269,7 @@ export const archiveImages = [
   {
     "id": "solar-flower",
     "original": "WhatsApp Image 2026-11-07 at 03.11.20.jpeg",
-    "file": "assets/images/solar-flower.jpeg",
+    "file": "assets/images/solar-flower.webp",
     "title": "Солнечный цветок",
     "titles": {
       "ru": "Солнечный цветок",
@@ -2286,7 +2286,7 @@ export const archiveImages = [
   {
     "id": "electric-tide-guide",
     "original": "WhatsApp Image 2026-11-07 at 03.12.02.jpeg",
-    "file": "assets/images/electric-tide-guide.jpeg",
+    "file": "assets/images/electric-tide-guide.webp",
     "title": "Проводница электрических приливов",
     "titles": {
       "ru": "Проводница электрических приливов",
@@ -2303,7 +2303,7 @@ export const archiveImages = [
   {
     "id": "moon-court-scholar",
     "original": "WhatsApp Image 2026-11-07 at 03.14.01.jpeg",
-    "file": "assets/images/moon-court-scholar.jpeg",
+    "file": "assets/images/moon-court-scholar.webp",
     "title": "Учёная лунного двора",
     "titles": {
       "ru": "Учёная лунного двора",
@@ -2320,7 +2320,7 @@ export const archiveImages = [
   {
     "id": "neon-harbor-pilot",
     "original": "WhatsApp Image 2026-11-07 at 03.14.38.jpeg",
-    "file": "assets/images/neon-harbor-pilot.jpeg",
+    "file": "assets/images/neon-harbor-pilot.webp",
     "title": "Пилот неоновой гавани",
     "titles": {
       "ru": "Пилот неоновой гавани",
@@ -2337,7 +2337,7 @@ export const archiveImages = [
   {
     "id": "valley-of-the-listeners",
     "original": "WhatsApp Image 2026-11-07 at 03.14.57.jpeg",
-    "file": "assets/images/valley-of-the-listeners.jpeg",
+    "file": "assets/images/valley-of-the-listeners.webp",
     "title": "Долина слушателей",
     "titles": {
       "ru": "Долина слушателей",
@@ -2354,7 +2354,7 @@ export const archiveImages = [
   {
     "id": "first-lesson",
     "original": "WhatsApp Image 2026-11-07 at 03.15.42.jpeg",
-    "file": "assets/images/first-lesson.jpeg",
+    "file": "assets/images/first-lesson.webp",
     "title": "Первый урок землян",
     "titles": {
       "ru": "Первый урок землян",
@@ -2376,7 +2376,7 @@ export const archiveImages = [
   {
     "id": "skeletal-lecturer",
     "original": "WhatsApp Image 2026-11-07 at 03.16.10.jpeg",
-    "file": "assets/images/skeletal-lecturer.jpeg",
+    "file": "assets/images/skeletal-lecturer.webp",
     "title": "Лектор без лишней плоти",
     "titles": {
       "ru": "Лектор без лишней плоти",
@@ -2393,7 +2393,7 @@ export const archiveImages = [
   {
     "id": "armored-cat",
     "original": "WhatsApp Image 2026-11-07 at 03.16.20.jpeg",
-    "file": "assets/images/armored-cat.jpeg",
+    "file": "assets/images/armored-cat.webp",
     "title": "Кот в тяжёлом скафандре",
     "titles": {
       "ru": "Кот в тяжёлом скафандре",
@@ -2410,7 +2410,7 @@ export const archiveImages = [
   {
     "id": "ancient-mechanical-guard",
     "original": "WhatsApp Image 2026-11-07 at 03.16.25.jpeg",
-    "file": "assets/images/ancient-mechanical-guard.jpeg",
+    "file": "assets/images/ancient-mechanical-guard.webp",
     "title": "Древний механический страж",
     "titles": {
       "ru": "Древний механический страж",
@@ -2427,7 +2427,7 @@ export const archiveImages = [
   {
     "id": "little-nova",
     "original": "WhatsApp Image 2026-11-07 at 03.16.57.jpeg",
-    "file": "assets/images/little-nova.jpeg",
+    "file": "assets/images/little-nova.webp",
     "title": "Маленькая сверхновая",
     "titles": {
       "ru": "Маленькая сверхновая",
@@ -2444,7 +2444,7 @@ export const archiveImages = [
   {
     "id": "moonlit-traveler",
     "original": "WhatsApp Image 2026-11-07 at 03.18.51.jpeg",
-    "file": "assets/images/moonlit-traveler.jpeg",
+    "file": "assets/images/moonlit-traveler.webp",
     "title": "Путница в лунном свете",
     "titles": {
       "ru": "Путница в лунном свете",
