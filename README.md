@@ -8,6 +8,8 @@
 
 **Three Pixels to Centauri** is a fictional intergalactic school of photography and visual art. A dark, cinematic one-page site joins an image archive, a video log, imaginary expeditions on six ships, humorous workshops and a cast of fictional tutors, guides and ship crews. The page is available in Russian, English and Hebrew (right-to-left). The GitHub repository is `Three-Pixels-to-Centaur`; older local copies may still use the folder name `photoclub-objectiv`.
 
+**Live demo:** https://dubnovalexey.github.io/Three-Pixels-to-Centaur/
+
 ### Try it
 
 1. Switch the language in the header: every visible text, dialog and data card changes, and Hebrew flips the layout.
@@ -57,6 +59,8 @@ These are proposals, not features.
 ## Русский
 
 **«Три пикселя до Центавра»** — вымышленный межгалактический учебный центр фотографии и изобразительного искусства. Тёмная кинематографичная одностраничная витрина объединяет архив изображений, видеожурнал, воображаемые экспедиции на шести кораблях, мастерские с сухим космическим юмором и целую команду вымышленных кураторов, проводников и экипажей. Страница работает на русском, английском и иврите (справа налево). Репозиторий на GitHub — `Three-Pixels-to-Centaur`; в старых локальных копиях папка может называться `photoclub-objectiv`.
+
+**Демо:** https://dubnovalexey.github.io/Three-Pixels-to-Centaur/
 
 ### Быстрый просмотр
 
@@ -109,6 +113,8 @@ npm run media:update
 ## עברית
 
 **שלושה פיקסלים עד קנטאור** הוא מרכז בין־גלקטי בדיוני לצילום ולאמנות חזותית. אתר חד־עמודי כהה וקולנועי מחבר ארכיון תמונות, יומן וידאו, מסעות דמיוניים בשש ספינות, סדנאות הומוריסטיות וצוות שלם של מורים, מדריכים ואנשי צוות בדיוניים. הדף זמין ברוסית, באנגלית ובעברית (מימין לשמאל). המאגר ב־GitHub נקרא `Three-Pixels-to-Centaur`; בעותקים מקומיים ישנים התיקייה עשויה להיקרא `photoclub-objectiv`.
+
+**הדגמה:** https://dubnovalexey.github.io/Three-Pixels-to-Centaur/
 
 ### סיור קצר
 

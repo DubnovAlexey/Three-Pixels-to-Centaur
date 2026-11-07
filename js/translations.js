@@ -791,6 +791,10 @@ export const translations = {
     "en": "Contact",
     "he": "יצירת קשר"
   },
+  "Код на GitHub ↗": {
+    "en": "Code on GitHub ↗",
+    "he": "הקוד ב-GitHub ↗"
+  },
   "© ТРИ ПИКСЕЛЯ ДО ЦЕНТАВРА / УЧЕБНЫЙ ХУДОЖЕСТВЕННЫЙ ПРОЕКТ": {
     "en": "© THREE PIXELS TO CENTAURI / ARTISTIC LEARNING PROJECT",
     "he": "© שלושה פיקסלים עד קנטאור / פרויקט לימודי אמנותי"

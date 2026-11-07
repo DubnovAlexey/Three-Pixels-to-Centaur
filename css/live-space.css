@@ -158,3 +158,15 @@
   background: var(--cyan); color: var(--void); transform: translateY(-2px);
 }
 /* END SECTION 9 */
+
+/* Ссылка на исходный код в подвале — в цвете бирюзовых акцентов сайта */
+.footer-links .footer-source {
+  color: var(--cyan);
+  border-bottom: 1px solid rgba(167, 223, 237, .35);
+}
+
+.footer-links .footer-source:hover,
+.footer-links .footer-source:focus-visible {
+  color: var(--ink);
+  border-color: var(--ink);
+}
