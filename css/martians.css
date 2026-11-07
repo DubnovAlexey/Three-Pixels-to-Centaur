@@ -205,9 +205,11 @@
     animation: martian-drip var(--drip-time) cubic-bezier(.5, 0, .8, .6) var(--drip-delay) forwards;
 }
 
+/* Only size and opacity change on impact — cheap for the browser even when several splats land at once */
 @keyframes martian-glass-hit {
-    0% { transform: scale(.15); filter: blur(5px); opacity: 0; }
-    100% { transform: scale(1); filter: blur(0) drop-shadow(0 2px 3px rgba(0, 0, 0, .35)); opacity: .93; }
+    0% { transform: scale(.15); opacity: 0; }
+    70% { transform: scale(1.06); opacity: .93; }
+    100% { transform: scale(1); opacity: .93; }
 }
 
 @keyframes martian-drip { to { transform: scaleY(1); } }
@@ -254,7 +256,8 @@
 
 /* BEGIN SECTION 6а — подсказка «включите музыку» */
 /* An alert in the centre of the screen — «danger!»: burgundy-red, red-black hazard stripes, the whole plate
-   swells and shrinks like a siren, a red glow pulses around it and the warning sign blinks. It never blocks clicks. */
+   swells and shrinks like a siren, a red glow pulses around it and the warning sign blinks. Hidden, it lets every
+   click through; shown, it can be pressed — that turns the site's music on (js/martians.js, startMusic). */
 .martian-hint {
     position: fixed;
     left: 50%;
@@ -290,30 +293,46 @@
     text-shadow: 0 0 14px #ff0000, 0 0 30px rgba(255, 0, 0, .7);
 }
 
+/* The red glow around the plate: drawn once, only its opacity pulses (repainting a big blurred shadow on every
+   frame would load the page) */
+.martian-hint::before {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    border-radius: 8px;
+    box-shadow: 0 0 34px 10px rgba(255, 20, 30, .85), 0 0 110px 30px rgba(170, 0, 15, .5);
+    opacity: 0;
+    pointer-events: none;
+}
+
 .martian-hint.visible {
     opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
     transform: translate(-50%, -50%) scale(1);
     animation: martian-alert .9s ease-in-out infinite;
 }
+
+.martian-hint.visible::before { animation: martian-alert-glow .9s ease-in-out infinite; }
 
 .martian-hint.visible .martian-hint__sign { animation: martian-siren .45s steps(2, end) infinite; }
 
 /* swell and shrink, with a red glow breathing around */
 @keyframes martian-alert {
-    0%, 100% {
-        transform: translate(-50%, -50%) scale(.96);
-        box-shadow: 0 0 18px 4px rgba(200, 0, 20, .55), 0 0 60px 10px rgba(120, 0, 10, .35);
-    }
-    50% {
-        transform: translate(-50%, -50%) scale(1.08);
-        box-shadow: 0 0 34px 10px rgba(255, 20, 30, .85), 0 0 110px 30px rgba(170, 0, 15, .5);
-    }
+    0%, 100% { transform: translate(-50%, -50%) scale(.96); }
+    50% { transform: translate(-50%, -50%) scale(1.08); }
+}
+
+@keyframes martian-alert-glow {
+    0%, 100% { opacity: .45; }
+    50% { opacity: 1; }
 }
 
 @keyframes martian-siren { 50% { opacity: .25; } }
 
 @media (prefers-reduced-motion: reduce) {
-    .martian-hint.visible, .martian-hint.visible .martian-hint__sign { animation: none; }
+    .martian-hint.visible, .martian-hint.visible .martian-hint__sign, .martian-hint.visible::before { animation: none; }
+    .martian-hint.visible::before { opacity: .8; }
 }
 /* END SECTION 6а */
 

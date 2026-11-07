@@ -1,8 +1,9 @@
 // js/martians.js
 // Пасхалка с чёрным юмором в стиле фантастики 1950-х: марсиане под стеклянными шлемами выглядывают из углов.
 // Сценарий «сначала страшно — потом смешно»:
-//   1. Без музыки марсиане не взрываются: появляются один за другим, остаются по краям экрана и мешают —
-//      выглядывают и прячутся. Когда их больше трёх, сайт аккуратно подсказывает включить музыку.
+//   1. Без музыки марсиане не взрываются: появляются один за другим, остаются по краям экрана, мешают и палят
+//      из бластеров. Когда их больше трёх, в центре экрана загорается тревога «включите музыку»; нажатие на неё
+//      включает музыку сайта.
 //   2. Музыка включилась — вся толпа танцует, а потом у марсиан по очереди лопаются головы: трескается шлем,
 //      летят осколки, кровь, куски мозга, слизь и глаз. Иногда всё это шлёпается «изнутри» на стекло экрана.
 //      Пока музыка играет, новые марсиане тоже появляются, танцуют и лопаются.
@@ -179,12 +180,25 @@
             hint.className = "martian-hint";
             hint.setAttribute("role", "alert");   // тревога: читается экранным диктором сразу
             hint.innerHTML = '<span class="martian-hint__sign" aria-hidden="true">⚠</span><span class="martian-hint__text"></span>';
+            hint.addEventListener("click", startMusic); // табличку можно нажать — она включает музыку сайта
             document.body.appendChild(hint);
         }
         const lang = (document.documentElement.lang || "en").slice(0, 2);
         hint.querySelector(".martian-hint__text").textContent = HINT[lang] || HINT.en;
         hint.dir = lang === "he" ? "rtl" : "ltr";
         hint.classList.add("visible");
+    }
+
+    // Нажатие на тревогу включает музыку сайта его же кнопкой (так плеер сайта знает, что играет).
+    // Кнопка: элемент с data-martian-play, иначе кнопка плеера Mars Project или «Трёх пикселей».
+    function startMusic() {
+        const m = music();
+        if (!m || !m.paused) return;
+        const control = document.querySelector("[data-martian-play]") ||
+            document.getElementById("site-audio-toggle") ||
+            document.getElementById("playlistToggle");
+        if (control) control.click();
+        else m.play().catch(() => {});
     }
 
     // Место у края экрана подальше от уже сидящих марсиан
