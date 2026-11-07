@@ -74,3 +74,35 @@ test('manifest entries explicitly marked unreadable are not selected for playbac
   const media = new FakeMedia(), player = createPlaylistController(media, [{ file: 'bad.mpeg', metadata: { integrity: 'unreadable' } }, ...tracks]);
   assert.equal(player.getState().count, 3); await player.play(); assert.equal(media.src, 'one.mp3'); player.dispose();
 });
+
+test('late errors exhaust one recovery chain even when each play promise first resolves', async () => {
+  const media = new FakeMedia(), player = createPlaylistController(media, tracks);
+  await player.play();
+  for (let index = 0; index < tracks.length; index++) {
+    media.error = new Error('decoder failed after playback began');
+    media.emit('error'); await drain();
+  }
+  assert.deepEqual(media.calls, ['one.mp3', 'two.mp4', 'three.mpeg']);
+  assert.equal(player.getState().intent, false); assert.equal(media.paused, true);
+  assert.equal(player.getState().pending, false); assert.match(player.getState().error, /Не удалось/);
+  media.emit('error'); media.emit('ended'); await drain();
+  assert.equal(media.calls.length, tracks.length);
+  // A deliberate retry is allowed to test the recordings again.
+  assert.equal(await player.play(), true); assert.equal(media.calls.length, tracks.length + 1);
+  player.dispose();
+});
+test('a normal ended event clears earlier failures and permits a new playlist cycle', async () => {
+  let firstFailure = true;
+  const media = new FakeMedia(src => {
+    if (src === 'one.mp3' && firstFailure) { firstFailure = false; return Promise.reject(new Error('temporary failure')); }
+    return Promise.resolve();
+  });
+  const player = createPlaylistController(media, tracks);
+  await player.play(); assert.equal(media.src, 'two.mp4');
+  media.error = new Error('late decoder failure'); media.emit('error'); await drain();
+  assert.equal(media.src, 'three.mpeg');
+  media.paused = true; media.emit('ended'); await drain();
+  assert.equal(media.src, 'one.mp3'); assert.equal(player.getState().playing, true);
+  assert.deepEqual(media.calls, ['one.mp3', 'two.mp4', 'three.mpeg', 'one.mp3']);
+  player.dispose();
+});

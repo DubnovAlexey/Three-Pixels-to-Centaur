@@ -1,3 +1,4 @@
+import { t,onLanguageChange } from './i18n.js';
 // =====================================================================
 // МОДУЛЬ: spaceSafari.js
 // Кнопка «Случайный факт о Вселенной» в секции #space-safari. Массив фактов
@@ -22,10 +23,12 @@ export function initSpaceSafariFacts() {
   if (!btn || !output) return;
 
   let lastIndex = -1;
+  const render = () => { output.textContent=t(lastIndex<0 ? "Перед вылетом убедитесь, что объектив смотрит наружу." : FACTS[lastIndex]); };
+  onLanguageChange(render); render();
   btn.addEventListener('click', () => {
     let index;
     do { index = Math.floor(Math.random() * FACTS.length); } while (index === lastIndex && FACTS.length > 1);
     lastIndex = index;
-    output.textContent = FACTS[index];
+    output.textContent = t(FACTS[index]);
   });
 }

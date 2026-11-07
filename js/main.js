@@ -11,18 +11,23 @@ import { initScrollEffects } from './scrollEffects.js';
 import { initGalleryLightbox } from './galleryLightbox.js';
 import { initPlaylistPlayer } from './playlistPlayer.js';
 import { initCourseModal } from './courseModal.js';
-import { initInstructorModal } from './instructorModal.js';
+import { initI18n } from './i18n.js';
+import { initPersonnel } from './personnel.js';
+import { initVideoGallery } from './videoGallery.js';
+import { initFleet } from './fleet.js';
+import { initSignalType } from './signalType.js';
 import { initContactForm } from './contactForm.js';
 import { initNewsletterForm } from './newsletterForm.js';
 import { initSpaceSafariFacts } from './spaceSafari.js';
 
 // BEGIN initializePage
 document.addEventListener('DOMContentLoaded', () => {
+  initI18n();
   initFontSizeControls(); initSmoothScroll(); initScrollEffects();
   document.documentElement.classList.add('js-reveal'); initScrollReveal();
   initGalleryLightbox(); let music;
   void initPlaylistPlayer().then(controller => { music = controller; });
-  initCourseModal(); initInstructorModal(); initContactForm(); initNewsletterForm(); initSpaceSafariFacts();
+  initCourseModal(); initPersonnel(); initVideoGallery(); initFleet(); initSignalType(); initContactForm(); initNewsletterForm(); initSpaceSafariFacts();
   const video = document.getElementById('fieldVideo');
   // A user starts the video explicitly; pause music without automatically resuming it.
   video?.addEventListener('play', () => music?.pause());

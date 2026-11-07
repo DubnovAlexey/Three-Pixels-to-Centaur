@@ -5,6 +5,8 @@
 // Failures are bounded by playlist length; stale play promises cannot restart audio.
 // =====================================================================
 
+import { t,onLanguageChange } from './i18n.js';
+
 // BEGIN createPlaylistController
 export function createPlaylistController(media, inputTracks, onChange = () => {}) {
   const tracks = inputTracks.filter(track => track && typeof track.file === 'string' && track.metadata?.integrity !== 'unreadable');
@@ -34,7 +36,10 @@ export function createPlaylistController(media, inputTracks, onChange = () => {}
         // play is called before the first await, preserving the initiating user gesture.
         await Promise.race([Promise.resolve(media.play()), failure]);
         if (ticket !== revision || disposed || !intent) return false;
-        rejectAttempt = null; pending = false; failed.clear(); error = ''; publish(); return true;
+        // A fulfilled play promise can still be followed by a late decoder error.
+        // Preserve this recovery chain's failed set until an explicit action or
+        // a normally completed track starts the next chain.
+        rejectAttempt = null; pending = false; error = ''; publish(); return true;
       } catch (reason) {
         if (ticket !== revision || disposed || !intent) return false;
         rejectAttempt = null;
@@ -98,14 +103,16 @@ export async function initPlaylistPlayer() {
     const tracks = await response.json();
     if (!Array.isArray(tracks)) throw new Error('invalid playlist');
     media.volume = Number(volume.value) / 100;
-    controller = createPlaylistController(media, tracks, state => {
-      title.textContent = state.track?.title || 'Бортовая волна';
+    const render = state => {
+      title.textContent = state.track?.title || t('Бортовая волна');
       counter.textContent = state.count ? `${String(state.index + 1).padStart(2, '0')} / ${String(state.count).padStart(2, '0')}` : '00 / 00';
       play.textContent = state.pending ? '…' : state.playing ? 'Ⅱ' : '▶';
-      play.setAttribute('aria-label', state.playing || state.pending ? 'Остановить бортовую волну' : 'Включить бортовую волну');
+      play.setAttribute('aria-label', t(state.playing || state.pending ? 'Остановить бортовую волну' : 'Включить бортовую волну'));
       play.setAttribute('aria-pressed', String(state.playing));
-      status.textContent = state.error || (state.pending ? 'Подключаемся к бортовому архиву…' : state.playing ? 'В эфире. Остальная галактика может подождать.' : 'Музыка включается только по вашему желанию.');
-    });
+      status.textContent = t(state.error || (state.pending ? 'Подключаемся к бортовому архиву…' : state.playing ? 'В эфире. Остальная галактика может подождать.' : 'Музыка включается только по вашему желанию.'));
+    };
+    controller = createPlaylistController(media, tracks, render);
+    onLanguageChange(() => render(controller.getState()));
     play.disabled = previous.disabled = next.disabled = !controller.getState().count;
     play.addEventListener('click', () => { void controller.toggle(); });
     previous.addEventListener('click', () => { void controller.previous(); });
@@ -113,8 +120,8 @@ export async function initPlaylistPlayer() {
     volume.addEventListener('input', () => controller.setVolume(Number(volume.value) / 100));
     window.addEventListener('pagehide', () => controller.pause());
   } catch {
-    title.textContent = 'Бортовая волна временно молчит';
-    status.textContent = 'Список записей пока недоступен. Остальные разделы работают.';
+    title.textContent = t('Бортовая волна временно молчит');
+    status.textContent = t('Список записей пока недоступен. Остальные разделы работают.');
   }
   return controller;
 }

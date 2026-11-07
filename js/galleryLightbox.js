@@ -5,6 +5,7 @@
 // Original image files are used; captions distinguish studies and illustrations.
 // =====================================================================
 import { archiveImages } from './mediaCatalog.js';
+import { t,localText,onLanguageChange } from './i18n.js';
 
 const PAGE_SIZE = 8;
 // BEGIN selectArchive
@@ -34,9 +35,10 @@ export function initGalleryLightbox() {
     currentIndex = (currentIndex + filtered.length) % filtered.length;
     const current = filtered[currentIndex];
     failure.hidden = true; imageEl.hidden = false;
-    imageEl.src = current.file; imageEl.alt = current.title;
-    titleEl.textContent = current.title;
-    caption.textContent = `${current.label} · ${currentIndex + 1} / ${filtered.length}`;
+    imageEl.src = current.file; imageEl.alt = localText(current.titles ?? current.title);
+    titleEl.textContent = localText(current.titles ?? current.title);
+    document.getElementById("photoModalDescription").textContent = current.descriptions ? localText(current.descriptions) : "";
+    caption.textContent = `${t(current.label)} · ${currentIndex + 1} / ${filtered.length}`;
   }
   // END renderCurrent
   function open(index, button) { currentIndex = index; opener = button; renderCurrent(); modal.show(); }
@@ -57,17 +59,17 @@ export function initGalleryLightbox() {
     filtered.slice(0, visibleCount).forEach((image, index) => {
       const button = document.createElement('button');
       button.type = 'button'; button.className = 'gallery-item'; button.dataset.category = image.category;
-      button.setAttribute('aria-label', `Открыть: ${image.title}. ${image.label}`);
+      button.setAttribute('aria-label', t('Открыть: {title}. {label}',{title:localText(image.titles ?? image.title),label:t(image.label)}));
       const frame = document.createElement('div'); frame.className = 'gallery-image';
       const picture = document.createElement('img');
-      picture.src = image.file; picture.alt = image.title; picture.width = image.width; picture.height = image.height;
+      picture.src = image.file; picture.alt = localText(image.titles ?? image.title); picture.width = image.width; picture.height = image.height;
       picture.loading = 'lazy'; picture.decoding = 'async'; frame.append(picture);
-      const heading = document.createElement('h3'); heading.className = 'gallery-item__title'; heading.textContent = image.title;
-      const meta = document.createElement('p'); meta.className = 'gallery-item__exif'; meta.textContent = image.label;
+      const heading = document.createElement('h3'); heading.className = 'gallery-item__title'; heading.textContent = localText(image.titles ?? image.title);
+      const meta = document.createElement('p'); meta.className = 'gallery-item__exif'; meta.textContent = t(image.label);
       button.append(frame, heading, meta); button.addEventListener('click', () => open(index, button)); fragment.append(button);
     });
     root.replaceChildren(fragment);
-    result.textContent = `Показано ${Math.min(visibleCount, filtered.length)} из ${filtered.length}`;
+    result.textContent = t('Показано {shown} из {total}',{shown:Math.min(visibleCount,filtered.length),total:filtered.length});
     more.hidden = visibleCount >= filtered.length;
   }
   // END renderArchive
@@ -82,6 +84,7 @@ export function initGalleryLightbox() {
     const before = Math.min(visibleCount, filtered.length); visibleCount += PAGE_SIZE; renderArchive();
     root.children[before]?.focus();
   });
+  onLanguageChange(() => { renderArchive(); opener = root.children[currentIndex] ?? opener; if (modalEl.classList.contains("show")) renderCurrent(); });
   renderArchive();
 }
 // END initGalleryLightbox

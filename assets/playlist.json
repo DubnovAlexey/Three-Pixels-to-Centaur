@@ -178,5 +178,159 @@
       ],
       "durationSec": 357.379
     }
+  },
+  {
+    "id": "1-Сны-Ветвей-Madre-S5WV7T",
+    "original": "1-Сны-Ветвей-Madre-S5WV7T.mp3",
+    "file": "assets/audio/1-Сны-Ветвей-Madre-S5WV7T.mp3",
+    "title": "Сны Ветвей — Madre",
+    "mime": "audio/mpeg",
+    "bytes": 19001688,
+    "sha256": "cc18de3077a2a13c1b9d3a7a9e2658e2bda9452eec5e0e0e2238aecbf9880716",
+    "metadata": {
+      "signature": "MPEG Layer III",
+      "firstFrames": [
+        {
+          "sampleRate": 44100,
+          "bitrateKbps": 320,
+          "frameBytes": 1044
+        },
+        {
+          "sampleRate": 44100,
+          "bitrateKbps": 320,
+          "frameBytes": 1044
+        },
+        {
+          "sampleRate": 44100,
+          "bitrateKbps": 320,
+          "frameBytes": 1045
+        }
+      ],
+      "id3": {
+        "TIT2": "Madre",
+        "TPE1": "Сны Ветвей"
+      },
+      "verification": "full file read and SHA-256; container/frame headers checked; browser decode not implied"
+    }
+  },
+  {
+    "id": "10-Encounters-Limbo-I5F2Y2",
+    "original": "10-Encounters-Limbo-I5F2Y2.mp3",
+    "file": "assets/audio/10-Encounters-Limbo-I5F2Y2.mp3",
+    "title": "Encounters, Enigmada — Limbo",
+    "mime": "audio/mpeg",
+    "bytes": 14063650,
+    "sha256": "79adb40cd52274afd4ca34614d33e7f54f5760d00190499fb94bb7b04f48595d",
+    "metadata": {
+      "signature": "MPEG Layer III",
+      "firstFrames": [
+        {
+          "sampleRate": 44100,
+          "bitrateKbps": 320,
+          "frameBytes": 1044
+        },
+        {
+          "sampleRate": 44100,
+          "bitrateKbps": 320,
+          "frameBytes": 1044
+        },
+        {
+          "sampleRate": 44100,
+          "bitrateKbps": 320,
+          "frameBytes": 1045
+        }
+      ],
+      "id3": {
+        "TIT2": "Limbo",
+        "TPE1": "Encounters, Enigmada"
+      },
+      "verification": "full file read and SHA-256; container/frame headers checked; browser decode not implied"
+    }
+  },
+  {
+    "id": "3-Lab-s-Cloud-Me-KXQPCW",
+    "original": "3-Lab-s-Cloud-Me-KXQPCW.mp3",
+    "file": "assets/audio/3-Lab-s-Cloud-Me-KXQPCW.mp3",
+    "title": "Lab's Cloud, I.M.D — Me",
+    "mime": "audio/mpeg",
+    "bytes": 17760274,
+    "sha256": "b7414d0a0fcb116d59174b033fb9baf58adb82fc29fb82de754484fea8c12f66",
+    "metadata": {
+      "signature": "MPEG Layer III",
+      "firstFrames": [
+        {
+          "sampleRate": 44100,
+          "bitrateKbps": 320,
+          "frameBytes": 1044
+        },
+        {
+          "sampleRate": 44100,
+          "bitrateKbps": 320,
+          "frameBytes": 1044
+        },
+        {
+          "sampleRate": 44100,
+          "bitrateKbps": 320,
+          "frameBytes": 1045
+        }
+      ],
+      "id3": {
+        "TIT2": "Me",
+        "TPE1": "Lab's Cloud, I.M.D"
+      },
+      "verification": "full file read and SHA-256; container/frame headers checked; browser decode not implied"
+    }
+  },
+  {
+    "id": "Moonlight Ride (feat. Bluey Moon) - Isaac Chambers",
+    "original": "Moonlight Ride (feat. Bluey Moon) - Isaac Chambers.m4a",
+    "file": "assets/audio/Moonlight Ride (feat. Bluey Moon) - Isaac Chambers.m4a",
+    "title": "Isaac Chambers — Moonlight Ride (feat. Bluey Moon)",
+    "mime": "audio/mp4",
+    "bytes": 4776127,
+    "sha256": "0ef59e2b60a5b27617339b3e39e5dcc44afb594537b3b01f0d41f54e667e658d",
+    "metadata": {
+      "container": "mp4",
+      "tracks": [
+        {
+          "width": 0,
+          "height": 0,
+          "handler": "soun"
+        }
+      ],
+      "durationSec": 289.61,
+      "sampleEntry": "mp4a",
+      "verification": "full file read and SHA-256; container/frame headers checked; browser decode not implied"
+    }
+  },
+  {
+    "id": "So - Break The Pattern",
+    "original": "So - Break The Pattern.mp3",
+    "file": "assets/audio/So - Break The Pattern.mp3",
+    "title": "So — Break The Pattern",
+    "mime": "audio/mpeg",
+    "bytes": 5848748,
+    "sha256": "5f9a298e5a84d711a331e60bccbbc205b21d52c714c4f45f775aca16d04bae00",
+    "metadata": {
+      "signature": "MPEG Layer III",
+      "firstFrames": [
+        {
+          "sampleRate": 48000,
+          "bitrateKbps": 192,
+          "frameBytes": 576
+        },
+        {
+          "sampleRate": 48000,
+          "bitrateKbps": 192,
+          "frameBytes": 576
+        },
+        {
+          "sampleRate": 48000,
+          "bitrateKbps": 192,
+          "frameBytes": 576
+        }
+      ],
+      "verification": "full file read and SHA-256; container/frame headers checked; browser decode not implied"
+    }
   }
 ]
