@@ -9,6 +9,7 @@
     "generate:audio": "node tools/generate-ambient-audio.js",
     "generate:space-audio": "node tools/generate-space-audio.js",
     "test": "node --test tests/*.test.mjs",
-    "media:update": "node tools/update-media-manifest.mjs"
+    "media:update": "node tools/update-media-manifest.mjs",
+    "images:previews": "node tools/make-image-previews.mjs"
   }
 }

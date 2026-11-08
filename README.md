@@ -21,6 +21,7 @@
 ### What works
 
 - **Archive:** 158 images (30 photographs, 93 illustrations, 35 character portraits) with progressive loading, filters and a keyboard-friendly full-size view. Captions do not claim documentary or NASA origin. All pictures are WebP at their original resolution (about 24 MB instead of 206 MB of PNG/JPEG); `assets/media-manifest.json` keeps each original file name.
+- **Light card images:** cards show 230–500 px, while originals are up to 2560 px wide. Every original wider than 760 px also has a 720-px preview (`assets/images/preview/`), and cards offer both through `srcset`: the browser takes the preview on ordinary screens and the original on sharp or wide ones. Full-size views always open the original. The home page now loads about 2.9 MB of pictures instead of 5.7 MB.
 - **Video log:** 35 clips in four themes. Small WebP posters are cut from each clip's opening seconds (`assets/video/posters/`), the player starts only on request, and video and music never play together.
 - **Music:** one shared player with 18 supplied recordings, started by the visitor, played in a loop with previous/next and volume.
 - **Characters:** 5 tutors, 3 expedition guides and 27 crew members across six ships (`js/personnelData.js`, `js/crewData.js`). Roles do not repeat. Every name, role and darkly humorous biography exists in all three languages. All characters are fictional.
@@ -36,9 +37,12 @@ Serve the folder over HTTP, for example `python -m http.server 5500`, and open `
 ```bash
 npm test
 npm run media:update
+npm run images:previews
 ```
 
 To add music, drop files into `assets/audio/` and run `npm run media:update`: the dependency-free Node tool rebuilds the playlist and hashes without renaming or converting files. Reload the page afterwards.
+
+After adding or replacing pictures in `assets/images/`, run `npm run images:previews` (needs `ffmpeg` with WebP on PATH): it makes the missing 720-px previews and rewrites `js/imagePreviews.js`.
 
 ### Engineering map
 
@@ -73,6 +77,7 @@ These are proposals, not features.
 ### Что работает
 
 - **Архив:** 158 изображений (30 фотографий, 93 иллюстрации, 35 портретов персонажей), постепенная загрузка, фильтры и полноразмерный просмотр с клавиатуры. Подписи не выдают работы за документальную съёмку или NASA. Все картинки — WebP в исходном разрешении (около 24 МБ вместо 206 МБ PNG/JPEG); исходные имена файлов записаны в `assets/media-manifest.json`.
+- **Лёгкие картинки в карточках:** карточки показывают 230–500 px, а оригиналы бывают шириной до 2560 px. У каждого оригинала шире 760 px есть копия шириной 720 px (`assets/images/preview/`). Карточки предлагают обе через `srcset`: на обычных экранах браузер берёт копию, на чётких или широких — оригинал. Просмотр целиком всегда открывает оригинал. Главная страница теперь загружает около 2,9 МБ картинок вместо 5,7 МБ.
 - **Видеожурнал:** 35 роликов в четырёх темах. Маленькие WebP-превью вырезаны из первых секунд каждого ролика (`assets/video/posters/`); плеер запускается только по просьбе, видео и музыка не играют одновременно.
 - **Музыка:** один общий плеер с 18 предоставленными записями; запуск только посетителем, воспроизведение по кругу, переключение и громкость.
 - **Персонажи:** 5 кураторов, 3 проводника и 27 членов экипажей шести кораблей (`js/personnelData.js`, `js/crewData.js`). Роли не повторяются. Имя, роль и биография с чёрным юмором есть у каждого на всех трёх языках. Все персонажи вымышлены.
@@ -88,9 +93,12 @@ These are proposals, not features.
 ```bash
 npm test
 npm run media:update
+npm run images:previews
 ```
 
 Чтобы добавить музыку, положите файлы в `assets/audio/` и запустите `npm run media:update`: Node-инструмент без сторонних зависимостей пересоберёт плейлист и SHA, не переименовывая и не конвертируя файлы. Затем обновите страницу.
+
+После добавления или замены картинок в `assets/images/` запустите `npm run images:previews` (нужен `ffmpeg` с поддержкой WebP): он сделает недостающие копии шириной 720 px и перепишет `js/imagePreviews.js`.
 
 ### Устройство
 
@@ -127,6 +135,7 @@ npm run media:update
 ### מה עובד
 
 - **ארכיון:** 158 תמונות (30 צילומים, 93 איורים, 35 דיוקנאות דמויות), טעינה הדרגתית, סינון ותצוגה מלאה מהמקלדת. הכיתובים אינם טוענים למקור תיעודי או ל־NASA. כל התמונות בפורמט WebP ברזולוציה המקורית (כ־24 MB במקום 206 MB של PNG/JPEG); שמות הקבצים המקוריים שמורים ב־`assets/media-manifest.json`.
+- **תמונות קלות בכרטיסים:** הכרטיסים מציגים 230–500 px, והמקוריים רחבים עד 2560 px. לכל מקור רחב מ־760 px יש עותק ברוחב 720 px (`assets/images/preview/`), והכרטיסים מציעים את שניהם דרך `srcset`: במסך רגיל הדפדפן בוחר בעותק, במסך חד או רחב — במקור. תצוגה מלאה פותחת תמיד את המקור. דף הבית טוען כעת כ־2.9 MB של תמונות במקום 5.7 MB.
 - **יומן וידאו:** 35 סרטונים בארבעה נושאים. תמונות WebP קטנות נחתכו מהשניות הראשונות של כל סרטון (`assets/video/posters/`); הנגן מתחיל רק לפי בקשה, ווידאו ומוזיקה לא מתנגנים יחד.
 - **מוזיקה:** נגן משותף אחד עם 18 הקלטות שסופקו; ההפעלה בידי המבקר, ניגון במחזוריות, הקודם/הבא ועוצמה.
 - **דמויות:** 5 מורים, 3 מדריכי מסע ו־27 אנשי צוות בשש ספינות (`js/personnelData.js`, `js/crewData.js`). התפקידים אינם חוזרים. לכל דמות שם, תפקיד וביוגרפיה עם הומור שחור בשלוש השפות. כל הדמויות בדויות.
@@ -142,9 +151,12 @@ npm run media:update
 ```bash
 npm test
 npm run media:update
+npm run images:previews
 ```
 
 כדי להוסיף מוזיקה, שימו קבצים ב־`assets/audio/` והריצו `npm run media:update`: כלי Node ללא תלויות בונה מחדש את רשימת ההשמעה וה־SHA בלי לשנות שמות או להמיר קבצים. לאחר מכן רעננו את הדף.
+
+אחרי הוספה או החלפה של תמונות ב־`assets/images/` הריצו `npm run images:previews` (נדרש `ffmpeg` עם תמיכה ב־WebP): הוא יוצר את העותקים החסרים ברוחב 720 px וכותב מחדש את `js/imagePreviews.js`.
 
 ### מבנה
 

@@ -6,6 +6,7 @@
 // =====================================================================
 import { personnel } from './personnelData.js';
 import { localText, t, onLanguageChange } from './i18n.js';
+import { CARD_SIZES, setCardImage } from './imageCard.js';
 
 // BEGIN initPersonnel
 export function initPersonnel() {
@@ -17,8 +18,10 @@ export function initPersonnel() {
   function card(person) {
     const article=document.createElement('article'); article.className='curator-card';
     const frame=document.createElement('div'); frame.className='curator-photo';
-    const image=document.createElement('img'); image.src=person.image; image.alt=localText(person.name);
-    image.loading='lazy'; image.decoding='async'; image.width=800;image.height=1000;frame.append(image);
+    const image=document.createElement('img'); image.alt=localText(person.name);
+    image.loading='lazy'; image.decoding='async'; image.width=800;image.height=1000;
+    setCardImage(image, person.image, CARD_SIZES.curator); // в личном деле — оригинал
+    frame.append(image);
     const heading=document.createElement('h3');heading.textContent=localText(person.name);
     const role=document.createElement('p');role.textContent=localText(person.role);
     const button=document.createElement('button');button.type='button';button.dataset.instructor=person.id;

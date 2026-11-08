@@ -6,6 +6,7 @@
 // =====================================================================
 import { archiveImages } from './mediaCatalog.js';
 import { archiveDescriptions } from './archiveDescriptions.js';
+import { CARD_SIZES, setCardImage } from './imageCard.js';
 import { t,localText,onLanguageChange } from './i18n.js';
 
 const PAGE_SIZE = 8;
@@ -66,8 +67,10 @@ export function initGalleryLightbox() {
       button.setAttribute('aria-label', t('Открыть: {title}. {label}',{title:localText(image.titles ?? image.title),label:t(image.label)}));
       const frame = document.createElement('div'); frame.className = 'gallery-image';
       const picture = document.createElement('img');
-      picture.src = image.file; picture.alt = localText(image.titles ?? image.title); picture.width = image.width; picture.height = image.height;
+      picture.alt = localText(image.titles ?? image.title); picture.width = image.width; picture.height = image.height;
       picture.loading = 'lazy'; picture.decoding = 'async';
+      // В сетке — лёгкая копия, в просмотре целиком (renderCurrent) — оригинал
+      setCardImage(picture, image.file, CARD_SIZES.archive);
       // Заметная подсказка, что работу можно открыть целиком
       const badge = document.createElement('span'); badge.className = 'gallery-open'; badge.setAttribute('aria-hidden', 'true');
       badge.textContent = t('Рассмотреть ⤢');

@@ -7,6 +7,7 @@
 import { fleet,fleetRoutes,fleetNotice } from './fleetData.js';
 import { t,localText,onLanguageChange } from './i18n.js';
 import { crew,crewPort } from './crewData.js';
+import { CARD_SIZES,setCardImage } from './imageCard.js';
 
 // BEGIN crew helpers — the captain comes first, the spaceport baggage team waves everyone off last.
 const crewOf=ship=>[...crew.filter(member=>member.ship===ship.id).sort((a,b)=>Number(b.captain)-Number(a.captain)),...crew.filter(member=>member.ship==='port')];
@@ -62,7 +63,8 @@ export function initFleet() {
   function open(ship,button){current=ship;opener=button;member=null;renderDossier();renderCrew();modal.show();}
   function card(ship) {
     const article=document.createElement('article');article.className='fleet-card';article.classList.toggle('is-selected',selected?.id===ship.id);
-    const image=document.createElement('img');image.src=ship.image;image.alt=localText(ship.name);image.loading='lazy';image.decoding='async';image.width=640;image.height=400;
+    const image=document.createElement('img');image.alt=localText(ship.name);image.loading='lazy';image.decoding='async';image.width=640;image.height=400;
+    setCardImage(image,ship.image,CARD_SIZES.fleet); // в досье корабля — оригинал
     const body=document.createElement('div');body.className='card-body-space';
     const role=document.createElement('p');role.className='eyebrow';role.textContent=localText(ship.role);
     const title=document.createElement('h3');title.textContent=localText(ship.name);
