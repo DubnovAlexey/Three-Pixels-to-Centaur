@@ -22,7 +22,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Зонд дальнего космоса",
       "en": "Deep-space probe",
-      "he": "גשושית החלל העמוק"
+      "he": "גשושית החלל העמוק",
+      "es": "Sonda del espacio profundo",
+      "fr": "Sonde de l’espace lointain"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -33,7 +35,9 @@ export const archiveImages = [
     "descriptions": {
       "ru": "Связь с Землёй есть. С чувством направления ведутся переговоры.",
       "en": "Earth is on the line. Our sense of direction is still negotiating.",
-      "he": "יש קשר עם כדור הארץ. חוש הכיוון עדיין במשא ומתן."
+      "he": "יש קשר עם כדור הארץ. חוש הכיוון עדיין במשא ומתן.",
+      "es": "Hay comunicación con la Tierra. Con el sentido de la orientación seguimos negociando.",
+      "fr": "La liaison avec la Terre est établie. Avec le sens de l’orientation, les négociations continuent."
     }
   },
   {
@@ -56,7 +60,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Облачные башни",
       "en": "Cloud towers",
-      "he": "מגדלי עננים"
+      "he": "מגדלי עננים",
+      "es": "Torres de nubes",
+      "fr": "Tours de nuages"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -67,7 +73,9 @@ export const archiveImages = [
     "descriptions": {
       "ru": "Облака повышенной этажности. Лифт пока только атмосферный.",
       "en": "High-rise clouds. The lift is still atmospheric.",
-      "he": "עננים רבי־קומות. המעלית עדיין אטמוספרית."
+      "he": "עננים רבי־קומות. המעלית עדיין אטמוספרית.",
+      "es": "Nubes de varias plantas. El ascensor, de momento, solo es atmosférico.",
+      "fr": "Des nuages à plusieurs étages. L’ascenseur n’est encore qu’atmosphérique."
     }
   },
   {
@@ -102,7 +110,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Лунное кафе",
       "en": "Lunar café",
-      "he": "בית קפה ירחי"
+      "he": "בית קפה ירחי",
+      "es": "Café lunar",
+      "fr": "Café lunaire"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -113,7 +123,9 @@ export const archiveImages = [
     "descriptions": {
       "ru": "Кофе невесомый. Счёт, к сожалению, имеет массу.",
       "en": "Weightless coffee. The bill, unfortunately, has mass.",
-      "he": "קפה חסר משקל. לחשבון, לצערנו, יש מסה."
+      "he": "קפה חסר משקל. לחשבון, לצערנו, יש מסה.",
+      "es": "Café ingrávido. La cuenta, por desgracia, sí tiene masa.",
+      "fr": "Café en apesanteur. L’addition, hélas, a une masse."
     }
   },
   {
@@ -130,7 +142,9 @@ export const archiveImages = [
     "descriptions": {
       "ru": "Портретный свет выставлен. Уровень воды — по настроению модели.",
       "en": "Portrait lighting is set. Water level depends on the model’s mood.",
-      "he": "תאורת הדיוקן מוכנה. מפלס המים תלוי במצב הרוח של הדוגמנית."
+      "he": "תאורת הדיוקן מוכנה. מפלס המים תלוי במצב הרוח של הדוגמנית.",
+      "es": "La luz de retrato está lista. El nivel del agua depende del humor de la modelo.",
+      "fr": "L’éclairage portrait est en place. Le niveau de l’eau dépend de l’humeur du modèle."
     }
   },
   {
@@ -459,7 +473,9 @@ export const archiveImages = [
     "descriptions": {
       "ru": "До Центавра три пикселя. До гостиницы — ещё два кратера.",
       "en": "Three pixels to Centauri. Two more craters to the hotel.",
-      "he": "שלושה פיקסלים עד קנטאור. עוד שני מכתשים עד המלון."
+      "he": "שלושה פיקסלים עד קנטאור. עוד שני מכתשים עד המלון.",
+      "es": "A tres píxeles de Centauri. Al hotel, todavía dos cráteres más.",
+      "fr": "À trois pixels du Centaure. Jusqu’à l’hôtel, encore deux cratères."
     }
   },
   {
@@ -782,7 +798,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Дорога под волнистым небом",
       "en": "Road beneath a rippled sky",
-      "he": "דרך מתחת לשמים גליים"
+      "he": "דרך מתחת לשמים גליים",
+      "es": "Carretera bajo un cielo ondulado",
+      "fr": "Route sous un ciel ondulé"
     },
     "category": "photo",
     "label": "Фотографический этюд",
@@ -799,7 +817,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Расписной мир",
       "en": "A painted world",
-      "he": "עולם מצויר"
+      "he": "עולם מצויר",
+      "es": "Un mundo pintado",
+      "fr": "Un monde peint"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -816,7 +836,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Орбитальный рассвет",
       "en": "Orbital dawn",
-      "he": "שחר במסלול"
+      "he": "שחר במסלול",
+      "es": "Amanecer orbital",
+      "fr": "Aube orbitale"
     },
     "category": "photo",
     "label": "Фотографический этюд",
@@ -833,7 +855,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Пальцы туманности",
       "en": "Nebula fingers",
-      "he": "אצבעות הערפילית"
+      "he": "אצבעות הערפילית",
+      "es": "Dedos de nebulosa",
+      "fr": "Doigts de nébuleuse"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -850,7 +874,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Медный каньон",
       "en": "Copper canyon",
-      "he": "קניון הנחושת"
+      "he": "קניון הנחושת",
+      "es": "Cañón de cobre",
+      "fr": "Canyon cuivré"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -867,7 +893,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Лунный модуль в разрезе",
       "en": "Lunar module study",
-      "he": "מחקר של רכב ירחי"
+      "he": "מחקר של רכב ירחי",
+      "es": "Módulo lunar en corte",
+      "fr": "Module lunaire en coupe"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -884,7 +912,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Спиральный уголёк",
       "en": "Spiral ember",
-      "he": "גחל ספירלי"
+      "he": "גחל ספירלי",
+      "es": "Brasa en espiral",
+      "fr": "Braise en spirale"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -901,7 +931,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Затмение над городом",
       "en": "Eclipse over the city",
-      "he": "ליקוי מעל העיר"
+      "he": "ליקוי מעל העיר",
+      "es": "Eclipse sobre la ciudad",
+      "fr": "Éclipse sur la ville"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -918,7 +950,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Долина тумана",
       "en": "Valley of mist",
-      "he": "עמק הערפל"
+      "he": "עמק הערפל",
+      "es": "Valle de la niebla",
+      "fr": "Vallée de la brume"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -935,7 +969,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Пустыня передумала",
       "en": "The desert changed its mind",
-      "he": "המדבר שינה את דעתו"
+      "he": "המדבר שינה את דעתו",
+      "es": "El desierto cambió de opinión",
+      "fr": "Le désert a changé d’avis"
     },
     "category": "photo",
     "label": "Фотографический этюд",
@@ -952,7 +988,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Грозовая колонна",
       "en": "Lightning column",
-      "he": "עמוד ברקים"
+      "he": "עמוד ברקים",
+      "es": "Columna de rayos",
+      "fr": "Colonne d’orage"
     },
     "category": "photo",
     "label": "Фотографический этюд",
@@ -969,7 +1007,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Облако цвета угля",
       "en": "Ember cloud",
-      "he": "ענן בצבע גחל"
+      "he": "ענן בצבע גחל",
+      "es": "Nube color carbón",
+      "fr": "Nuage couleur charbon"
     },
     "category": "photo",
     "label": "Фотографический этюд",
@@ -986,7 +1026,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Ночь с орбиты",
       "en": "Night from orbit",
-      "he": "לילה מן המסלול"
+      "he": "לילה מן המסלול",
+      "es": "Noche desde la órbita",
+      "fr": "La nuit vue de l’orbite"
     },
     "category": "photo",
     "label": "Фотографический этюд",
@@ -1003,7 +1045,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Ретролунный порт",
       "en": "Retro lunar port",
-      "he": "נמל ירחי רטרו"
+      "he": "נמל ירחי רטרו",
+      "es": "Puerto lunar retro",
+      "fr": "Port lunaire rétro"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1020,7 +1064,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Место у орбитального окна",
       "en": "An orbital window seat",
-      "he": "מושב ליד חלון המסלול"
+      "he": "מושב ליד חלון המסלול",
+      "es": "Asiento junto a la ventana orbital",
+      "fr": "Place côté hublot orbital"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -1037,7 +1083,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Ретрополёт без билета",
       "en": "Retro flight without a ticket",
-      "he": "טיסת רטרו ללא כרטיס"
+      "he": "טיסת רטרו ללא כרטיס",
+      "es": "Vuelo retro sin billete",
+      "fr": "Vol rétro sans billet"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1054,7 +1102,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Пилот фронтира",
       "en": "Frontier pilot",
-      "he": "טייסת הספר"
+      "he": "טייסת הספר",
+      "es": "Piloto de la frontera",
+      "fr": "Pilote des confins"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -1071,7 +1121,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Медная лётная куртка",
       "en": "Copper flight jacket",
-      "he": "מעיל טיסה מנחושת"
+      "he": "מעיל טיסה מנחושת",
+      "es": "Chaqueta de vuelo cobriza",
+      "fr": "Blouson d’aviateur cuivré"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -1088,7 +1140,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Серебряная путешественница",
       "en": "Silver traveler",
-      "he": "הנוסעת הכסופה"
+      "he": "הנוסעת הכסופה",
+      "es": "Viajera plateada",
+      "fr": "Voyageuse argentée"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1105,7 +1159,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Курорт без приливов",
       "en": "A resort without tides",
-      "he": "אתר נופש ללא גאות"
+      "he": "אתר נופש ללא גאות",
+      "es": "Un balneario sin mareas",
+      "fr": "Une station sans marées"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1122,7 +1178,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Семинар первого контакта",
       "en": "First-contact seminar",
-      "he": "סמינר למפגש ראשון"
+      "he": "סמינר למפגש ראשון",
+      "es": "Seminario de primer contacto",
+      "fr": "Séminaire de premier contact"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1139,7 +1197,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Юпитер над хребтом",
       "en": "Jupiter above the ridge",
-      "he": "צדק מעל הרכס"
+      "he": "צדק מעל הרכס",
+      "es": "Júpiter sobre la cresta",
+      "fr": "Jupiter au-dessus de la crête"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1150,7 +1210,9 @@ export const archiveImages = [
     "descriptions": {
       "ru": "Большое красное пятно не ретушируем: оно старше преподавателя.",
       "en": "We leave the Great Red Spot alone: it is older than the tutor.",
-      "he": "לא מרטשים את הכתם האדום הגדול: הוא מבוגר מהמרצה."
+      "he": "לא מרטשים את הכתם האדום הגדול: הוא מבוגר מהמרצה.",
+      "es": "La Gran Mancha Roja no se retoca: es más antigua que el profesor.",
+      "fr": "On ne retouche pas la Grande Tache rouge : elle est plus vieille que le professeur."
     }
   },
   {
@@ -1161,7 +1223,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Медведь у съёмочной площадки",
       "en": "A bear on the film set",
-      "he": "דוב באתר הצילום"
+      "he": "דוב באתר הצילום",
+      "es": "Un oso en el plató",
+      "fr": "Un ours sur le plateau"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1178,7 +1242,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Посадка у Сатурна",
       "en": "Landing near Saturn",
-      "he": "נחיתה ליד שבתאי"
+      "he": "נחיתה ליד שבתאי",
+      "es": "Aterrizaje junto a Saturno",
+      "fr": "Atterrissage près de Saturne"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1195,7 +1261,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Два путешественника",
       "en": "Two travelers",
-      "he": "שני נוסעים"
+      "he": "שני נוסעים",
+      "es": "Dos viajeros",
+      "fr": "Deux voyageurs"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1212,7 +1280,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Робот на привале",
       "en": "Robot at rest",
-      "he": "רובוט במנוחה"
+      "he": "רובוט במנוחה",
+      "es": "Robot descansando",
+      "fr": "Robot en pause"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1223,7 +1293,9 @@ export const archiveImages = [
     "descriptions": {
       "ru": "Режим энергосбережения. Выглядит подозрительно как обед.",
       "en": "Power-saving mode. Suspiciously similar to lunch.",
-      "he": "מצב חיסכון באנרגיה. דומה באופן חשוד להפסקת צהריים."
+      "he": "מצב חיסכון באנרגיה. דומה באופן חשוד להפסקת צהריים.",
+      "es": "Modo de ahorro de energía. Sospechosamente parecido a la hora de comer.",
+      "fr": "Mode économie d’énergie. Ressemble étrangement à une pause déjeuner."
     }
   },
   {
@@ -1234,7 +1306,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Кот в скафандре",
       "en": "Cat in a spacesuit",
-      "he": "חתול בחליפת חלל"
+      "he": "חתול בחליפת חלל",
+      "es": "Gato con traje espacial",
+      "fr": "Chat en scaphandre"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1245,7 +1319,9 @@ export const archiveImages = [
     "descriptions": {
       "ru": "Шлем подобрали. Вопрос с лотком передан инженерам.",
       "en": "The helmet fits. The litter tray is now an engineering problem.",
-      "he": "הקסדה מתאימה. ארגז החול הועבר לטיפול המהנדסים."
+      "he": "הקסדה מתאימה. ארגז החול הועבר לטיפול המהנדסים.",
+      "es": "El casco ya está elegido. Lo del arenero se ha pasado a los ingenieros.",
+      "fr": "Le casque est trouvé. La question de la litière a été transmise aux ingénieurs."
     }
   },
   {
@@ -1256,7 +1332,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Передача материи",
       "en": "Matter transmission",
-      "he": "העברת חומר"
+      "he": "העברת חומר",
+      "es": "Transmisión de materia",
+      "fr": "Transmission de matière"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1273,7 +1351,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Пастухи звёзд",
       "en": "Star herders",
-      "he": "רועי הכוכבים"
+      "he": "רועי הכוכבים",
+      "es": "Pastores de estrellas",
+      "fr": "Bergers d’étoiles"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1290,7 +1370,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Звёздный механик",
       "en": "Stellar engineer",
-      "he": "מהנדסת הכוכבים"
+      "he": "מהנדסת הכוכבים",
+      "es": "Ingeniera estelar",
+      "fr": "Ingénieure stellaire"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -1307,7 +1389,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Ботаник на орбите",
       "en": "Orbital botanist",
-      "he": "בוטנאית במסלול"
+      "he": "בוטנאית במסלול",
+      "es": "Botánico en órbita",
+      "fr": "Botaniste en orbite"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1324,7 +1408,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Галактика после заката",
       "en": "Galaxy after sunset",
-      "he": "גלקסיה אחרי השקיעה"
+      "he": "גלקסיה אחרי השקיעה",
+      "es": "Galaxia tras la puesta de sol",
+      "fr": "Galaxie après le coucher du soleil"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1341,7 +1427,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Пилот ретромостика",
       "en": "Retro bridge pilot",
-      "he": "טייסת גשר הרטרו"
+      "he": "טייסת גשר הרטרו",
+      "es": "Piloto de puente retro",
+      "fr": "Pilote de passerelle rétro"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -1358,7 +1446,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Атомный комикс",
       "en": "Atomic comic study",
-      "he": "מחקר קומיקס אטומי"
+      "he": "מחקר קומיקס אטומי",
+      "es": "Cómic atómico",
+      "fr": "BD atomique"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1375,7 +1465,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Орбитальная закусочная",
       "en": "Orbital diner",
-      "he": "מזנון במסלול"
+      "he": "מזנון במסלול",
+      "es": "Cafetería orbital",
+      "fr": "Snack orbital"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1392,7 +1484,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Изобретательница в очках",
       "en": "The goggle inventor",
-      "he": "הממציאה עם המשקפיים"
+      "he": "הממציאה עם המשקפיים",
+      "es": "La inventora de las gafas",
+      "fr": "L’inventrice aux lunettes"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -1409,7 +1503,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Шлем помнит всё",
       "en": "The helmet remembers",
-      "he": "הקסדה זוכרת הכול"
+      "he": "הקסדה זוכרת הכול",
+      "es": "El casco lo recuerda todo",
+      "fr": "Le casque se souvient de tout"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1426,7 +1522,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Красная пустота",
       "en": "Red void",
-      "he": "הריק האדום"
+      "he": "הריק האדום",
+      "es": "Vacío rojo",
+      "fr": "Vide rouge"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1443,7 +1541,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Алхимик огня",
       "en": "Fire alchemist",
-      "he": "אלכימאית האש"
+      "he": "אלכימאית האש",
+      "es": "Alquimista del fuego",
+      "fr": "Alchimiste du feu"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -1460,7 +1560,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Бард лесного фронтира",
       "en": "Forest-frontier bard",
-      "he": "פייטן ספר היער"
+      "he": "פייטן ספר היער",
+      "es": "Bardo de la frontera forestal",
+      "fr": "Barde des confins forestiers"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -1477,7 +1579,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Хранительница знаков",
       "en": "Keeper of signs",
-      "he": "שומרת הסימנים"
+      "he": "שומרת הסימנים",
+      "es": "Guardiana de los presagios",
+      "fr": "Gardienne des présages"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -1494,7 +1598,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Хранительница леса",
       "en": "Forest keeper",
-      "he": "שומרת היער"
+      "he": "שומרת היער",
+      "es": "Guardiana del bosque",
+      "fr": "Gardienne de la forêt"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -1511,7 +1617,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Шляпа для вулкана",
       "en": "A hat for a volcano",
-      "he": "כובע להר געש"
+      "he": "כובע להר געש",
+      "es": "Un sombrero para un volcán",
+      "fr": "Un chapeau pour un volcan"
     },
     "category": "photo",
     "label": "Фотографический этюд",
@@ -1528,7 +1636,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Библиотекарь сумерек",
       "en": "Twilight librarian",
-      "he": "ספרנית הדמדומים"
+      "he": "ספרנית הדמדומים",
+      "es": "Bibliotecario del crepúsculo",
+      "fr": "Bibliothécaire du crépuscule"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -1545,7 +1655,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Страж пустоты",
       "en": "Void sentinel",
-      "he": "זקיף הריק"
+      "he": "זקיף הריק",
+      "es": "Centinela del vacío",
+      "fr": "Sentinelle du vide"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -1562,7 +1674,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Грибной советник",
       "en": "Fungal adviser",
-      "he": "היועץ הפטרייתי"
+      "he": "היועץ הפטרייתי",
+      "es": "Consejero fúngico",
+      "fr": "Conseiller fongique"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1579,7 +1693,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Лунное явление",
       "en": "Lunar apparition",
-      "he": "הופעה ירחית"
+      "he": "הופעה ירחית",
+      "es": "Aparición lunar",
+      "fr": "Apparition lunaire"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1596,7 +1712,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Башни двух лун",
       "en": "Towers of two moons",
-      "he": "מגדלי שני הירחים"
+      "he": "מגדלי שני הירחים",
+      "es": "Torres de las dos lunas",
+      "fr": "Tours des deux lunes"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1613,7 +1731,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Дерево времени",
       "en": "Tree of time",
-      "he": "עץ הזמן"
+      "he": "עץ הזמן",
+      "es": "Árbol del tiempo",
+      "fr": "Arbre du temps"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1630,7 +1750,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Комната, забывшая пол",
       "en": "A room that forgot its floor",
-      "he": "חדר ששכח את הרצפה"
+      "he": "חדר ששכח את הרצפה",
+      "es": "Una habitación que olvidó su suelo",
+      "fr": "Une pièce qui a oublié son sol"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1647,7 +1769,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Мысль пустила корни",
       "en": "A thought takes root",
-      "he": "מחשבה מכה שורש"
+      "he": "מחשבה מכה שורש",
+      "es": "Una idea echa raíces",
+      "fr": "Une pensée prend racine"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1664,7 +1788,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Завтрак с солнцем",
       "en": "Breakfast with a sun",
-      "he": "ארוחת בוקר עם שמש"
+      "he": "ארוחת בוקר עם שמש",
+      "es": "Desayuno con un sol",
+      "fr": "Petit-déjeuner avec un soleil"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1675,7 +1801,9 @@ export const archiveImages = [
     "descriptions": {
       "ru": "Яичница по рецепту сверхновой. Посуду после этого не нашли.",
       "en": "Supernova-style breakfast. The dishes were never recovered.",
-      "he": "ארוחת בוקר בנוסח סופרנובה. הכלים לא נמצאו מאז."
+      "he": "ארוחת בוקר בנוסח סופרנובה. הכלים לא נמצאו מאז.",
+      "es": "Huevos fritos al estilo supernova. La vajilla nunca apareció.",
+      "fr": "Œufs au plat façon supernova. La vaisselle n’a jamais été retrouvée."
     }
   },
   {
@@ -1686,7 +1814,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Дерево-обсерватория",
       "en": "Observatory tree",
-      "he": "עץ מצפה הכוכבים"
+      "he": "עץ מצפה הכוכבים",
+      "es": "Árbol observatorio",
+      "fr": "Arbre-observatoire"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1703,7 +1833,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Скала под галактикой",
       "en": "Cliff beneath a galaxy",
-      "he": "צוק מתחת לגלקסיה"
+      "he": "צוק מתחת לגלקסיה",
+      "es": "Acantilado bajo una galaxia",
+      "fr": "Falaise sous une galaxie"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1720,7 +1852,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Коронованный странник",
       "en": "Crowned wanderer",
-      "he": "הנודד המוכתר"
+      "he": "הנודד המוכתר",
+      "es": "Errante coronado",
+      "fr": "Vagabond couronné"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -1737,7 +1871,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Летающий замок-дерево",
       "en": "Flying tree castle",
-      "he": "טירת העץ המעופפת"
+      "he": "טירת העץ המעופפת",
+      "es": "Castillo-árbol volador",
+      "fr": "Château-arbre volant"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1754,7 +1890,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Гроза на горизонте",
       "en": "Storm on the horizon",
-      "he": "סערה באופק"
+      "he": "סערה באופק",
+      "es": "Tormenta en el horizonte",
+      "fr": "Orage à l’horizon"
     },
     "category": "photo",
     "label": "Фотографический этюд",
@@ -1771,7 +1909,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Вулкан под звёздами",
       "en": "Volcano beneath the stars",
-      "he": "הר געש תחת הכוכבים"
+      "he": "הר געש תחת הכוכבים",
+      "es": "Volcán bajo las estrellas",
+      "fr": "Volcan sous les étoiles"
     },
     "category": "photo",
     "label": "Фотографический этюд",
@@ -1788,7 +1928,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Луна и хвост кита",
       "en": "Moon and a whale tail",
-      "he": "ירח וזנב לווייתן"
+      "he": "ירח וזנב לווייתן",
+      "es": "La luna y la cola de una ballena",
+      "fr": "La lune et une queue de baleine"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1799,7 +1941,9 @@ export const archiveImages = [
     "descriptions": {
       "ru": "Навигатор перепутал море Спокойствия с обычным морем.",
       "en": "The navigator confused the Sea of Tranquility with an ordinary sea.",
-      "he": "הנווט בלבל בין ים השלווה לים רגיל."
+      "he": "הנווט בלבל בין ים השלווה לים רגיל.",
+      "es": "El navegante confundió el mar de la Tranquilidad con un mar cualquiera.",
+      "fr": "Le navigateur a confondu la mer de la Tranquillité avec une mer ordinaire."
     }
   },
   {
@@ -1810,7 +1954,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Грузовик фронтира",
       "en": "Frontier freighter",
-      "he": "ספינת המשא של הספר"
+      "he": "ספינת המשא של הספר",
+      "es": "Carguero de la frontera",
+      "fr": "Cargo des confins"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1827,7 +1973,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Серебряный орбитальщик",
       "en": "Silver orbital craft",
-      "he": "כלי מסלול כסוף"
+      "he": "כלי מסלול כסוף",
+      "es": "Nave orbital plateada",
+      "fr": "Orbiteur argenté"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1844,7 +1992,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Двухмоторный странник",
       "en": "Twin-engine wanderer",
-      "he": "נודד דו־מנועי"
+      "he": "נודד דו־מנועי",
+      "es": "Errante bimotor",
+      "fr": "Vagabond bimoteur"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1861,7 +2011,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Крейсер дальних рейсов",
       "en": "Long-haul cruiser",
-      "he": "סיירת למרחקים"
+      "he": "סיירת למרחקים",
+      "es": "Crucero de largo recorrido",
+      "fr": "Croiseur long-courrier"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1878,7 +2030,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Кольцевой двигатель",
       "en": "Ring-drive ship",
-      "he": "ספינה עם מנוע טבעת"
+      "he": "ספינה עם מנוע טבעת",
+      "es": "Nave con motor de anillo",
+      "fr": "Vaisseau à propulsion annulaire"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1895,7 +2049,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Корабль у горизонта событий",
       "en": "Ship at the event horizon",
-      "he": "ספינה באופק האירועים"
+      "he": "ספינה באופק האירועים",
+      "es": "Nave en el horizonte de sucesos",
+      "fr": "Vaisseau à l’horizon des événements"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1912,7 +2068,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Инженер многозадачности",
       "en": "The multitasking engineer",
-      "he": "מהנדס ריבוי המשימות"
+      "he": "מהנדס ריבוי המשימות",
+      "es": "El ingeniero multitarea",
+      "fr": "L’ingénieur du multitâche"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -1929,7 +2087,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Проводница техногорода",
       "en": "Guide to the machine city",
-      "he": "מדריכת עיר המכונות"
+      "he": "מדריכת עיר המכונות",
+      "es": "Guía de la tecnociudad",
+      "fr": "Guide de la techno-cité"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -1946,7 +2106,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Книга дыма",
       "en": "Book of smoke",
-      "he": "ספר העשן"
+      "he": "ספר העשן",
+      "es": "Libro de humo",
+      "fr": "Livre de fumée"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1963,7 +2125,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Механическое сердце",
       "en": "Mechanical heart",
-      "he": "לב מכני"
+      "he": "לב מכני",
+      "es": "Corazón mecánico",
+      "fr": "Cœur mécanique"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1980,7 +2144,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Пылевая медитация",
       "en": "Dust meditation",
-      "he": "מדיטציית אבק"
+      "he": "מדיטציית אבק",
+      "es": "Meditación de polvo",
+      "fr": "Méditation de poussière"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -1997,7 +2163,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Дом на краю моря",
       "en": "House at the end of the sea",
-      "he": "בית בקצה הים"
+      "he": "בית בקצה הים",
+      "es": "Casa al borde del mar",
+      "fr": "Maison au bout de la mer"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -2008,7 +2176,9 @@ export const archiveImages = [
     "descriptions": {
       "ru": "Дом с видом на всё. Соседей смыло в прошлый четверг.",
       "en": "A house with a view of everything. The neighbors drifted off last Thursday.",
-      "he": "בית עם נוף להכול. השכנים נסחפו ביום חמישי שעבר."
+      "he": "בית עם נוף להכול. השכנים נסחפו ביום חמישי שעבר.",
+      "es": "Una casa con vistas a todo. A los vecinos se los llevó el agua el jueves pasado.",
+      "fr": "Une maison avec vue sur tout. Les voisins ont été emportés par les flots jeudi dernier."
     }
   },
   {
@@ -2019,7 +2189,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Улыбка солнечной ковки",
       "en": "Sun-forged smile",
-      "he": "חיוך שחושל בשמש"
+      "he": "חיוך שחושל בשמש",
+      "es": "Sonrisa forjada al sol",
+      "fr": "Sourire forgé au soleil"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -2036,7 +2208,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Пират фронтира",
       "en": "Frontier pirate",
-      "he": "שודד ספר החלל"
+      "he": "שודד ספר החלל",
+      "es": "Pirata de la frontera",
+      "fr": "Pirate des confins"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -2053,7 +2227,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Контакт в лесу",
       "en": "Forest contact",
-      "he": "מפגש ביער"
+      "he": "מפגש ביער",
+      "es": "Contacto en el bosque",
+      "fr": "Contact en forêt"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -2070,7 +2246,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Орбитальный акробат",
       "en": "Orbital acrobat",
-      "he": "אקרובט במסלול"
+      "he": "אקרובט במסלול",
+      "es": "Acróbata orbital",
+      "fr": "Acrobate orbital"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -2087,7 +2265,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Экспедиция в красном",
       "en": "Expedition in red",
-      "he": "משלחת באדום"
+      "he": "משלחת באדום",
+      "es": "Expedición de rojo",
+      "fr": "Expédition en rouge"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -2104,7 +2284,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Инспектор часового механизма",
       "en": "Clockwork inspector",
-      "he": "פקח מנגנון השעון"
+      "he": "פקח מנגנון השעון",
+      "es": "Inspector de relojería",
+      "fr": "Inspecteur d’horlogerie"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -2121,7 +2303,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Страж с корнями вместо волос",
       "en": "Root-haired guardian",
-      "he": "שומרת עם שורשים במקום שיער"
+      "he": "שומרת עם שורשים במקום שיער",
+      "es": "Guardián con raíces por pelo",
+      "fr": "Gardien aux cheveux de racines"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -2138,7 +2322,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Взгляд с ватерлинии",
       "en": "A waterline gaze",
-      "he": "מבט מקו המים"
+      "he": "מבט מקו המים",
+      "es": "Una mirada desde la línea de flotación",
+      "fr": "Un regard à fleur d’eau"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -2155,7 +2341,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Чертёж скоростного корабля",
       "en": "Racer design sheet",
-      "he": "גיליון תכנון של ספינת מרוץ"
+      "he": "גיליון תכנון של ספינת מרוץ",
+      "es": "Plano de una nave de carreras",
+      "fr": "Plan d’un vaisseau de course"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -2172,7 +2360,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Серебряный страж фронтира",
       "en": "Silver frontier warden",
-      "he": "שומרת הספר הכסופה"
+      "he": "שומרת הספר הכסופה",
+      "es": "Guardián plateado de la frontera",
+      "fr": "Gardien argenté des confins"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -2189,7 +2379,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Экспедиция к монолиту",
       "en": "Monolith expedition",
-      "he": "משלחת אל המונולית"
+      "he": "משלחת אל המונולית",
+      "es": "Expedición al monolito",
+      "fr": "Expédition vers le monolithe"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -2206,7 +2398,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Дворец горизонта",
       "en": "Horizon palace",
-      "he": "ארמון האופק"
+      "he": "ארמון האופק",
+      "es": "Palacio del horizonte",
+      "fr": "Palais de l’horizon"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -2223,7 +2417,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Подвесной небесный сад",
       "en": "Hanging sky garden",
-      "he": "גן השמים התלוי"
+      "he": "גן השמים התלוי",
+      "es": "Jardín celeste colgante",
+      "fr": "Jardin céleste suspendu"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -2240,7 +2436,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Призрак библиотечного фонда",
       "en": "The library ghost",
-      "he": "רוח הספרייה"
+      "he": "רוח הספרייה",
+      "es": "El fantasma de la biblioteca",
+      "fr": "Le fantôme de la bibliothèque"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -2257,7 +2455,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Снежная полевая миссия",
       "en": "Snow-field mission",
-      "he": "משימה בשדה השלג"
+      "he": "משימה בשדה השלג",
+      "es": "Misión en el campo nevado",
+      "fr": "Mission sur le champ de neige"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -2274,7 +2474,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Солнечный цветок",
       "en": "Solar flower",
-      "he": "פרח שמש"
+      "he": "פרח שמש",
+      "es": "Flor solar",
+      "fr": "Fleur solaire"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -2291,7 +2493,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Проводница электрических приливов",
       "en": "Guide to electric tides",
-      "he": "מדריכת הגאות החשמלית"
+      "he": "מדריכת הגאות החשמלית",
+      "es": "Guía de las mareas eléctricas",
+      "fr": "Guide des marées électriques"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -2308,7 +2512,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Учёная лунного двора",
       "en": "Moon-court scholar",
-      "he": "מלומדת חצר הירח"
+      "he": "מלומדת חצר הירח",
+      "es": "Erudita de la corte lunar",
+      "fr": "Érudite de la cour lunaire"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -2325,7 +2531,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Пилот неоновой гавани",
       "en": "Neon-harbor pilot",
-      "he": "טייסת נמל הניאון"
+      "he": "טייסת נמל הניאון",
+      "es": "Piloto del puerto de neón",
+      "fr": "Pilote du port des néons"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -2342,7 +2550,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Долина слушателей",
       "en": "Valley of the listeners",
-      "he": "עמק המקשיבים"
+      "he": "עמק המקשיבים",
+      "es": "Valle de los que escuchan",
+      "fr": "Vallée des auditeurs"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -2359,7 +2569,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Первый урок землян",
       "en": "The humans’ first lesson",
-      "he": "השיעור הראשון של בני האדם"
+      "he": "השיעור הראשון של בני האדם",
+      "es": "La primera lección de los terrícolas",
+      "fr": "La première leçon des Terriens"
     },
     "category": "illustration",
     "label": "Иллюстрация",
@@ -2370,7 +2582,9 @@ export const archiveImages = [
     "descriptions": {
       "ru": "Первый контакт с домашним заданием. Человечество пока держится.",
       "en": "First contact with homework. Humanity is holding on.",
-      "he": "מפגש ראשון עם שיעורי הבית. האנושות מחזיקה מעמד."
+      "he": "מפגש ראשון עם שיעורי הבית. האנושות מחזיקה מעמד.",
+      "es": "Primer contacto con los deberes. La humanidad, de momento, resiste.",
+      "fr": "Premier contact avec les devoirs. L’humanité tient bon pour l’instant."
     }
   },
   {
@@ -2381,7 +2595,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Лектор без лишней плоти",
       "en": "The bare-bones lecturer",
-      "he": "המרצה בשלד מלא"
+      "he": "המרצה בשלד מלא",
+      "es": "El profesor en los huesos",
+      "fr": "Le conférencier réduit à l’os"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -2398,7 +2614,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Кот в тяжёлом скафандре",
       "en": "Cat in heavy armor",
-      "he": "חתול בחליפת שריון"
+      "he": "חתול בחליפת שריון",
+      "es": "Gato con traje espacial pesado",
+      "fr": "Chat en scaphandre lourd"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -2415,7 +2633,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Древний механический страж",
       "en": "Ancient mechanical guard",
-      "he": "שומר מכני עתיק"
+      "he": "שומר מכני עתיק",
+      "es": "Antiguo guardián mecánico",
+      "fr": "Ancien gardien mécanique"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -2432,7 +2652,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Маленькая сверхновая",
       "en": "Little supernova",
-      "he": "סופרנובה קטנה"
+      "he": "סופרנובה קטנה",
+      "es": "Pequeña supernova",
+      "fr": "Petite supernova"
     },
     "category": "portrait",
     "label": "Персонажный арт",
@@ -2449,7 +2671,9 @@ export const archiveImages = [
     "titles": {
       "ru": "Путница в лунном свете",
       "en": "Moonlit traveler",
-      "he": "נוסעת באור הירח"
+      "he": "נוסעת באור הירח",
+      "es": "Viajera a la luz de la luna",
+      "fr": "Voyageuse au clair de lune"
     },
     "category": "portrait",
     "label": "Персонажный арт",

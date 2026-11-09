@@ -41,7 +41,7 @@ export function initGalleryLightbox() {
     titleEl.textContent = localText(current.titles ?? current.title);
     // Подпись к работе: своя из каталога или шуточная из archiveDescriptions.js
     const extra = archiveDescriptions[current.id];
-    const description = current.descriptions ?? (extra && {ru: extra[0], en: extra[1], he: extra[2]});
+    const description = current.descriptions ?? (extra && {ru: extra[0], en: extra[1], he: extra[2], es: extra[3], fr: extra[4]});
     document.getElementById("photoModalDescription").textContent = description ? localText(description) : "";
     caption.textContent = `${t(current.label)} · ${currentIndex + 1} / ${filtered.length}`;
   }

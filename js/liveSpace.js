@@ -144,6 +144,8 @@ const glyphs = {
   ru: 'АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЭЮЯ0123456789#%*+=<>',
   en: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%*+=<>',
   he: 'אבגדהוזחטיכלמנסעפצקרשת0123456789',
+  es: 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ0123456789#%*+=<>',
+  fr: 'ABCDEFGHIJKLMNOPQRSTUVWXYZÀÂÇÉÈÊÎÔÙ0123456789#%*+=<>',
 };
 const running = new Map();
 
@@ -250,7 +252,7 @@ function initTelemetry() {
   if (!line) return;
   let distance = 4.246512, ping = 42;
   const render = () => {
-    const locale = { ru: 'ru-RU', en: 'en-GB', he: 'he-IL' }[getLanguage()] || 'en-GB';
+    const locale = { ru: 'ru-RU', en: 'en-GB', he: 'he-IL', es: 'es-ES', fr: 'fr-FR' }[getLanguage()] || 'en-GB';
     line.textContent = t('До Центавра {distance} св. лет · сигнал {ping} мс', {
       distance: distance.toLocaleString(locale, { minimumFractionDigits: 6, maximumFractionDigits: 6 }), ping,
     });

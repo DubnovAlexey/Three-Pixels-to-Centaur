@@ -5,8 +5,12 @@
  * ==================================================================== */
 
 /* BEGIN NAVIGATION AND LANGUAGE */
-.language-control{display:flex;align-items:center;gap:8px;font-size:.72rem;color:var(--muted)}
-.language-control select{min-height:40px;max-width:140px;border:1px solid var(--line);background:var(--navy);color:var(--ink);padding:7px 10px;border-radius:0}
+/* The switch sits in the header bar itself, outside the slide-out menu, so it is visible at every width.
+   margin-inline-start:auto keeps it next to the menu button on narrow screens (in Hebrew too). */
+.language-control{display:flex;align-items:center;gap:8px;flex:0 0 auto;margin:0;margin-inline-start:auto;font-size:.72rem;color:var(--muted)}
+.language-icon{width:18px;height:18px;flex:0 0 auto;fill:none;stroke:var(--cyan);stroke-width:1.4}
+.language-control select{min-height:40px;max-width:140px;border:1px solid var(--line);background:var(--navy);color:var(--ink);padding:7px 10px;border-radius:0;cursor:pointer;transition:border-color .25s}
+.language-control select:hover{border-color:var(--cyan)}
 .language-control option{background:var(--navy);color:var(--ink)}
 html[dir=rtl] body{font-family:Arial,system-ui,sans-serif;line-height:1.9}
 html[dir=rtl] h1,html[dir=rtl] h2,html[dir=rtl] .card-body-space h3,html[dir=rtl] .workshop-card h3{font-family:Arial,system-ui,sans-serif;letter-spacing:0;line-height:1.25}
@@ -70,8 +74,10 @@ input[type=email],.sound-counter,.media-time{direction:ltr;unicode-bidi:isolate}
 /* END CATEGORIZED VIDEO */
 
 /* BEGIN RESPONSIVE AND REDUCED MOTION */
-@media(min-width:992px) and (max-width:1299px){.nav-list{gap:12px;font-size:.65rem}.navbar-space .offcanvas-body{gap:14px}.nav-tools{gap:10px}.type-controls{display:none}.brand{min-width:175px}.brand-name{font-size:.63rem}.nav-tools .button-space{padding-inline:10px}.language-control{font-size:.65rem}.language-control>span{display:none}}
-@media(max-width:991px){.language-control select{max-width:none;min-height:44px}.nav-tools .language-control{width:100%}.fleet-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.video-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.guide-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:992px) and (max-width:1299px){.nav-list{gap:12px;font-size:.65rem}.navbar-space .offcanvas-body{gap:14px}.nav-tools{gap:10px}.type-controls{display:none}.brand{min-width:175px}.brand-name{font-size:.63rem}.nav-tools .button-space{padding-inline:10px}.navbar-space .container-space{gap:20px}.language-control{font-size:.65rem}.language-caption{display:none}}
+@media(max-width:991px){.navbar-space .container-space{gap:12px}.language-control select{min-height:44px}.fleet-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.video-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.guide-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:767px){.curator-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.guide-grid .curator-card:last-child{grid-column:1/-1;max-width:350px}.fleet-grid{grid-template-columns:1fr}.fleet-card>img{height:260px}.fleet-modal-content{grid-template-columns:1fr}.fleet-modal-content>img{height:230px}.video-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px}.video-card img{height:145px}.video-play{top:92px;width:34px;height:34px}.video-card h3{font-size:.78rem;margin-inline:13px}.video-card .eyebrow{font-size:.58rem;margin-inline:13px}.filter-btn{font-size:.76rem;padding:10px 13px}.gallery-item__title{font-size:.8rem}.gallery-item__exif{font-size:.64rem}.curator-card button{font-size:.64rem;line-height:1.8}.modal-body{padding:20px}.personnel-intro{margin-top:50px}.video-modal video{max-height:58vh}}
+/* Phones: the globe icon is enough as a label, so the brand keeps its room next to the switch and the menu button. */
+@media(max-width:575px){.navbar-space .container-space{gap:10px}.language-caption{display:none}.language-control{gap:6px}.language-control select{padding-inline:7px}}
 @media(prefers-reduced-motion:reduce){.hero-orbit::before{animation:none}.video-card:hover{transform:none}.dispatch-signal{min-height:3.6em}}
 /* END RESPONSIVE AND REDUCED MOTION */

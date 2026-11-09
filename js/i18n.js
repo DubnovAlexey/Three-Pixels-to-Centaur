@@ -1,12 +1,12 @@
 // =====================================================================
 // FILE: js/i18n.js
-// PURPOSE: RU/EN/HE copy, language preference and accessible RTL presentation.
+// PURPOSE: RU/EN/HE/ES/FR copy, language preference and accessible RTL presentation (Hebrew only).
 // SECTIONS: 1 pure lookup; 2 static bindings; 3 language lifecycle.
 // Static text nodes are retained, so switching never recreates forms or media.
 // Dynamic views subscribe separately and preserve their current selection.
 // =====================================================================
 import { translations } from './translations.js';
-export const supportedLanguages = ['ru', 'en', 'he'];
+export const supportedLanguages = ['ru', 'en', 'he', 'es', 'fr'];
 let language = 'ru';
 const bindings = [];
 const dynamicIds = new Set(['archiveGrid','archiveResult','photoModalTitle','photoModalExif','photoModalDescription',
