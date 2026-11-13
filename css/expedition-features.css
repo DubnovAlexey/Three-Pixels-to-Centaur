@@ -81,3 +81,13 @@ input[type=email],.sound-counter,.media-time{direction:ltr;unicode-bidi:isolate}
 @media(max-width:575px){.navbar-space .container-space{gap:10px}.language-caption{display:none}.language-control{gap:6px}.language-control select{padding-inline:7px}}
 @media(prefers-reduced-motion:reduce){.hero-orbit::before{animation:none}.video-card:hover{transform:none}.dispatch-signal{min-height:3.6em}}
 /* END RESPONSIVE AND REDUCED MOTION */
+
+/* BEGIN NARROW PHONE HEADER (13.11.2026): на телефоне до 420px логотип, выбор языка и кнопка меню не помещались
+   в одну строку — кнопка меню уезжала за правый край. Теперь название логотипа сжимается и переносится на две
+   строки, а кнопка меню всегда видна целиком. */
+@media (max-width: 420px) {
+    .navbar-space .container-space > .brand { flex: 1 1 auto; min-width: 0; }
+    .navbar-space .brand-name { white-space: normal; line-height: 1.2; overflow-wrap: anywhere; }
+    .navbar-space .navbar-toggler { flex: 0 0 auto; }
+}
+/* END NARROW PHONE HEADER */
