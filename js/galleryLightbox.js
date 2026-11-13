@@ -64,19 +64,24 @@ export function initGalleryLightbox() {
     filtered.slice(0, visibleCount).forEach((image, index) => {
       const button = document.createElement('button');
       button.type = 'button'; button.className = 'gallery-item'; button.dataset.category = image.category;
-      button.setAttribute('aria-label', t('Открыть: {title}. {label}',{title:localText(image.titles ?? image.title),label:t(image.label)}));
+      // Имя кнопки для экранного диктора — её собственный видимый текст (название и подпись): голосовое управление
+      // («нажми <название>») находит её по тому, что написано на экране. Отдельного aria-label нет намеренно.
       const frame = document.createElement('div'); frame.className = 'gallery-image';
       const picture = document.createElement('img');
-      picture.alt = localText(image.titles ?? image.title); picture.width = image.width; picture.height = image.height;
+      // Название уже стоит в заголовке рядом — картинке пустой alt, чтобы диктор не читал название дважды
+      picture.alt = ''; picture.width = image.width; picture.height = image.height;
       picture.loading = 'lazy'; picture.decoding = 'async';
       // В сетке — лёгкая копия, в просмотре целиком (renderCurrent) — оригинал
       setCardImage(picture, image.file, CARD_SIZES.archive);
       // Заметная подсказка, что работу можно открыть целиком
       const badge = document.createElement('span'); badge.className = 'gallery-open'; badge.setAttribute('aria-hidden', 'true');
       badge.textContent = t('Рассмотреть ⤢');
+      badge.id = `gallery-item-${index}-open`;
       frame.append(picture, badge);
       const heading = document.createElement('h3'); heading.className = 'gallery-item__title'; heading.textContent = localText(image.titles ?? image.title);
+      heading.id = `gallery-item-${index}-title`;
       const meta = document.createElement('p'); meta.className = 'gallery-item__exif'; meta.textContent = t(image.label);
+      meta.id = `gallery-item-${index}-meta`;
       button.append(frame, heading, meta); button.addEventListener('click', () => open(index, button)); fragment.append(button);
     });
     root.replaceChildren(fragment);

@@ -38,7 +38,8 @@ export function initVideoGallery() {
     const filtered=videoEntries.filter(x=>category==='all'||x.category===category);
     const cards=filtered.slice(0,count).map(entry=>{
       const button=document.createElement('button');button.type='button';button.className='video-card';button.dataset.video=entry.id;
-      button.setAttribute('aria-label',t('Открыть видео: {title}',{title:localText(entry.titles ?? entry.title)}));
+      // Имя карточки — её видимый текст (раздел, длительность, название): голосовое управление находит её по написанному
+      // на экране. Отдельного aria-label нет намеренно (проверка доступности «Кузницы миров», 13.11.2026).
       const image=document.createElement('img');image.src=entry.poster ?? posters[entry.category] ?? posters.worlds;
       image.alt='';image.loading='lazy';image.decoding='async';image.width=640;image.height=360;
       const meta=document.createElement('span');meta.className='eyebrow';meta.textContent=`${t(names[entry.category] || names.worlds)} · ${metadata(entry)}`;
