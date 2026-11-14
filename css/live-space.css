@@ -77,7 +77,10 @@
 /* BEGIN SECTION 7 — hero title assembly (js/liveSpace.js) */
 .sr-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .hero-word { display: inline-block; white-space: nowrap; }
-.hero-letter { display: inline-block; transition: transform .9s cubic-bezier(.2, .8, .25, 1.15), opacity .6s ease; }
+.hero-letter { position: relative; display: inline-block; transition: transform .9s cubic-bezier(.2, .8, .25, 1.15), opacity .6s ease; }
+/* Перебор знаков рисуется поверх настоящей буквы: место в строке всегда её собственное — заголовок не дёргает страницу */
+.hero-letter.shuffling { -webkit-text-fill-color: transparent; }
+.hero-letter.shuffling::after { content: attr(data-glyph); position: absolute; left: 50%; top: 0; transform: translateX(-50%); -webkit-text-fill-color: currentColor; pointer-events: none; }
 .hero-letter.pending { transform: perspective(500px) rotateY(85deg) translateY(-.08em); opacity: 0; }
 /* END SECTION 7 */
 

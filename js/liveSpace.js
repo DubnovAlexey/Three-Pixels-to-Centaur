@@ -160,12 +160,17 @@ function scramble(element, duration = 900) {
   const begin = performance.now();
   const job = { frame: 0 };
   running.set(element, job);
-  // Random glyphs have other widths than the real letters: hold the box so neighbours do not jump.
-  const previousMinWidth = element.style.minWidth;
-  element.style.minWidth = `${element.getBoundingClientRect().width}px`;
+  // Random glyphs have other widths than the real letters: hold the whole box — width AND height — so the caption
+  // cannot wrap onto an extra line and push everything below it; a glyph wider than the box is clipped for a moment.
+  // (Holding only min-width let a caption grow a line every few seconds — the page jerked, 14.11.)
+  const box = element.getBoundingClientRect();
+  const previous = { width: element.style.width, height: element.style.height, overflow: element.style.overflow };
+  element.style.width = `${box.width}px`;
+  element.style.height = `${box.height}px`;
+  element.style.overflow = 'clip';
   const finish = (restore) => {
     cancelAnimationFrame(job.frame); running.delete(element);
-    element.style.minWidth = previousMinWidth;
+    Object.assign(element.style, previous);
     // Only nodes nobody else rewrote get their text back; a translated node keeps the translation.
     if (restore) for (const item of nodes) if (item.node.data === item.written) item.node.data = item.target;
   };
@@ -319,7 +324,7 @@ function initHeroTitle() {
         for (const char of Array.from(token)) {
         const letter = document.createElement('span');
         letter.className = 'hero-letter';
-        letter.textContent = char;
+        letter.textContent = String(char);
         word.appendChild(letter);
         if (motion.matches) continue;
         letter.classList.add('pending');
@@ -327,9 +332,18 @@ function initHeroTitle() {
         index += 1;
         timers.push(setTimeout(() => {
           letter.classList.remove('pending');
+          // The letter keeps its own character (and so its own width) all the time; the random glyphs are drawn
+          // over it by CSS (data-glyph + ::after). Writing them into the text made every glyph change the line
+          // width, the title re-wrapped and pushed the whole page (14.11: 145 shifts in 12 s on a phone).
           for (let k = 0; k < 4; k++) {
             timers.push(setTimeout(() => {
-              letter.textContent = k < 3 ? set[Math.floor(Math.random() * set.length)] : char;
+              if (k < 3) {
+                letter.dataset.glyph = set[Math.floor(Math.random() * set.length)];
+                letter.classList.add('shuffling');
+              } else {
+                letter.classList.remove('shuffling');
+                delete letter.dataset.glyph;
+              }
             }, k * 150));
           }
         }, begin));
